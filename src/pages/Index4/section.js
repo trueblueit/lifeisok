@@ -1,71 +1,94 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Form, Input, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+
+//Importing Modal
+import ModalSection from "../../components/common/ModalSection";
+
+import Lottie from "lottie-react";
+import animationdata from "../../animation/Animation - 1708004346894.json";
+import animationdata2 from "../../animation/Animation - 1708004811580.json";
+
+
 
 class Section extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false,
+    };
+    this.callModal.bind(this);
+  }
+
+  callModal = () => {
+    this.refs.child.openModal();
+  };
+
   render() {
     return (
       <React.Fragment>
-        <section
-          className="section bg-home home-half home-registration active"
-          id="home"
-        >
+        <section className="section bg-home home-half" id="home">
           <div className="bg-overlay"></div>
-          <div class="display-table">
-            <div class="display-table-cell">
           <Container>
-            <Row className="vertical-content">
-              <Col lg="7" className="text-white text-start">
-                <div className="mt-4">
-                  <h4 className="home-small-title">Awesome Design</h4>
-                  <h1 className="home-title">
-                    We love make things amazing and simple
-                  </h1>
-                  <p className="pt-3 home-desc home-subtitle-width-100">
-                    Maecenas class semper class semper sollicitudin lectus lorem
-                    iaculis imperdiet aliquam vehicula tempor auctor curabitur
-                    pede aenean ornare.
-                  </p>
+            <Row>
+              <p className="animationbox">
+                <Lottie animationData={animationdata} ></Lottie>
+              </p>
+              <p className="animationbox2">
+                <Lottie loop={false} animationData={animationdata2} ></Lottie>
+              </p>
+              <Col
+                lg={{ size: 8, offset: 2 }}
+                className="text-white text-center"
+              >
+                <h4 className="home-small-title">Awesome Design</h4>
+                <h1 className="home-title">We love make things amazing and simple</h1>
+                <p className="pt-3 home-desc mx-auto">
+                  Maecenas class semper class semper sollicitudin lectus lorem
+                  iaculis imperdiet aliquam vehicula tempor auctor curabitur
+                  pede aenean ornare.
+                </p>
+                <p className="play-shadow mt-4">
                   <Link
+                    onClick={this.callModal}
                     to="#"
-                    className="btn btn-primary mt-5 waves-effect waves-light"
+                    className="play-btn video-play-icon"
                   >
-                    Get Started <i className="mdi mdi-arrow-right"></i>
+                    <i className="mdi mdi-play text-center"></i>
                   </Link>
-                </div>
+                </p>
               </Col>
-              <Col lg={{ size: 4, offset: 1 }} className="mt-5 mt-lg-0">
-                <div className="home-registration-form bg-white mt-4">
-                  <h4 className="form-heading text-center mt-2">
-                    Get 30 day FREE Trial
-                  </h4>
-                  <Form className="registration-form" id="registration-form">
-                    <Input
-                      type="text"
-                      id="exampleInputName1"
-                      className="form-control registration-input-box"
-                      placeholder="Name"
-                    />
-                    <Input
-                      type="email"
-                      id="exampleInputEmail1"
-                      className="form-control registration-input-box"
-                      placeholder="Email"
-                    />
-                    <textarea
-                      className="form-control registration-textarea-box"
-                      rows="4"
-                      placeholder="Message"
-                    ></textarea>
-                    <Button className="btn btn-primary w-100 waves-effect waves-light">
-                      Send Detail
-                    </Button>
-                  </Form>
-                </div>
-              </Col>
+              
+              {/* Render ModalSection Component for Modal */}
+              <ModalSection ref="child" channel="vimeo" videoId="99025203" />
             </Row>
           </Container>
-          </div>
+
+          <div className="wave-effect wave-anim">
+            <div className="waves-shape shape-one">
+              <div
+                className="wave wave-one"
+                style={{
+                  backgroundImage: `url(assets/images/wave-shape/wave1.png)`,
+                }}
+              ></div>
+            </div>
+            <div className="waves-shape shape-two">
+              <div
+                className="wave wave-two"
+                style={{
+                  backgroundImage: `url(assets/images/wave-shape/wave2.png)`,
+                }}
+              ></div>
+            </div>
+            <div className="waves-shape shape-three">
+              <div
+                className="wave wave-three"
+                style={{
+                  backgroundImage: `url(assets/images/wave-shape/wave3.png)`,
+                }}
+              ></div>
+            </div>
           </div>
         </section>
       </React.Fragment>
