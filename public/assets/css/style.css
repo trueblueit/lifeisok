@@ -111,47 +111,6 @@ p {
   position: relative;
 }
 
-.animationbox {
-  position: absolute;
-  height: 25%;
-  width: 25%;
-  right: 0;
-  bottom: 0;
-  left: 15%;
-  top: 10%;
-}
-
-.animationbox2 {
-  position: absolute;
-  height: 25%;
-  width: 25%;
-  right: 0;
-  bottom: 0;
-  left: 75%;
-  top: 25%;
-}
-.animationboxbg {
-  opacity: 0.8;
-  position: absolute;
-  height: 20%;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 9%;
-  z-index: -1;
-}
-.animationboxbg2 {
-  opacity: 0.95;
-  position: absolute;
-  height: 1%;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 20%;
-  z-index: -1;
-}
 .section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1326,6 +1285,49 @@ iframe {
 
 .navbar-button {
   margin-left: 20px;
+}
+/* my animations */
+
+.animationbox {
+  position: absolute;
+  height: 25%;
+  width: 25%;
+  right: 0;
+  bottom: 0;
+  left: 15%;
+  top: 10%;
+}
+
+.animationbox2 {
+  position: absolute;
+  height: 25%;
+  width: 25%;
+  right: 0;
+  bottom: 0;
+  left: 75%;
+  top: 25%;
+}
+.animationboxbg {
+  opacity: 0.8;
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 9%;
+  z-index: -1;
+}
+.animationboxbg2 {
+  opacity: 0.95;
+  position: absolute;
+  height: 1%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 20%;
+  z-index: -1;
 }
 
 /*---Navbar-White--*/

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
 import Lottie from "lottie-react";
@@ -36,7 +35,7 @@ class Features extends Component {
               <Col lg={{ size: 7, order: 2 }} xs={{ order: 1 }}>
                 <div className="features-img mx-auto me-lg-0">
                   <img
-                    src="assets/images/growth-analytics.svg"
+                    src="assets/lifeisok/img1.jpeg"
                     alt="macbook"
                     className="img-fluid"
                   />

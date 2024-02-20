@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
+import Lottie from "lottie-react";
+import animationdata from "../../animation/Animation-partical.json";
+
 class WebsiteDescription extends Component {
   render() {
     return (
@@ -11,17 +14,17 @@ class WebsiteDescription extends Component {
           <Container>
             <Row>
               <Col lg="12" className="text-center">
-                <h2 className="text-white">Build your dream website today</h2>
+                <h2 className="text-white">Join Our Team Today</h2>
                 <p className="pt-3 home-desc mx-auto">
-                  But nothing the copy said could convince her and so it didn’t
-                  take long until a few insidious Copy Writers ambushed her.
+                Founded by a team of professionals to improve the quality of life for people with difficulties.
                 </p>
                 <Link
-                  to="#"
+                  to="/index4"
                   className="btn btn-light mt-5 waves-effect waves-light"
                 >
-                  View Plan & Pricing
+                  Join Us
                 </Link>
+        
               </Col>
             </Row>
           </Container>
