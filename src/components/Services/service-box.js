@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Col} from "reactstrap";
 
-import Lottie from "lottie-react";
-import animationdata from "../../animation/Animation - bg2.json";
+
+import { Link } from "react-router-dom";
 
 class ServiceBox extends Component {
   render() {
@@ -16,9 +16,17 @@ class ServiceBox extends Component {
               <div className="ms-4">
                 <h4>{this.props.title}</h4>
                 <p className="pt-2 text-muted">{this.props.description}</p>
+                
               </div>
             </div>
+            <Link
+                  to="/index2"
+                  className="btn btn-light mt-5 waves-effect waves-light"
+                >
+                  Read More
+                </Link>
           </div>
+          
         </Col>
       </React.Fragment>
     );

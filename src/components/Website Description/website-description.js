@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
-import Lottie from "lottie-react";
-import animationdata from "../../animation/Animation-partical.json";
 
 class WebsiteDescription extends Component {
   render() {
