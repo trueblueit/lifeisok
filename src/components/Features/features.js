@@ -15,26 +15,22 @@ class Features extends Component {
               <Col lg="5" className="order-2 order-lg-1">
                 <div className="features-box mt-5 mt-lg-0">
                   <h3>
-                    A digital web design studio creating modern & engaging
-                    online
+                   Why Life Is Ok?
                   </h3>
                   <p className="text-muted web-desc">
-                    Separated they live in Bookmarksgrove right at the coast of
-                    the Semantics, a large language ocean.
+                  At Life is OK, we partner with NDIS to provide person-centric services that promote well-being, cultural awareness, and inclusivity.
                   </p>
                   <ul className="text-muted list-unstyled mt-4 features-item-list">
-                    <li className="">We put a lot of effort in design.</li>
+                    <li className="">Cultural Sensitivity: Experienced worker with exceptional cultural awareness</li>
                     <li className="">
-                      The most important ingredient of successful website.
+                    Life Dignification: Ability to dignify your life and to make you feel your life is o
                     </li>
-                    <li className="">Submit Your Orgnization.</li>
+                    <li className="">Expert Consultation: Free consultation session with our experienced team</li>
+                    <li className="">Team Integrity: Our policies ensure our team treat you with fairness, respect, and honesty</li>
+                    <li className="">Choice Empowerment: You have the choice and control, always
+
+</li>
                   </ul>
-                  <Link
-                    to="#"
-                    className="btn btn-primary mt-4 waves-effect waves-light"
-                  >
-                    Learn More <i className="mdi mdi-arrow-right"></i>
-                  </Link>
                 </div>
               </Col>
               <Col lg={{ size: 7, order: 2 }} xs={{ order: 1 }}>
