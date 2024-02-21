@@ -15,6 +15,7 @@ import ScrollspyNav from "./scrollSpy";
 import StickyHeader from "react-sticky-header";
 import "../../../node_modules/react-sticky-header/styles.css";
 
+
 class Navbar_Page extends Component {
   constructor(props) {
     super(props);
@@ -73,8 +74,8 @@ class Navbar_Page extends Component {
               id="navbar"
             >
               <Container>
-                <NavbarBrand className="logo text-uppercase" href="/">
-                  <i className="mdi mdi-alien"></i>Life Is OK
+                <NavbarBrand className="logo text-uppercase" href="/index3">
+                <i className="myicon">Life Is OK</i>
                 </NavbarBrand>
 
                 <NavbarToggler className="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" onClick={this.toggle}>

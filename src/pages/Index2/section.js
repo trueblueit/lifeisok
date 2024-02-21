@@ -48,19 +48,10 @@ class Section extends Component {
                   iaculis imperdiet aliquam vehicula tempor auctor curabitur
                   pede aenean ornare.
                 </p>
-                <p className="play-shadow mt-4">
-                  <Link
-                    onClick={this.callModal}
-                    to="#"
-                    className="play-btn video-play-icon"
-                  >
-                    <i className="mdi mdi-play text-center"></i>
-                  </Link>
-                </p>
+                
               </Col>
               
-              {/* Render ModalSection Component for Modal */}
-              <ModalSection ref="child" channel="vimeo" videoId="99025203" />
+              
             </Row>
           </Container>
 
