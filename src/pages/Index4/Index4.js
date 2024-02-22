@@ -1,36 +1,41 @@
 import React, { Component } from 'react';
 import NavbarPage from "../../components/Navbar/NavbarPage";
-import Section from "./section";
-import Clients from '../../components/Clients/clients';
-import Features from '../../components/Features/features';
-import Services from '../../components/Services/services';
-import WebsiteDescription from '../../components/Website Description/website-description';
-import AboutUs from '../../components/About Us/about-us';
-import Pricing from '../../components/Pricing/pricing';
-import Testimonials from '../../components/Testimonials/testimonials';
-import GetStarted from '../../components/Get Started/get-started';
-import Blog from '../../components/Blog/blog';
-import ContactUs from '../../components/Contact Us/contact-us';
 import Footer from '../../components/Footer/footer';
-
+import { Container, Row, Col } from "reactstrap";
+import {Link} from 'react-router-dom';
 class Index4 extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          navClass : ""
-        };
-    }
-    componentDidMount()
-    {
-        document.getElementById("colorTheme").href="assets/colors/pink.css";
-    }
+    
 
 
     render() {
         return (
             <React.Fragment>
+                <section className="section" id="about">
+          <Container>
+            <Row>
+              <Col lg={{ size: 8, offset: 2 }}>
+                <div className="about-title mx-auto text-center">
+                  <h2 className="font-weight-light">
+                    About Us{" "}
+                  </h2>
+                  <p className="text-muted pt-4">
+                  “Life Is OK” aspires to be business role models through cultural awareness and person-centric support strategies; we also have the vision to uphold our commitment to serving NDIS participants with excellence.
+                  </p>
+                 
+                
+                </div>
+               
+                
+              </Col>
+              
+            </Row>
+           
+            
+          </Container>
+        </section>
+                
 
-                                {/* Importing Get Footer */}
+                {/* Importing Get Footer */}
                 <Footer/>
 
             </React.Fragment>
