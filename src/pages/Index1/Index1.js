@@ -15,7 +15,7 @@ class Index1 extends Component {
         return (
             <React.Fragment>
 
-                {/* Importing Section */}
+                {/* normal push Importing Section */}
                 <Section />
 
                 {/* Importing Contact Us */}
