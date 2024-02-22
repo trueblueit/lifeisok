@@ -46,19 +46,10 @@ class Section extends Component {
                 <p className="pt-3 home-desc mx-auto">
                 Dedicated to improving the quality of life for people with disabilites. Aims to build a partnership with NDIS Participants to learn what they want to learn and achieve.
                 </p>
-                <p className="play-shadow mt-4">
-                  <Link
-                    onClick={this.callModal}
-                    to="#"
-                    className="play-btn video-play-icon"
-                  >
-                    <i className="mdi mdi-play text-center"></i>
-                  </Link>
-                </p>
+                
               </Col>
               
-              {/* Render ModalSection Component for Modal */}
-              <ModalSection ref="child" channel="vimeo" videoId="99025203" />
+              
             </Row>
           </Container>
 

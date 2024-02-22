@@ -16,6 +16,7 @@ import ScrollspyNav from "./scrollSpy";
 import StickyHeader from "react-sticky-header";
 import "../../../node_modules/react-sticky-header/styles.css";
 
+
 class Navbar_Page extends Component {
   constructor(props) {
     super(props);
@@ -74,6 +75,7 @@ class Navbar_Page extends Component {
               id="navbar"
             >
               <Container>
+                
                 <NavbarBrand className="logo text-uppercase" href="/">
                 <img
                     src="assets/lifeisok/logo.png"
