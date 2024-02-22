@@ -54,8 +54,7 @@ class Index2 extends Component {
                 {/* Importing Pricing */}
                 <Pricing/>
 
-                {/* Importing Testimonials */}
-                <Testimonials/>
+                
 
                 {/* Importing Get Started */}
                 <GetStarted/>
