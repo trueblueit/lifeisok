@@ -1,32 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Button, FormFeedback, Form, Input } from "reactstrap";
 
-// Formik validation
-import * as Yup from "yup";
-import { useFormik } from "formik";
+import { Link } from "react-router-dom";
+
 
 //Import Section Title
 import SectionTitle from "../common/section-title";
 
 const ContactUs = () => {
-  const validation = useFormik({
-    // enableReinitialize : use this flag when initial values needs to be changed
-    enableReinitialize: true,
-
-    initialValues: {
-        name: '',
-        email: '',
-        subject: '',
-    },
-    validationSchema: Yup.object({
-        name: Yup.string().required("Please Enter Your Name"),
-        email: Yup.string().required("Please Enter Your Email"),
-        subject: Yup.string().required("Please Enter Your Subject"),
-    }),
-    onSubmit: (values) => {
-        console.log("values",values);
-    }
-});
     return (
       <React.Fragment>
         <section className="section " id="contact">
@@ -64,6 +45,12 @@ const ContactUs = () => {
                   </Col>
 
             </div>
+            <Link
+                  to="/index1"
+                  className="btn btn-light ml-50 waves-effect waves-light"
+                >
+                  Contact Us
+                </Link>
 
           
           </Container>

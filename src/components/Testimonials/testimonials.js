@@ -1,63 +1,57 @@
-import React, { Component } from "react";
-import { Container, Row } from "reactstrap";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import React from 'react';
+import { Container, Row, Col } from "reactstrap";
 
-//Import Section Title
-import SectionTitle from "../common/section-title";
+function DemoModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
-//Import Testimonial Box
-import TestimonialBox from "./testimonial-box";
+function Testimonials() {
+  const [modalShow, setModalShow] = React.useState(false);
 
-class Testimonials extends Component {
-  state = {
-    testimonials: [
-      {
-        id: 1,
-        image: "assets/images/testimonials/user-1.jpg",
-        name: "DENNIS WILLIAMS",
-        cmpName: "Charleston",
-        message:
-          "“I feel confident imposing change on myself. It's a lot more fun progressing than looking back. That's why I ultricies enim at malesuada nibh diam on tortor neaded to throw curve balls.”",
-      },
-      {
-        id: 2,
-        image: "assets/images/testimonials/user-2.jpg",
-        name: "LAURIE BELL",
-        cmpName: "Worcester",
-        message:
-          "“Our task must be to free ourselves by widening our circle of compassion to embrace all living creatures and the whole of quis consectetur nunc sit amet semper justo. nature and its beauty.”",
-      },
-      {
-        id: 3,
-        image: "assets/images/testimonials/user-3.jpg",
-        name: "HOWARD KELLEY",
-        cmpName: "Lynchburg",
-        message:
-          "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how donec in efficitur lectus, nec lobortis metus you made them feel.”",
-      },
-    ],
-  };
-  render() {
-    return (
-      <React.Fragment>
-        <section className="section" id="testi">
-          <Container>
-            {/* Render section title */}
-            <SectionTitle
-              title="What they've said"
-              description="The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli."
-            />
+  return (
+    <Container>
+            <Row>
+              <Col lg="12" className="text-center">
+              <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button>
 
-            <Row className="mt-5">
-              {/* render testimonials box */}
-              {this.state.testimonials.map((testimonial, key) => (
-                <TestimonialBox key={key} testimonial={testimonial} />
-              ))}
+      <DemoModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+              </Col>
             </Row>
           </Container>
-        </section>
-      </React.Fragment>
-    );
-  }
+    
+  );
 }
+
 
 export default Testimonials;
