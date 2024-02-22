@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import {
   Nav,
   NavbarBrand,
@@ -74,7 +75,10 @@ class Navbar_Page extends Component {
             >
               <Container>
                 <NavbarBrand className="logo text-uppercase" href="/">
-                  <i className="mdi mdi-alien"></i>Life Is OK
+                <img
+                    src="assets/lifeisok/logo.png"
+                    
+                  />
                 </NavbarBrand>
 
                 <NavbarToggler className="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" onClick={this.toggle}>
@@ -114,7 +118,7 @@ class Navbar_Page extends Component {
                           color="primary"
                           className=" navbar-btn btn-rounded waves-effect waves-light"
                         >
-                          Try it Free
+                          Book Appointment
                         </Button>
                       </NavItem>
                     </Nav>

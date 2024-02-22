@@ -12,44 +12,19 @@ class Pricing extends Component {
     pricings: [
       {
         id: 1,
-        title: "Economy",
-        price: "9.90",
-        duration: "MONTH",
+        title: "House 1",
+        price: "100",
+        duration: "5 months",
         features: {
-          bandwith: "1GB",
-          onlinespace: "50MB",
-          support: "No",
-          domain: "1",
-          hiddenFees: "No",
+          bandwith: "",
+          onlinespace: "",
+          support: "",
+          domain: "",
+          hiddenFees: "",
         },
       },
-      {
-        id: 2,
-        title: "DELUXE",
-        price: "19.90",
-        duration: "MONTH",
-        isRibbon: true,
-        features: {
-          bandwith: "10GB",
-          onlinespace: "500MB",
-          support: "Yes",
-          domain: "10",
-          hiddenFees: "No",
-        },
-      },
-      {
-        id: 3,
-        title: "ULTIMATE",
-        price: "29.90",
-        duration: "MONTH",
-        features: {
-          bandwith: "100GB",
-          onlinespace: "2 GB",
-          support: "Yes",
-          domain: "Unlimited",
-          hiddenFees: "No",
-        },
-      },
+     
+      
     ],
   };
   render() {
@@ -59,8 +34,8 @@ class Pricing extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Our Pricing"
-              description="Call to action pricing table is really crucial to your for your business website. Make your bids stand-out with amazing options."
+              title="Our Accomodation"
+              description="Available for Independent Living, Short & Medium-Term Accommodation"
             />
 
             <Row className="mt-5">

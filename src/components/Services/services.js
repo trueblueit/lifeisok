@@ -11,58 +11,57 @@ class Services extends Component {
   state = {
     services: [
       {
-        title: "Digital Design",
+        title: "DAILY ACTIVITIES & IMPROVED LIVING CHOICE",
         icon: "pe-7s-diamond",
         description:
-          "Some quick example text to build on the card title and make up the bulk of the card's content. Moltin gives platform.",
+          "Outreach support to the core (home-bound or community place).",
       },
       {
-        title: "Unlimited Colors",
+        title: "COMMUNITY ACCESS/ SOCIAL AND PARTICIPATION",
         icon: "pe-7s-display2",
         description:
-          "Credibly brand standards compliant users without extensible services. Anibh euismod tincidunt laoreet Ipsum passage.",
+          "Non-clinical capacity-building services includes social skills, life skills, and support.",
       },
       {
-        title: "Strategy Solutions",
+        title: "ACCOMMODATION SUPPORT",
         icon: "pe-7s-piggy",
         description:
-          "Separated they live in Bookmarksgrove right at the coast of the Semantics, and large language ocean neary regelia.",
+          "Funding for Accommodation Supports generally comes from the Core funding section of your NDIS plan..",
       },
       {
-        title: "Awesome Support",
+        title: "SUPPORTED INDEPENDENT LIVING (SIL)",
         icon: "pe-7s-science",
         description:
-          "It is a paradisematic country, in which roasted parts of sentences fly into your mouth leave for the far World.",
+          "In our SIL, you will find a safe, comfortable, and supportive living environment.",
       },
       {
-        title: "Truly Multipurpose",
+        title: "SHORT TERM ACCOMMODATION (STA)",
         icon: "pe-7s-news-paper",
         description:
-          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.",
+          "Our STA offers a safe place for you to experience time away from your normal place of residence.",
       },
       {
-        title: "Easy to customize",
+        title: "MEDIUM TERM ACCOMMODATION (MTA)",
         icon: "pe-7s-plane",
-        description:
-          "Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.",
+        description:"NDIS participants can stay at our MTA during a transitional period (such as when leaving the hospital or released from Corrections).",
       },
       {
-        title: "Pixel Perfect Design",
+        title: "SUPPORTS IN EMPLOYMENT",
         icon: "pe-7s-arc",
         description:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.",
+          "As a registered NDIS provider of Supports in employment supports, we assist participants with employment..",
       },
       {
-        title: "Perfect Toolbox",
+        title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)box",
         icon: "pe-7s-tools",
         description:
-          "Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.",
+          "A SLES is an NDIS support available to students leaving secondary school that helps them on a pathway to employment..",
       },
       {
-        title: "Awesome Design",
+        title: "Capacity Building Outreach Supports",
         icon: "pe-7s-timer",
         description:
-          "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+          "Non-clinical services like social skills development, employment support, life skills training, and tenancy support, with a focus on person-centred recovery.",
       },
     ],
   };
@@ -74,7 +73,8 @@ class Services extends Component {
             {/* Render section title */}
             <SectionTitle
               title="Our Services"
-              description="We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning and add a value for our clients."
+              description="The Support services Life Is Ok offer, are person-centred, strength-based, and determined to be excellent
+              throughout your journey with us."
             />
 
             <Row className="mt-5">

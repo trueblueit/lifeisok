@@ -41,12 +41,10 @@ class Section extends Component {
                 lg={{ size: 8, offset: 2 }}
                 className="text-white text-center"
               >
-                <h4 className="home-small-title">Awesome Design</h4>
-                <h1 className="home-title">We love make things amazing and simple</h1>
+                <h4 className="home-small-title"></h4>
+                <h1 className="home-title">Providing best Support for Your Choice</h1>
                 <p className="pt-3 home-desc mx-auto">
-                  Maecenas class semper class semper sollicitudin lectus lorem
-                  iaculis imperdiet aliquam vehicula tempor auctor curabitur
-                  pede aenean ornare.
+                Dedicated to improving the quality of life for people with disabilites. Aims to build a partnership with NDIS Participants to learn what they want to learn and achieve.
                 </p>
                 <p className="play-shadow mt-4">
                   <Link

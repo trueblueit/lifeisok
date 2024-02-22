@@ -21,7 +21,7 @@ class ServiceBox extends Component {
             </div>
             <Link
                   to="/index2"
-                  className="btn btn-light mt-5 waves-effect waves-light"
+                  className="btn btn-orange class mt-5 waves-effect waves-light"
                 >
                   Read More
                 </Link>
