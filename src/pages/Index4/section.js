@@ -31,12 +31,7 @@ class Section extends Component {
           <div className="bg-overlay"></div>
           <Container>
             <Row>
-              <p className="animationbox">
-                <Lottie animationData={animationdata} ></Lottie>
-              </p>
-              <p className="animationbox2">
-                <Lottie loop={false} animationData={animationdata2} ></Lottie>
-              </p>
+              
               <Col
                 lg={{ size: 8, offset: 2 }}
                 className="text-white text-center"
@@ -81,14 +76,7 @@ class Section extends Component {
                 }}
               ></div>
             </div>
-            <div className="waves-shape shape-three">
-              <div
-                className="wave wave-three"
-                style={{
-                  backgroundImage: `url(assets/images/wave-shape/wave3.png)`,
-                }}
-              ></div>
-            </div>
+            
           </div>
         </section>
       </React.Fragment>
