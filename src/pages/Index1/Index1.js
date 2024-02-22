@@ -21,9 +21,6 @@ class Index1 extends Component {
                 {/* Importing Contact Us */}
                 <Contactus />
 
-                {/* Importing Get Footer */}
-                <Footer />
-
             </React.Fragment>
         );
     }
