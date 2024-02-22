@@ -30,43 +30,7 @@ class Index4 extends Component {
         return (
             <React.Fragment>
 
-                {/* Importing Navbar */}
-                <NavbarPage navClass={this.state.navClass} />
-
-                {/* Importing Section */}
-                <Section/>
-
-                {/* Importing Client */}
-                <Clients/>
-
-                {/* Importing Features */}
-                <Features/>
-
-                {/* Importing Services */}
-                <Services/>
-
-                {/* Importing Website Description */}
-                <WebsiteDescription/>
-
-                {/* Importing About Us */}
-                <AboutUs/>
-
-                {/* Importing Pricing */}
-                <Pricing/>
-
-                {/* Importing Testimonials */}
-                <Testimonials/>
-
-                {/* Importing Get Started */}
-                <GetStarted/>
-
-                {/* Importing Blog */}
-                <Blog/>
-
-                {/* Importing Contact Us */}
-                <ContactUs/>
-
-                {/* Importing Get Footer */}
+                                {/* Importing Get Footer */}
                 <Footer/>
 
             </React.Fragment>
