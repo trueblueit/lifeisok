@@ -2,24 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
-//Importing Modal
-import ModalSection from "../../components/common/ModalSection";
 
-class Section extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isOpen: false,
-    };
-    this.callModal.bind(this);
-  }
 
-  callModal = () => {
-    this.refs.child.openModal();
-  };
-
-  render() {
-    return (
+function Section() {
+  return (
+  
       <React.Fragment>
         <section className="section" id="contact us"> 
           <div className="bg-overlay"></div>
@@ -37,8 +24,7 @@ class Section extends Component {
                 Get in Touch and Let us Care for you.
                 </p>
               </Col>
-              {/* Render ModalSection Component for Modal */}
-              <ModalSection ref="child" channel="vimeo" videoId="99025203" />
+              
             </Row>
           </Container>
 
@@ -46,7 +32,7 @@ class Section extends Component {
         </section>
       </React.Fragment>
     );
-  }
+  
 }
 
 export default Section;
