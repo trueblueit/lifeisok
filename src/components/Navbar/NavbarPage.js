@@ -16,7 +16,6 @@ import ScrollspyNav from "./scrollSpy";
 import StickyHeader from "react-sticky-header";
 import "../../../node_modules/react-sticky-header/styles.css";
 
-
 class Navbar_Page extends Component {
   constructor(props) {
     super(props);
@@ -39,25 +38,24 @@ class Navbar_Page extends Component {
   };
 
   render() {
-
-      /********************* Menu Js **********************/
+    /********************* Menu Js **********************/
 
     function windowScroll() {
       const navbar = document.getElementById("navbar");
       if (
-          document.body.scrollTop >= 50 ||
-          document.documentElement.scrollTop >= 50
+        document.body.scrollTop >= 50 ||
+        document.documentElement.scrollTop >= 50
       ) {
-          navbar.classList.add("nav-sticky");
+        navbar.classList.add("nav-sticky");
       } else {
-          navbar.classList.remove("nav-sticky");
+        navbar.classList.remove("nav-sticky");
       }
-  }
-  
-  window.addEventListener('scroll', (ev) => {
+    }
+
+    window.addEventListener("scroll", (ev) => {
       ev.preventDefault();
       windowScroll();
-  });
+    });
 
     //Store all Navigationbar Id into TargetID variable(Used for Scrollspy)
     let TargetId = this.state.navItems.map((item) => {
@@ -70,20 +68,29 @@ class Navbar_Page extends Component {
           header={
             <div
               className={
-                this.props.navClass + " navbar navbar-expand-lg fixed-top  navbar-custom sticky sticky-dark"
+                this.props.navClass +
+                " navbar navbar-expand-lg fixed-top  navbar-custom sticky sticky-dark"
               }
               id="navbar"
             >
               <Container>
-                
                 <NavbarBrand className="logo text-uppercase" href="/">
-                <img
-                    src="assets/lifeisok/logo.png"
-                    
-                  />
+                  <img
+                    src="assets/lifeisok/favicon.png"
+                    height={50}
+                    width={50}
+                  />{" "}
+                  Life is ok
                 </NavbarBrand>
 
-                <NavbarToggler className="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" onClick={this.toggle}>
+                <NavbarToggler
+                  className=""
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarCollapse"
+                  aria-controls="navbarCollapse"
+                  aria-expanded="false"
+                  onClick={this.toggle}
+                >
                   <i className="mdi mdi-menu"></i>
                 </NavbarToggler>
 
