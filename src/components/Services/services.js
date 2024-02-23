@@ -18,48 +18,49 @@ class Services extends Component {
       },
       {
         title: "COMMUNITY ACCESS/ SOCIAL AND PARTICIPATION",
-        icon: "pe-7s-display2",
+        icon: "pe-7s-chat ",
         description:
           "Non-clinical capacity-building services includes social skills, life skills, and support.",
       },
       {
         title: "ACCOMMODATION SUPPORT",
-        icon: "pe-7s-piggy",
+        icon: "pe-7s-home",
         description:
           "Funding for Accommodation Supports generally comes from the Core funding section of your NDIS plan..",
       },
       {
         title: "SUPPORTED INDEPENDENT LIVING (SIL)",
-        icon: "pe-7s-science",
+        icon: "pe-7s-paper-plane ",
         description:
           "In our SIL, you will find a safe, comfortable, and supportive living environment.",
       },
       {
         title: "SHORT TERM ACCOMMODATION (STA)",
-        icon: "pe-7s-news-paper",
+        icon: "pe-7s-clock",
         description:
           "Our STA offers a safe place for you to experience time away from your normal place of residence.",
       },
       {
         title: "MEDIUM TERM ACCOMMODATION (MTA)",
-        icon: "pe-7s-plane",
-        description:"NDIS participants can stay at our MTA during a transitional period (such as when leaving the hospital or released from Corrections).",
+        icon: "pe-7s-news-paper",
+        description:
+          "NDIS participants can stay at our MTA during a transitional period (such as when leaving the hospital or released from Corrections).",
       },
       {
         title: "SUPPORTS IN EMPLOYMENT",
-        icon: "pe-7s-arc",
+        icon: "pe-7s-check",
         description:
           "As a registered NDIS provider of Supports in employment supports, we assist participants with employment..",
       },
       {
         title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)box",
-        icon: "pe-7s-tools",
+        icon: "pe-7s-folder",
         description:
           "A SLES is an NDIS support available to students leaving secondary school that helps them on a pathway to employment..",
       },
       {
         title: "Capacity Building Outreach Supports",
-        icon: "pe-7s-timer",
+        icon: "pe-7s-comment",
         description:
           "Non-clinical services like social skills development, employment support, life skills training, and tenancy support, with a focus on person-centred recovery.",
       },

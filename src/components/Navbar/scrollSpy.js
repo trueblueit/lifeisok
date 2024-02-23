@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/**import React, { Component } from "react";
 
 class ScrollspyNav extends Component {
   constructor(props) {
@@ -166,3 +166,4 @@ class ScrollspyNav extends Component {
 }
 
 export default ScrollspyNav;
+**/

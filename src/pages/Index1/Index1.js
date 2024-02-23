@@ -1,29 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Section from "./section";
-import Contactus from './contact-us';
-import Footer from '../../components/Footer/footer';
+import Contactus from "./contact-us";
 
+import NavbarPage from "../../components/Navbar/NavbarPage";
 class Index1 extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            navClass: "navbar-white"
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      navClass: "navbar-white",
+    };
+  }
 
-    render() {
-        return (
-            <React.Fragment>
-
-                {/* normal push Importing Section */}
-                <Section />
-
-                {/* Importing Contact Us */}
-                <Contactus />
-
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <NavbarPage navClass={this.state.navClass} />
+        <Section />
+        <Contactus />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Index1;

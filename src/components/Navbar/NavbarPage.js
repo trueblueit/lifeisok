@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import {
   Nav,
   NavbarBrand,
@@ -8,13 +7,11 @@ import {
   NavLink,
   Container,
   Collapse,
-  Button,
 } from "reactstrap";
-import ScrollspyNav from "./scrollSpy";
 
-//Import Stickey Header
-import StickyHeader from "react-sticky-header";
-import "../../../node_modules/react-sticky-header/styles.css";
+import DropdownButton from "react-bootstrap/DropdownButton";
+
+import Dropdown from "react-bootstrap/Dropdown";
 
 class Navbar_Page extends Component {
   constructor(props) {
@@ -24,120 +21,97 @@ class Navbar_Page extends Component {
         { id: 1, idnm: "home", navheading: "Home" },
         { id: 2, idnm: "features", navheading: "Features" },
         { id: 3, idnm: "services", navheading: "Services" },
-        { id: 3, idnm: "about", navheading: "About" },
-        { id: 4, idnm: "pricing", navheading: "Pricing" },
-        { id: 5, idnm: "blog", navheading: "Blog" },
-        { id: 6, idnm: "contact", navheading: "Contact" },
+        { id: 4, idnm: "about", navheading: "About" },
+        { id: 5, idnm: "pricing", navheading: "Pricing" },
+        { id: 6, idnm: "blog", navheading: "Blog" },
+        { id: 7, idnm: "get-started", navheading: "Blog" },
       ],
+      isNavSticky: false,
       isOpenMenu: false,
     };
   }
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const { isNavSticky } = this.state;
+    const scrollY = window.scrollY;
+
+    if (scrollY >= 50 && !isNavSticky) {
+      this.setState({ isNavSticky: true });
+    } else if (scrollY < 50 && isNavSticky) {
+      this.setState({ isNavSticky: false });
+    }
+  };
+
   toggle = () => {
-    this.setState({ isOpenMenu: !this.state.isOpenMenu });
+    this.setState((prevState) => ({ isOpenMenu: !prevState.isOpenMenu }));
   };
 
   render() {
-    /********************* Menu Js **********************/
-
-    function windowScroll() {
-      const navbar = document.getElementById("navbar");
-      if (
-        document.body.scrollTop >= 50 ||
-        document.documentElement.scrollTop >= 50
-      ) {
-        navbar.classList.add("nav-sticky");
-      } else {
-        navbar.classList.remove("nav-sticky");
-      }
-    }
-
-    window.addEventListener("scroll", (ev) => {
-      ev.preventDefault();
-      windowScroll();
-    });
-
-    //Store all Navigationbar Id into TargetID variable(Used for Scrollspy)
-    let TargetId = this.state.navItems.map((item) => {
-      return item.idnm;
-    });
+    const { isNavSticky, isOpenMenu, navItems } = this.state;
 
     return (
       <React.Fragment>
-        <StickyHeader
-          header={
-            <div
-              className={
-                this.props.navClass +
-                " navbar navbar-expand-lg fixed-top  navbar-custom sticky sticky-dark"
-              }
-              id="navbar"
+        <div
+          className={`navbar navbar-expand-lg fixed-top navbar-custom sticky ${
+            isNavSticky ? "nav-sticky  sticky-dark" : ""
+          }`}
+        >
+          <Container>
+            <NavbarBrand className="logo text-uppercase" href="/">
+              <img src="assets/lifeisok/favicon.png" height={50} width={50} />{" "}
+              Life is ok
+            </NavbarBrand>
+
+            <NavbarToggler
+              className=""
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              onClick={this.toggle}
             >
-              <Container>
-                <NavbarBrand className="logo text-uppercase" href="/">
-                  <img
-                    src="assets/lifeisok/favicon.png"
-                    height={50}
-                    width={50}
-                  />{" "}
-                  Life is ok
-                </NavbarBrand>
+              <i className="mdi mdi-menu"></i>
+            </NavbarToggler>
 
-                <NavbarToggler
-                  className=""
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarCollapse"
-                  aria-controls="navbarCollapse"
-                  aria-expanded="false"
-                  onClick={this.toggle}
-                >
-                  <i className="mdi mdi-menu"></i>
-                </NavbarToggler>
-
-                <Collapse
-                  id="navbarCollapse"
-                  isOpen={this.state.isOpenMenu}
-                  navbar
-                >
-                  <ScrollspyNav
-                    scrollTargetIds={TargetId}
-                    activeNavClass="active"
-                    scrollDuration="800"
-                    headerBackground="true"
+            <Collapse id="navbarCollapse" isOpen={isOpenMenu} navbar>
+              <Nav className="navbar-nav navbar-center" id="mySidenav">
+                {navItems.map((item, key) => (
+                  <NavItem
+                    key={key}
+                    className={item.idnm === "Home" ? "active" : ""}
                   >
-                    <Nav className="navbar-nav navbar-center" id="mySidenav">
-                      {this.state.navItems.map((item, key) => (
-                        <NavItem
-                          key={key}
-                          className={item.navheading === "Home" ? "active" : ""}
-                        >
-                          <NavLink href={"#" + item.idnm}>
-                            {" "}
-                            {item.navheading}
-                          </NavLink>
-                        </NavItem>
-                      ))}
-                    </Nav>
-                  </ScrollspyNav>
-                  <div className="nav-button ms-auto">
-                    <Nav className="navbar-right nav" navbar>
-                      <NavItem>
-                        <Button
-                          type="button"
-                          color="primary"
-                          className=" navbar-btn btn-rounded waves-effect waves-light"
-                        >
-                          Book Appointment
-                        </Button>
-                      </NavItem>
-                    </Nav>
-                  </div>
-                </Collapse>
-              </Container>
-            </div>
-          }
-          stickyOffset={-100}
-        ></StickyHeader>
+                    <NavLink href={`/#${item.idnm}`}>
+                      {" "}
+                      {key < 5 ? item.navheading : null}
+                    </NavLink>
+                  </NavItem>
+                ))}
+              </Nav>
+              <Nav className="navbar-right nav text-primary" navbar>
+                <NavItem>
+                  <DropdownButton
+                    id="dropdown-basic-button"
+                    title="Contact Us"
+                    data-bs-theme="dark"
+                  >
+                    <Dropdown.Item href="/#contact">Referal</Dropdown.Item>
+                    <Dropdown.Item href="/index1">Enquairy</Dropdown.Item>
+                    <Dropdown.Item href="/#get-started">Carreer</Dropdown.Item>
+                    <Dropdown.Item href="/#blog">Feedback</Dropdown.Item>
+                  </DropdownButton>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Container>
+        </div>
       </React.Fragment>
     );
   }
