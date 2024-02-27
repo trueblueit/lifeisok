@@ -22,7 +22,7 @@ class Navbar_Page extends Component {
         { id: 2, idnm: "features", navheading: "Features" },
         { id: 3, idnm: "services", navheading: "Services" },
         { id: 4, idnm: "about", navheading: "About" },
-        { id: 5, idnm: "pricing", navheading: "Pricing" },
+        { id: 5, idnm: "accomodation", navheading: "Accomodation" },
         { id: 6, idnm: "blog", navheading: "Blog" },
         { id: 7, idnm: "get-started", navheading: "Blog" },
       ],

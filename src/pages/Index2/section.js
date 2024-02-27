@@ -1,15 +1,10 @@
-import React, { Component} from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 
-//Importing Modal
-import ModalSection from "../../components/common/ModalSection";
+import Image from "react-bootstrap/Image";
 
 import Lottie from "lottie-react";
 import animationdata from "../../animation/Animation - 1708004346894.json";
-import animationdata2 from "../../animation/Animation - 1708004811580.json";
-
-
 
 class Section extends Component {
   constructor() {
@@ -32,24 +27,31 @@ class Section extends Component {
           <Container>
             <Row>
               <p className="animationbox">
-                <Lottie animationData={animationdata} ></Lottie>
+                <Lottie animationData={animationdata}></Lottie>
               </p>
-              <p className="animationbox2">
-                <Lottie loop={false} animationData={animationdata2} ></Lottie>
+              <p className="animationbox1">
+                <Image
+                  src="assets/lifeisok/1701306967757.jpg"
+                  height={350}
+                  width={350}
+                  roundedCircle
+                />
               </p>
+
               <Col
                 lg={{ size: 8, offset: 2 }}
                 className="text-white text-center"
               >
                 <h4 className="home-small-title"></h4>
-                <h1 className="home-title">Providing best Support for Your Choice</h1>
+                <h1 className="home-title">
+                  Providing best Support for Your Choice
+                </h1>
                 <p className="pt-3 home-desc mx-auto">
-                Dedicated to improving the quality of life for people with disabilites. Aims to build a partnership with NDIS Participants to learn what they want to learn and achieve.
+                  Dedicated to improving the quality of life for people with
+                  disabilites. Aims to build a partnership with NDIS
+                  Participants to learn what they want to learn and achieve.
                 </p>
-                
               </Col>
-              
-              
             </Row>
           </Container>
 
