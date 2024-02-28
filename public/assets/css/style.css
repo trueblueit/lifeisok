@@ -160,6 +160,10 @@ p {
   left: 0;
   top: 0;
 }
+
+.about {
+  background: #ebe7e4;
+}
 .bg-overlay-org {
   background-color: #ff6900 !important;
   opacity: 0.95;
