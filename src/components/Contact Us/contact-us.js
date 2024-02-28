@@ -56,6 +56,18 @@ const ContactUs = () => {
             </Row>
           </div>
         </Container>
+        <Row className="justify-content-md-center">
+          <Col lg="3">
+            <Link to="/index5" className="btn btn-orange class mt-5 ">
+              Referral
+            </Link>
+          </Col>
+          <Col lg="2">
+            <Link to="/index1" className="btn btn-orange class mt-5 ">
+              Enquire
+            </Link>
+          </Col>
+        </Row>
       </section>
     </React.Fragment>
   );
