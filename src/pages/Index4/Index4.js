@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import React, { Component } from "react";
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Footer from "../../components/Footer/footer";
 import Contact from "../../components/Contact Us/contact-us";

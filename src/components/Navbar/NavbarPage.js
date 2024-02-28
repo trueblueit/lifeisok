@@ -102,8 +102,8 @@ class Navbar_Page extends Component {
                     title="Contact Us"
                     data-bs-theme="dark"
                   >
-                    <Dropdown.Item href="/#contact">Referal</Dropdown.Item>
-                    <Dropdown.Item href="/index1">Enquairy</Dropdown.Item>
+                    <Dropdown.Item href="/index5">Referal</Dropdown.Item>
+                    <Dropdown.Item href="/index1">Enquire</Dropdown.Item>
                     <Dropdown.Item href="/#get-started">Carreer</Dropdown.Item>
                     <Dropdown.Item href="/#blog">Feedback</Dropdown.Item>
                   </DropdownButton>

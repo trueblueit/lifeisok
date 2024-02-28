@@ -56,20 +56,34 @@ const ContactUs = () => {
             </Row>
           </div>
         </Container>
-        <Col lg={{ size: 8, order: 2 }} xs={{ order: 1 }}>
-          <div className="features-img">
-            <img src="assets/lifeisok/NDIS.jpeg" />
-          </div>
-        </Col>
-        <Col lg={{ size: 9, order: 2 }} xs={{ order: 1 }}>
-          <div className="features-img">
-            <a href="www.facebook.com">
-              <img src="assets/lifeisok/facebook.png" />
-            </a>
-            <img src="assets/lifeisok/linkedin.png" />
-            <img src="assets/lifeisok/instagram.png" />
-          </div>
-        </Col>
+        <Row className="justify-content-md-center">
+          <Col lg="3">
+            <Link to="/index5" className="btn btn-orange class mt-5 ">
+              Referral
+            </Link>
+          </Col>
+          <Col lg="2">
+            <Link to="/index1" className="btn btn-orange class mt-5 ">
+              Enquire
+            </Link>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={{ size: 8, order: 2 }} xs={{ order: 1 }}>
+            <div className="features-img">
+              <img src="assets/lifeisok/NDIS.jpeg" />
+            </div>
+          </Col>
+          <Col lg={{ size: 9, order: 2 }} xs={{ order: 1 }}>
+            <div className="features-img">
+              <a href="www.facebook.com">
+                <img src="assets/lifeisok/facebook.png" />
+              </a>
+              <img src="assets/lifeisok/linkedin.png" />
+              <img src="assets/lifeisok/instagram.png" />
+            </div>
+          </Col>
+        </Row>
       </section>
     </React.Fragment>
   );
