@@ -31,7 +31,7 @@ class Section extends Component {
               </p>
               <p className="animationbox1">
                 <Image
-                  src="assets/lifeisok/1701306967757.jpg"
+                  src="assets/lifeisok/Photo-1.jpg"
                   height={350}
                   width={350}
                   roundedCircle
