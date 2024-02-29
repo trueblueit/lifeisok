@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class AboutUs extends Component {
   render() {
     return (

@@ -1704,11 +1704,6 @@ iframe {
   top: 14px;
 }
 
-.features-img {
-  max-width: 500px;
-  margin: 0 0 0 auto;
-}
-
 [dir="rtl"] .features-box .features-item-list li:before {
   right: 0;
 }

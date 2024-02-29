@@ -1,23 +1,42 @@
+import { Component } from "react";
 import React from "react";
 
-const Footer = () => {
-  return (
-    <footer style={styles.footer}>
-      <p>&copy; 2024 Life Iis Ok. All rights reserved.</p>
-    </footer>
-  );
-};
+import { Row, Col } from "reactstrap";
 
-const styles = {
-  footer: {
-    backgroundColor: "#333",
-    color: "#fff",
-    padding: "20px",
-    textAlign: "center",
-    bottom: "0",
-    width: "100%",
-    height: "8%",
-  },
-};
+class Footer extends Component {
+  state = {
+    socials: [
+      { icon: "mdi mdi-facebook", link: "#" },
+      { icon: "mdi mdi-linkedin", link: "#" },
+    ],
+  };
+  render() {
+    return (
+      <footer className="footer">
+        <Row>
+          <div>
+            <img src="assets/lifeisok/NDIS.jpeg" />
+          </div>
+        </Row>
+        <Row>
+          <div className="mt-3">
+            <a href="https://www.facebook.com/lifeisok.au/">
+              <img src="assets/lifeisok/facebook.png" />
+            </a>
+            <a href="https://www.linkedin.com/company/life-is-ok/">
+              <img className="ms-3" src="assets/lifeisok/linkedin.png" />
+            </a>
+            <a href="">
+              <img className="ms-3" src="assets/lifeisok/instagram.png" />
+            </a>
+          </div>
+        </Row>
+        <p className="mt-5 mb-0">
+          &copy; 2024 Life Iis Ok. All rights reserved.
+        </p>
+      </footer>
+    );
+  }
+}
 
 export default Footer;

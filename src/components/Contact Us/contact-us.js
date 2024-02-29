@@ -9,6 +9,7 @@ import {
   Input,
 } from "reactstrap";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 //Import Section Title
@@ -68,22 +69,8 @@ const ContactUs = () => {
             </Link>
           </Col>
         </Row>
-        <Row>
-          <Col lg={{ size: 8, order: 2 }} xs={{ order: 1 }}>
-            <div className="features-img">
-              <img src="assets/lifeisok/NDIS.jpeg" />
-            </div>
-          </Col>
-          <Col lg={{ size: 9, order: 2 }} xs={{ order: 1 }}>
-            <div className="features-img">
-              <a href="www.facebook.com">
-                <img src="assets/lifeisok/facebook.png" />
-              </a>
-              <img src="assets/lifeisok/linkedin.png" />
-              <img src="assets/lifeisok/instagram.png" />
-            </div>
-          </Col>
-        </Row>
+
+        <FontAwesomeIcon icon="fa-solid fa-coffee" listItem />
       </section>
     </React.Fragment>
   );

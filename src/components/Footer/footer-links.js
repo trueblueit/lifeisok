@@ -15,7 +15,7 @@ class FooterLinks extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="footer-alt">
+        <footer className="footer-alt">
           <Container>
             <Row>
               <Col lg="12">
@@ -39,7 +39,7 @@ class FooterLinks extends Component {
               </Col>
             </Row>
           </Container>
-        </div>
+        </footer>
       </React.Fragment>
     );
   }
