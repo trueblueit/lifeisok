@@ -26,13 +26,12 @@ class Section extends Component {
                 lg={{ size: 8, offset: 2 }}
                 className="text-white text-center"
               >
-                <h4 className="home-small-title"></h4>
                 <h1 className="home-title">Our Support Services</h1>
-                <p className="pt-3 home-desc mx-auto">
+                <h3 className=" mx-auto">
                   We offer person-centred, strength-based support services,
                   committed to maintaining excellence throughout your journey
                   with us.
-                </p>
+                </h3>
               </Col>
             </Row>
           </Container>
