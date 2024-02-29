@@ -73,7 +73,7 @@ class Index4 extends Component {
                   to deliver services that includes:
                 </p>
 
-                <ul className="text-muted list-unstyled mt-4 features-item-list list-group list-group-flush">
+                <ul className="mt-4 features-item-list list-group list-group-flush">
                   <li className="list-group-item">
                     Assistance with social and community participation
                   </li>
