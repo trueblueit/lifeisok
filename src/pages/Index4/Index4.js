@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import React, { Component } from "react";
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Footer from "../../components/Footer/footer";
 import Contact from "../../components/Contact Us/contact-us";
@@ -74,19 +73,25 @@ class Index4 extends Component {
                   to deliver services that includes:
                 </p>
 
-                <ul className="text-muted list-unstyled mt-4 features-item-list">
-                  <li className="">
+                <ul className="text-muted list-unstyled mt-4 features-item-list list-group list-group-flush">
+                  <li className="list-group-item">
                     Assistance with social and community participation
                   </li>
-                  <li className="">
+                  <li className="list-group-item">
                     Increased social and community participation
                   </li>
-                  <li className="">Improve health and wellbeing</li>
-                  <li className="">Improve daily living</li>
-                  <li className="">Finding and keeping the job</li>
-                  <li className="">Improve life choices </li>
-                  <li className="">Assistance with daily living</li>
-                  <li className="">School Leavers Employment</li>
+                  <li className="list-group-item">
+                    Improve health and wellbeing
+                  </li>
+                  <li className="list-group-item">Improve daily living</li>
+                  <li className="list-group-item">
+                    Finding and keeping the job
+                  </li>
+                  <li className="list-group-item">Improve life choices </li>
+                  <li className="list-group-item">
+                    Assistance with daily living
+                  </li>
+                  <li className="list-group-item">School Leavers Employment</li>
                 </ul>
               </div>
             </Col>
