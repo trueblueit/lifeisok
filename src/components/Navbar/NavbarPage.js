@@ -88,7 +88,7 @@ class Navbar_Page extends Component {
                     key={key}
                     className={item.idnm === "Home" ? "active" : ""}
                   >
-                    <NavLink href={`/#${item.idnm}`}>
+                    <NavLink href={key == 3 ? "/index4" : `/#${item.idnm}`}>
                       {" "}
                       {key < 5 ? item.navheading : null}
                     </NavLink>
