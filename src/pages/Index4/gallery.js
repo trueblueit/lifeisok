@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import Card from "react-bootstrap/Card";
 class Gallery extends Component {
   state = {
-    clients: [
+    images: [
       { id: 1, img: "assets/lifeisok/1.jpeg" },
       {
         id: 2,
@@ -22,10 +22,10 @@ class Gallery extends Component {
           <Container>
             <h1 class="text-center">Gallery</h1>
             <Row>
-              {this.state.clients.map((client) => (
-                <Col key={client.id} md={4} sm={6} xs={12}>
+              {this.state.images.map((image) => (
+                <Col key={image.id} md={4} sm={6} xs={12}>
                   <Card style={{ marginBottom: "15px" }}>
-                    <Card.Img variant="top" src={client.img} />
+                    <Card.Img variant="top" src={image.img} />
                   </Card>
                 </Col>
               ))}

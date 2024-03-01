@@ -1,42 +1,50 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 
-
+import Card from "react-bootstrap/Card";
 
 class Clients extends Component {
   state = {
     clients: [
       { id: 1, img: "assets/images/icons/1.png", name: "COMPASSION" },
-      { id: 2, img: "assets/images/icons/2.png" , name:"TOGETHERNESS/INTEGRITY" },
-      { id: 3, img: "assets/images/icons/3.png" , name:"RESEPCT" },
-      { id: 4, img: "assets/images/icons/4.png" , name:"TRUST" },
+      {
+        id: 2,
+        img: "assets/images/icons/2.png",
+        name: "TOGETHERNESS/INTEGRITY",
+      },
+      { id: 3, img: "assets/images/icons/3.png", name: "RESEPCT" },
+      { id: 4, img: "assets/images/icons/4.png", name: "TRUST" },
     ],
   };
+
   render() {
     return (
       <React.Fragment>
         <section className="section-sm bg-light">
-          
-          <Container >
-            <h1 class="text-center" >
-            Our Values
-            </h1>
-            <Row>
-              {this.state.clients.map((client, key) => (
-                  <Col md="3" key={key}>
-                    <div className=" text-center value-shadow">
-                      {client.name}
-                      <img
+          <Container>
+            <h1 className="text-center mycolor">Our Values</h1>
+            <Row className="justify-content-center">
+              {this.state.clients.map((client) => (
+                <Col md="auto" key={client.id}>
+                  <Card
+                    className="text-center value-shadow"
+                    style={{ maxWidth: "18rem", overflow: "hidden" }}
+                  >
+                    <Card.Body>
+                      <Card.Title>{client.name}</Card.Title>
+                      <Card.Img
+                        variant="top"
                         src={client.img}
                         alt="logo-img"
-                        className="mx-auto img-fluid d-block"
+                        className="image-fluid"
                       />
-                    </div>
+                    </Card.Body>
+                  </Card>
                 </Col>
               ))}
             </Row>
           </Container>
-        </section> 
+        </section>
       </React.Fragment>
     );
   }

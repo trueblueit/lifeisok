@@ -9,7 +9,6 @@ import {
   Input,
 } from "reactstrap";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 //Import Section Title
@@ -69,8 +68,6 @@ const ContactUs = () => {
             </Link>
           </Col>
         </Row>
-
-        <FontAwesomeIcon icon="fa-solid fa-coffee" listItem />
       </section>
     </React.Fragment>
   );

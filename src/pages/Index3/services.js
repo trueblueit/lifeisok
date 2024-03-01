@@ -67,58 +67,69 @@ const Services = () => {
         </Col>
 
         <Col lg={{ size: 8, offset: 2 }}>
-          {key !== 2 && (
-            <div>
-              <h2 className="mx-auto text-success text-center">
-                {teamMembers[key].name}
-              </h2>
-              <h4 className="ml-auto">{teamMembers[key].description}</h4>
-              <img src={teamMembers[key].imag} height={350} width={350} />
-            </div>
-          )}
-          {key === 2 && (
-            <Accordion defaultActiveKey="0">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>
-                  Supported independent living{" "}
-                </Accordion.Header>
-                <Accordion.Body>
-                  In our SIL, you’ll enjoy a safe, comfortable, and supportive
-                  living environment where your daily needs are met. Our
-                  dedicated SIL team provides person-centered care to help plan
-                  your recovery journey, build independence, and achieve your
-                  goals. Long-term SIL services are offered in Palmerston and
-                  Darwin.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>Short term accommodation</Accordion.Header>
-                <Accordion.Body>
-                  Our Short-Term Accommodation (STA) provides a safe haven away
-                  from your usual residence. During your stay, we offer
-                  personalized support that covers appointments, social outings,
-                  family visits, daily living, self-care, and planning for
-                  psychosocial recovery and NDIS. STA is available for up to 14
-                  days at shared residential sites in Darwin.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="2">
-                <Accordion.Header>
-                  Medium term accommodation (MTA)
-                </Accordion.Header>
-                <Accordion.Body>
-                  NDIS participants can stay at our MTA during a transitional
-                  period (such as when leaving the hospital or released from
-                  Corrections). Throughout your recovery journey, our
-                  residential staff will provide you with support and guidance
-                  so that you can move into more permanent accommodations and
-                  support your psychosocial recovery goal. For a period of up to
-                  90 days, we provide MTA at shared residential locations
-                  throughout Darwin.
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          )}
+          <Row>
+            <Col>
+              {key !== 2 && (
+                <div>
+                  <h2 className="mx-auto text-success text-center">
+                    {teamMembers[key].name}
+                  </h2>
+                  <p className="ml-auto">{teamMembers[key].description}</p>
+                </div>
+              )}
+              {key === 2 && (
+                <Accordion defaultActiveKey="0">
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>
+                      Supported independent living{" "}
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      In our SIL, you’ll enjoy a safe, comfortable, and
+                      supportive living environment where your daily needs are
+                      met. Our dedicated SIL team provides person-centered care
+                      to help plan your recovery journey, build independence,
+                      and achieve your goals. Long-term SIL services are offered
+                      in Palmerston and Darwin.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>
+                      Short term accommodation
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      Our Short-Term Accommodation (STA) provides a safe haven
+                      away from your usual residence. During your stay, we offer
+                      personalized support that covers appointments, social
+                      outings, family visits, daily living, self-care, and
+                      planning for psychosocial recovery and NDIS. STA is
+                      available for up to 14 days at shared residential sites in
+                      Darwin.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="2">
+                    <Accordion.Header>
+                      Medium term accommodation (MTA)
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      NDIS participants can stay at our MTA during a
+                      transitional period (such as when leaving the hospital or
+                      released from Corrections). Throughout your recovery
+                      journey, our residential staff will provide you with
+                      support and guidance so that you can move into more
+                      permanent accommodations and support your psychosocial
+                      recovery goal. For a period of up to 90 days, we provide
+                      MTA at shared residential locations throughout Darwin.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              )}
+            </Col>
+            <Col>
+              {key == 2 ? null : (
+                <img src={teamMembers[key].imag} height={350} width={350} />
+              )}
+            </Col>
+          </Row>
         </Col>
       </Row>
     </React.Fragment>

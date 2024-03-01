@@ -134,6 +134,7 @@ p {
   -webkit-justify-content: center;
   flex-direction: row;
 }
+/*Rate Us*/
 .star-rating {
   font-size: 2rem;
   cursor: pointer;
@@ -148,6 +149,31 @@ p {
 .star.filled {
   color: #ffc107;
 }
+/* our changes*/
+.mycolor {
+  color: #ff6900;
+}
+.mycolor:hover {
+  color: #ff8911;
+}
+.custom-dropdown {
+  background-color: orange !important;
+  color: white !important;
+}
+.mybg {
+  background: url("../lifeisok/Waves.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footerbg {
+  background: url("../lifeisok/Texture-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*background */
 
 .bg-overlay {
   background: linear-gradient(to right, #ff6900, #ff8911);
@@ -401,8 +427,8 @@ iframe {
   color: whitesmoke;
 }
 .btn-primary {
-  background: #4341cc;
-  border-color: #4341cc !important;
+  background: #f09105;
+  border-color: #f09105 !important;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -412,8 +438,8 @@ iframe {
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary .open > .dropdown-toggle.btn-primary {
-  background: #3735c4;
-  border-color: #3735c4;
+  background: #f7a62d;
+  border-color: #f7a62d;
 }
 
 .btn-outline-primary {
@@ -1335,14 +1361,14 @@ iframe {
   top: 25%;
 }
 .animationboxbg {
-  opacity: 0.8;
+  opacity: 0.95;
   position: absolute;
-  height: 20%;
+  height: 60%;
   width: 100%;
   right: 0;
   bottom: 0;
   left: 0;
-  top: 9%;
+  top: 0%;
   z-index: -1;
 }
 .animationboxbg2 {
@@ -1389,6 +1415,7 @@ iframe {
   padding: 10px 0px;
   box-shadow: 0px 3px 10px 0px rgba(38, 107, 193, 0.08);
 }
+/*made the navbar orange */
 .nav-sticky.navbar-custom.sticky-dark {
   background-color: #ff6900;
 }

@@ -75,7 +75,7 @@ export function WebsiteDescription() {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <React.Fragment>
-      <section className="section" id="get-started">
+      <section className="section mybg" id="get-started">
         <div className="bg-overlay"></div>
         <Row>
           <Col lg="12" className="text-center">
