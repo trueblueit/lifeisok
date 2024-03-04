@@ -27,11 +27,11 @@ class Section extends Component {
                 className="text-white text-center"
               >
                 <h1 className="home-title">Our Support Services</h1>
-                <h3 className=" mx-auto">
+                <h4 className="mx-auto">
                   We offer person-centred, strength-based support services,
                   committed to maintaining excellence throughout your journey
                   with us.
-                </h3>
+                </h4>
               </Col>
             </Row>
           </Container>

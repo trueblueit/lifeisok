@@ -8,7 +8,7 @@ function Referral() {
   return (
     <div class="container mt-5">
       <div class="row">
-        <Form>
+        <Form className="m-3">
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Participant Details</Form.Label>
             <Row>

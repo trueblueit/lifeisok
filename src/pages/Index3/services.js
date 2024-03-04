@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Accordion from "react-bootstrap/Accordion";
-
+import Image from "react-bootstrap/Image";
 import { Row, Col } from "reactstrap";
 
 const Services = () => {
@@ -43,23 +43,38 @@ const Services = () => {
 
   return (
     <React.Fragment>
-      <Row>
+      <Row className="mb-5">
         <Col>
-          <div id="list-example" class="list-group ">
-            <ButtonGroup vertical aria-label="Basic example">
-              <Button onClick={() => handleKey(0)} variant="secondary">
+          <div id="list-example" class="list-group mt-5 mb-5">
+            <ButtonGroup aria-label="Basic example">
+              <Button
+                variant={key == 0 ? "primary" : "secondary"}
+                onClick={() => handleKey(0)}
+              >
                 Core Outreach Support
               </Button>
-              <Button onClick={() => handleKey(1)} variant="secondary">
+              <Button
+                onClick={() => handleKey(1)}
+                variant={key == 1 ? "primary" : "secondary"}
+              >
                 Capacity Building Outreach Supports
               </Button>
-              <Button onClick={() => handleKey(2)} variant="secondary">
+              <Button
+                onClick={() => handleKey(2)}
+                variant={key == 2 ? "primary" : "secondary"}
+              >
                 Accommodation Supports
               </Button>
-              <Button onClick={() => handleKey(3)} variant="secondary">
+              <Button
+                onClick={() => handleKey(3)}
+                variant={key == 3 ? "primary" : "secondary"}
+              >
                 Support Coordination
               </Button>
-              <Button onClick={() => handleKey(4)} variant="secondary">
+              <Button
+                onClick={() => handleKey(4)}
+                variant={key == 4 ? "primary" : "secondary"}
+              >
                 Supports in Employment
               </Button>
             </ButtonGroup>
@@ -126,7 +141,13 @@ const Services = () => {
             </Col>
             <Col>
               {key == 2 ? null : (
-                <img src={teamMembers[key].imag} height={350} width={350} />
+                <Image
+                  className="m-5"
+                  src={teamMembers[key].imag}
+                  height={350}
+                  width={350}
+                  rounded
+                />
               )}
             </Col>
           </Row>

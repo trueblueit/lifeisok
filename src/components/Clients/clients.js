@@ -23,7 +23,7 @@ class Clients extends Component {
         <section className="section-sm bg-light">
           <Container>
             <h1 className="text-center mycolor">Our Values</h1>
-            <Row className="justify-content-center">
+            <Row>
               {this.state.clients.map((client) => (
                 <Col md="auto" key={client.id}>
                   <Card

@@ -84,7 +84,11 @@ export function WebsiteDescription() {
               Founded by a team of professionals to improve the quality of life
               for people with difficulties.
             </p>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+            <Button
+              className="mt-5"
+              variant="primary"
+              onClick={() => setModalShow(true)}
+            >
               Join Us
             </Button>
 

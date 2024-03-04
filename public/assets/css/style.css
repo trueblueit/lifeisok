@@ -156,6 +156,9 @@ p {
 .mycolor:hover {
   color: #ff8911;
 }
+.mybtn {
+  background-color: #ff6900;
+}
 .custom-dropdown {
   background-color: orange !important;
   color: white !important;

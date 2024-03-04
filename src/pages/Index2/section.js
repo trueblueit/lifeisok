@@ -42,7 +42,6 @@ class Section extends Component {
                 lg={{ size: 8, offset: 2 }}
                 className="text-white text-center"
               >
-                <h4 className="home-small-title"></h4>
                 <h1 className="home-title">
                   Providing best Support for Your Choice
                 </h1>

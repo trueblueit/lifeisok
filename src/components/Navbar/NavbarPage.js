@@ -65,7 +65,10 @@ class Navbar_Page extends Component {
           }`}
         >
           <Container>
-            <NavbarBrand className="logo text-uppercase" href="/">
+            <NavbarBrand
+              className="logo text-uppercase order-1 order-lg-0 me-lg-0 me-2"
+              href="/"
+            >
               <img src="assets/lifeisok/favicon.png" height={50} width={50} />{" "}
               Life is ok
             </NavbarBrand>
@@ -89,7 +92,6 @@ class Navbar_Page extends Component {
                     className={item.idnm === "Home" ? "active" : ""}
                   >
                     <NavLink href={key == 3 ? "/index4" : `/#${item.idnm}`}>
-                      {" "}
                       {key < 5 ? item.navheading : null}
                     </NavLink>
                   </NavItem>
