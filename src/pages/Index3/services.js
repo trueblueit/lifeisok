@@ -1,9 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Accordion from "react-bootstrap/Accordion";
 import Image from "react-bootstrap/Image";
-import { Row, Col } from "reactstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const Services = () => {
   const teamMembers = [
@@ -20,7 +22,7 @@ const Services = () => {
       imag: "assets/lifeisok/sil.jpg",
     },
     {
-      name: "",
+      name: "Accommodation Supports",
       description: "",
     },
     {
@@ -43,116 +45,101 @@ const Services = () => {
 
   return (
     <React.Fragment>
-      <Row className="mb-5">
-        <Col>
-          <div id="list-example" class="list-group mt-5 mb-5">
-            <ButtonGroup aria-label="Basic example">
-              <Button
-                variant={key == 0 ? "primary" : "secondary"}
-                onClick={() => handleKey(0)}
-              >
-                Core Outreach Support
-              </Button>
-              <Button
-                onClick={() => handleKey(1)}
-                variant={key == 1 ? "primary" : "secondary"}
-              >
-                Capacity Building Outreach Supports
-              </Button>
-              <Button
-                onClick={() => handleKey(2)}
-                variant={key == 2 ? "primary" : "secondary"}
-              >
-                Accommodation Supports
-              </Button>
-              <Button
-                onClick={() => handleKey(3)}
-                variant={key == 3 ? "primary" : "secondary"}
-              >
-                Support Coordination
-              </Button>
-              <Button
-                onClick={() => handleKey(4)}
-                variant={key == 4 ? "primary" : "secondary"}
-              >
-                Supports in Employment
-              </Button>
-            </ButtonGroup>
-          </div>
-        </Col>
-
-        <Col lg={{ size: 8, offset: 2 }}>
+      <Container fluid>
+        <Container fluid>
           <Row>
-            <Col>
-              {key !== 2 && (
-                <div>
-                  <h2 className="mx-auto text-success text-center">
-                    {teamMembers[key].name}
-                  </h2>
-                  <p className="ml-auto">{teamMembers[key].description}</p>
-                </div>
-              )}
-              {key === 2 && (
-                <Accordion defaultActiveKey="0">
-                  <Accordion.Item eventKey="0">
-                    <Accordion.Header>
-                      Supported independent living{" "}
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      In our SIL, you’ll enjoy a safe, comfortable, and
-                      supportive living environment where your daily needs are
-                      met. Our dedicated SIL team provides person-centered care
-                      to help plan your recovery journey, build independence,
-                      and achieve your goals. Long-term SIL services are offered
-                      in Palmerston and Darwin.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1">
-                    <Accordion.Header>
-                      Short term accommodation
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      Our Short-Term Accommodation (STA) provides a safe haven
-                      away from your usual residence. During your stay, we offer
-                      personalized support that covers appointments, social
-                      outings, family visits, daily living, self-care, and
-                      planning for psychosocial recovery and NDIS. STA is
-                      available for up to 14 days at shared residential sites in
-                      Darwin.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="2">
-                    <Accordion.Header>
-                      Medium term accommodation (MTA)
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      NDIS participants can stay at our MTA during a
-                      transitional period (such as when leaving the hospital or
-                      released from Corrections). Throughout your recovery
-                      journey, our residential staff will provide you with
-                      support and guidance so that you can move into more
-                      permanent accommodations and support your psychosocial
-                      recovery goal. For a period of up to 90 days, we provide
-                      MTA at shared residential locations throughout Darwin.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              )}
-            </Col>
-            <Col>
-              {key == 2 ? null : (
-                <Image
-                  className="m-5"
-                  src={teamMembers[key].imag}
-                  height={350}
-                  width={350}
-                  rounded
-                />
-              )}
-            </Col>
+            <div id="list-example" class="list-group mt-5 mb-5">
+              <ButtonGroup
+                aria-label="Basic example"
+                vertical
+                className="d-md-flex flex-md-row"
+              >
+                {teamMembers.map((member, index) => (
+                  <Button
+                    key={index}
+                    variant={key === index ? "primary" : "secondary"}
+                    onClick={() => handleKey(index)}
+                  >
+                    {member.name}
+                  </Button>
+                ))}
+              </ButtonGroup>
+            </div>
           </Row>
-        </Col>
-      </Row>
+
+          <Col lg={{ size: 8, offset: 2 }}>
+            <Row>
+              <Col>
+                {key !== 2 && (
+                  <div>
+                    <h2 className="mx-auto text-success text-center">
+                      {teamMembers[key].name}
+                    </h2>
+                    <p className="ml-auto">{teamMembers[key].description}</p>
+                  </div>
+                )}
+                {key === 2 && (
+                  <Accordion defaultActiveKey="0">
+                    <Accordion.Item eventKey="0">
+                      <Accordion.Header>
+                        Supported independent living{" "}
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        In our SIL, you’ll enjoy a safe, comfortable, and
+                        supportive living environment where your daily needs are
+                        met. Our dedicated SIL team provides person-centered
+                        care to help plan your recovery journey, build
+                        independence, and achieve your goals. Long-term SIL
+                        services are offered in Palmerston and Darwin.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                      <Accordion.Header>
+                        Short term accommodation
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        Our Short-Term Accommodation (STA) provides a safe haven
+                        away from your usual residence. During your stay, we
+                        offer personalized support that covers appointments,
+                        social outings, family visits, daily living, self-care,
+                        and planning for psychosocial recovery and NDIS. STA is
+                        available for up to 14 days at shared residential sites
+                        in Darwin.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                      <Accordion.Header>
+                        Medium term accommodation (MTA)
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        NDIS participants can stay at our MTA during a
+                        transitional period (such as when leaving the hospital
+                        or released from Corrections). Throughout your recovery
+                        journey, our residential staff will provide you with
+                        support and guidance so that you can move into more
+                        permanent accommodations and support your psychosocial
+                        recovery goal. For a period of up to 90 days, we provide
+                        MTA at shared residential locations throughout Darwin.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                )}
+              </Col>
+              <Col>
+                {key === 2 ? null : (
+                  <Image
+                    className="m-5"
+                    src={teamMembers[key].imag}
+                    height={350}
+                    width={350}
+                    rounded
+                  />
+                )}
+              </Col>
+            </Row>
+          </Col>
+        </Container>
+      </Container>
     </React.Fragment>
   );
 };

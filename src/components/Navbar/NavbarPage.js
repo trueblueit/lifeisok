@@ -64,7 +64,7 @@ class Navbar_Page extends Component {
             isNavSticky ? "nav-sticky  sticky-dark" : ""
           }`}
         >
-          <Container>
+          <Container fluid>
             <NavbarBrand
               className="logo text-uppercase order-1 order-lg-0 me-lg-0 me-2"
               href="/"
@@ -73,19 +73,12 @@ class Navbar_Page extends Component {
               Life is ok
             </NavbarBrand>
 
-            <NavbarToggler
-              className=""
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse"
-              aria-expanded="false"
-              onClick={this.toggle}
-            >
+            <NavbarToggler className="" onClick={this.toggle}>
               <i className="mdi mdi-menu"></i>
             </NavbarToggler>
 
             <Collapse id="navbarCollapse" isOpen={isOpenMenu} navbar>
-              <Nav className="navbar-nav navbar-center" id="mySidenav">
+              <Nav className="navbar-nav navbar-center ms-auto" id="mySidenav">
                 {navItems.map((item, key) => (
                   <NavItem
                     key={key}
