@@ -6,6 +6,7 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Carousel from "react-bootstrap/Carousel";
 
 const Services = () => {
   const teamMembers = [
@@ -38,6 +39,33 @@ const Services = () => {
       imag: "assets/lifeisok/mta.jpg",
     },
   ];
+  const houses = [
+    {
+      name: "Image-1",
+      imag: "assets/lifeisok/house/1.jpg",
+    },
+    {
+      name: "Image-2",
+      imag: "assets/lifeisok/house/2.jpg",
+    },
+    {
+      name: "Image-3",
+      imag: "assets/lifeisok/house/3.jpg",
+    },
+    {
+      name: "Image-4",
+      imag: "assets/lifeisok/house/4.jpg",
+    },
+    {
+      name: "Image-5",
+      imag: "assets/lifeisok/house/5.jpg",
+    },
+    {
+      name: "Image-6",
+      imag: "assets/lifeisok/house/6.jpg",
+    },
+  ];
+
   const [key, setCount] = useState(0);
   const handleKey = (number) => {
     setCount(number);
@@ -126,7 +154,26 @@ const Services = () => {
                 )}
               </Col>
 
-              {key === 2 ? null : (
+              {key === 2 ? (
+                <Col xs={12} md={6}>
+                  <Carousel fade>
+                    {houses.map((house, index) => (
+                      <Carousel.Item key={index}>
+                        <Image
+                          className="mt-3"
+                          src={house.imag}
+                          alt={house.name}
+                          rounded
+                          fluid
+                        />
+                        <Carousel.Caption>
+                          <h3>{house.name}</h3>
+                        </Carousel.Caption>
+                      </Carousel.Item>
+                    ))}
+                  </Carousel>
+                </Col>
+              ) : (
                 <Col xs={12} md={6}>
                   <Image
                     className="mt-3"
