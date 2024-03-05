@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
 class Gallery extends Component {
   state = {
     images: [
@@ -18,20 +19,18 @@ class Gallery extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section-sm bg-light">
-          <Container>
-            <h1 class="text-center">Gallery</h1>
-            <Row>
-              {this.state.images.map((image) => (
-                <Col key={image.id} md={4} sm={6} xs={12}>
-                  <Card style={{ marginBottom: "15px" }}>
-                    <Card.Img variant="top" src={image.img} />
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
+        <Container fluid>
+          <h1 class="text-center">Gallery</h1>
+          <Row>
+            {this.state.images.map((image) => (
+              <Col key={image.id} md={4} sm={6} xs={12}>
+                <Card style={{ marginBottom: "15px" }}>
+                  <Card.Img variant="top" src={image.img} />
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </React.Fragment>
     );
   }

@@ -1,9 +1,10 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import Container from "react-bootstrap/Container";
 function Contactus() {
   return (
-    <div class="container mt-5">
+    <Container fluid class="mt-5">
       <div class="row">
         <Form class="col text-center">
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -37,7 +38,7 @@ function Contactus() {
           </div>
         </Form>
       </div>
-    </div>
+    </Container>
   );
 }
 

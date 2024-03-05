@@ -8,7 +8,7 @@ function Section() {
       <section className="section" id="contact us">
         <div className="bg-overlay"></div>
         <Container>
-          <Row>
+          <Row className="justify-content-center">
             <Col lg={{ size: 8, offset: 2 }} className="text-white text-center">
               <h1 className="home-title">Contact Us</h1>
               <p className="pt-3 home-desc mx-auto">

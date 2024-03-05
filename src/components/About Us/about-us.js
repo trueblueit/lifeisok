@@ -8,9 +8,9 @@ class AboutUs extends Component {
       <React.Fragment>
         <section className="section" id="about">
           <Container>
-            <Row>
-              <Col lg={{ size: 8, offset: 2 }}>
-                <div className="about-title mx-auto text-center">
+            <Row className="justify-content-center">
+              <Col lg="8">
+                <div className="about-title text-center">
                   <h2 className="font-weight-light">About Us </h2>
                   <p className="text-muted pt-4">
                     “Life Is OK” aspires to be business role models through

@@ -11,10 +11,7 @@ class Index4 extends Component {
         <NavbarPage />
         <Aboutbody />
         <Gallery />
-
-        {/* Importing Get Footer */}
         <Contact />
-
         <Footer />
       </React.Fragment>
     );
