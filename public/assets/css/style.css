@@ -164,7 +164,7 @@ p {
   color: white !important;
 }
 .mybg {
-  background: url("../lifeisok/Waves.png");
+  background: url("../lifeisok/art.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1753,7 +1753,7 @@ iframe {
 }
 
 .bg-get-start {
-  background: url("../images/img-2.jpg");
+  background: url("../images/art.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
