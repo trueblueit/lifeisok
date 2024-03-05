@@ -1241,11 +1241,6 @@ iframe {
   border-color: #fafbfe;
 }
 
-[data-bs-theme="dark"] .btn-white:hover,
-[data-bs-theme="dark"] .btn-white.active {
-  color: #272a33;
-}
-
 .navbar-custom {
   padding: 20px 0px;
   width: 100%;
@@ -1287,7 +1282,7 @@ iframe {
   font-size: 24px;
   margin-top: 5px;
   margin-bottom: 0px;
-  color: #272a33;
+  color: #ff6900;
 }
 
 .navbar-custom .navbar-nav li a.active,
@@ -1445,12 +1440,12 @@ iframe {
 .nav-sticky .navbar-custom {
   margin-top: 0px;
   padding: 10px 0px;
-  background-color: #272a33;
-  box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+  background-color: #ff6900;
+  box-shadow: 0 10px 33px rgba(255, 255, 255, 0.1);
 }
 
 [data-bs-theme="dark"] .nav-sticky.navbar-custom.sticky-dark {
-  background-color: #141c26;
+  background-color: #ff6900;
 }
 
 .bg-home {
@@ -2281,7 +2276,7 @@ ul.pattern .color8 {
     padding: 10px 0px !important;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
     color: #ffffff !important;
-    background: #272a33;
+    background: #ff6900;
   }
   .navbar-custom .navbar-nav {
     margin-left: 0px;
@@ -2298,7 +2293,7 @@ ul.pattern .color8 {
     width: 90%;
   }
   .navbar-white .navbar-toggler {
-    color: #272a33 !important;
+    color: #ff6900 !important;
   }
   .navbar-button {
     margin-top: 15px;

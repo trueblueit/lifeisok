@@ -5,9 +5,10 @@ import {
   NavbarToggler,
   NavItem,
   NavLink,
-  Container,
   Collapse,
 } from "reactstrap";
+
+import Container from "react-bootstrap/Container";
 
 import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -59,18 +60,24 @@ class Navbar_Page extends Component {
 
     return (
       <React.Fragment>
-        <div
-          className={`navbar navbar-expand-lg fixed-top navbar-custom sticky ${
-            isNavSticky ? "nav-sticky  sticky-dark" : ""
-          }`}
-        >
-          <Container fluid>
+        <Container>
+          <div
+            className={`navbar navbar-expand-lg fixed-top navbar-custom sticky ${
+              isNavSticky ? "nav-sticky  sticky-dark" : ""
+            }`}
+          >
             <NavbarBrand
               className="logo text-uppercase order-1 order-lg-0 me-lg-0 me-2"
               href="/"
             >
-              <img src="assets/lifeisok/favicon.png" height={50} width={50} />{" "}
-              Life is ok
+              <img
+                src="assets/lifeisok/favicon.png"
+                height={50}
+                width={50}
+                className="d-inline-block align-text-top"
+                alt="Life is ok Logo"
+              />{" "}
+              <span className="d-none d-lg-inline">Life is ok</span>
             </NavbarBrand>
 
             <NavbarToggler className="" onClick={this.toggle}>
@@ -105,8 +112,8 @@ class Navbar_Page extends Component {
                 </NavItem>
               </Nav>
             </Collapse>
-          </Container>
-        </div>
+          </div>
+        </Container>
       </React.Fragment>
     );
   }

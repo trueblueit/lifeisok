@@ -125,17 +125,18 @@ const Services = () => {
                   </Accordion>
                 )}
               </Col>
-              <Col>
-                {key === 2 ? null : (
+
+              {key === 2 ? null : (
+                <Col xs={12} md={6}>
                   <Image
-                    className="m-5"
+                    className="mt-3"
                     src={teamMembers[key].imag}
-                    height={350}
-                    width={350}
+                    alt={teamMembers[key].name}
                     rounded
+                    fluid
                   />
-                )}
-              </Col>
+                </Col>
+              )}
             </Row>
           </Col>
         </Container>
