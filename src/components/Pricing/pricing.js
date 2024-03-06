@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Container, Row } from "reactstrap";
 import Accordion from "react-bootstrap/Accordion";
-
+import Image from "react-bootstrap/Image";
 //Import Section Title
 import SectionTitle from "../common/section-title";
 const house1 =
   "Location: Heart of Darwin City \n3 bedroom Modal \n2 Bathroom \n2 Car Park Space";
 const house =
   "Location: Stuart Park \n2 bedroom Modal \n1 Bathroom \n1 Car Park Space\nNote:- No Pet allowed";
+
 class Pricing extends Component {
   render() {
     return (
@@ -37,6 +38,8 @@ class Pricing extends Component {
               </Accordion>
             </Row>
           </Container>
+
+          <Container></Container>
         </section>
       </React.Fragment>
     );

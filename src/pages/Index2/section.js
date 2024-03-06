@@ -32,35 +32,46 @@ class Section extends Component {
                 <p className="animationbox">
                   <Lottie animationData={animationdata}></Lottie>
                 </p>
+                /*
                 <p className="animationbox1">
                   <motion.img
                     src="assets/lifeisok/Photo-1.jpg"
-                    width="350" /* Ensure it doesn't overflow its container */
+                    width="350"
                     height="auto"
                     class="rounded-circle"
-                    initial={{ y: 0 }} // Initial position at the start of the animation
-                    animate={{ y: [0, -30, 0] }} // Sequence of positions to create the bounce effect
+                    initial={{ y: 0 }}
+                    animate={{ y: [0, -30, 0] }}
                     transition={{
-                      duration: 4, // Time in seconds for one bounce
-                      ease: "easeInOut", // Type of easing for the animation
-                      repeat: Infinity, // Repeat the animation indefinitely
-                      repeatType: "reverse", // Makes the animation reverse back to the start, creating a continuous effect
+                      duration: 4,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "reverse",
                     }}
                   />
                 </p>
-
+                */
                 <Col
                   lg={{ size: 8, offset: 2 }}
                   className="text-white text-center"
                 >
-                  <h1 className="home-title">
+                  <motion.h1
+                    className="home-title"
+                    initial={{ opacity: 0, scale: 0.75 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 2 }}
+                  >
                     Providing best Support for Your Choice
-                  </h1>
-                  <p className="pt-3 home-desc mx-auto">
+                  </motion.h1>
+                  <motion.p
+                    className="home-desc"
+                    initial={{ opacity: 0, scale: 0.75 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 3 }}
+                  >
                     Dedicated to improving the quality of life for people with
                     disabilites. Aims to build a partnership with NDIS
                     Participants to learn what they want to learn and achieve.
-                  </p>
+                  </motion.p>
                 </Col>
               </Row>
             </Container>

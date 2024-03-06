@@ -44,25 +44,25 @@ class Services extends Component {
         title: "MEDIUM TERM ACCOMMODATION (MTA)",
         icon: "pe-7s-news-paper",
         description:
-          "NDIS participants can stay at our MTA during a transitional period (such as when leaving the hospital or released from Corrections).",
+          "NDIS participants can stay at our MTA during transitions, like post-hospital or corrections release.",
       },
       {
         title: "SUPPORTS IN EMPLOYMENT",
         icon: "pe-7s-check",
         description:
-          "As a registered NDIS provider of Supports in employment supports, we assist participants with employment..",
+          "As a registered NDIS provider of Supports in employment supports, we assist participants with employment.",
       },
       {
         title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)box",
         icon: "pe-7s-folder",
         description:
-          "A SLES is an NDIS support available to students leaving secondary school that helps them on a pathway to employment..",
+          "SLES is an NDIS support that assists graduating students towards employment.",
       },
       {
         title: "Capacity Building Outreach Supports",
         icon: "pe-7s-comment",
         description:
-          "Non-clinical services like social skills development, employment support, life skills training, and tenancy support, with a focus on person-centred recovery.",
+          "Person-centred recovery focuses on social skills, employment, life training, and tenancy support.",
       },
     ],
   };

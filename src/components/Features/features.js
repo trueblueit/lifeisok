@@ -14,12 +14,12 @@ class Features extends Component {
               <Col lg="5" className="order-2 order-lg-1">
                 <div className="features-box mt-5 mt-lg-0">
                   <h3>Why Life Is Ok?</h3>
-                  <p className="text-muted web-desc">
+                  <p className="text-muted home-desc">
                     At Life is OK, we partner with NDIS to provide
                     person-centric services that promote well-being, cultural
                     awareness, and inclusivity.
                   </p>
-                  <ul className="text-muted list-unstyled mt-4 features-item-list">
+                  <ul className="text-muted list-unstyled mt-4 features-item-list home-desc">
                     <li className="">
                       Cultural Sensitivity: Experienced worker with exceptional
                       cultural awareness

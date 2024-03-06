@@ -180,7 +180,7 @@ p {
 
 .bg-overlay {
   background: linear-gradient(to right, #ff6900, #ff8911);
-  opacity: 0.85;
+  opacity: 0.8;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1254,6 +1254,7 @@ iframe {
 }
 .navbar-custom .navbar-nav li a {
   color: rgba(255, 255, 255, 0.6);
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 15px;
   text-transform: capitalize;
   transition: all 0.5s;
@@ -1449,13 +1450,34 @@ iframe {
 }
 
 .bg-home {
-  background: url("../images/bg-home.jpg");
+  background-image: url("../images/bg-home.jpg");
+  background-image: url("../images/img-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  animation: slide 30s infinite alternate;
+}
+
+@keyframes slide {
+  0% {
+    background-image: url("../images/bg-home.jpg");
+  }
+  25% {
+    background-image: url("../images/img-1.jpg");
+  }
+  50% {
+    background-image: url("../images/bg-home.jpg");
+  }
+  75% {
+    background-image: url("../images/img-1.jpg");
+  }
+  100% {
+    background-image: url("../images/bg-home.jpg");
+  }
 }
 
 .home-title {
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 46px;
   line-height: 64px;
 }
@@ -1501,6 +1523,7 @@ iframe {
 
 .home-desc {
   color: rgba(255, 255, 255, 0.7);
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 15px;
   max-width: 600px;
   margin: 0 auto;

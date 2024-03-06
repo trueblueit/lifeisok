@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 
 import Container from "react-bootstrap/Container";
+import { motion } from "framer-motion";
 
 import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -97,17 +98,46 @@ class Navbar_Page extends Component {
                   </NavItem>
                 ))}
               </Nav>
-              <Nav className="navbar-right nav text-primary" navbar>
+              <Nav className="" navbar>
                 <NavItem>
                   <DropdownButton
                     id="dropdown-basic-button"
+                    className="home-desc"
                     title="Contact Us"
                     data-bs-theme="dark"
                   >
-                    <Dropdown.Item href="/index5">Referal</Dropdown.Item>
-                    <Dropdown.Item href="/index1">Enquire</Dropdown.Item>
-                    <Dropdown.Item href="/#get-started">Carreer</Dropdown.Item>
-                    <Dropdown.Item href="/#blog">Feedback</Dropdown.Item>
+                    {/* Animation for the first item */}
+                    <motion.div
+                      initial={{ x: -100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Dropdown.Item href="/index5">Referal</Dropdown.Item>
+                    </motion.div>
+                    {/* Animation for the second item, with a slight delay */}
+                    <motion.div
+                      initial={{ x: -100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.1, duration: 0.5 }}
+                    >
+                      <Dropdown.Item href="/index1">Enquire</Dropdown.Item>
+                    </motion.div>
+                    {/* Animation for the third item, with a further delay */}
+                    <motion.div
+                      initial={{ x: -100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.2, duration: 0.5 }}
+                    >
+                      <Dropdown.Item href="/#get-started">Career</Dropdown.Item>
+                    </motion.div>
+                    {/* Animation for the fourth item, with the longest delay */}
+                    <motion.div
+                      initial={{ x: -100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.3, duration: 0.5 }}
+                    >
+                      <Dropdown.Item href="/#blog">Feedback</Dropdown.Item>
+                    </motion.div>
                   </DropdownButton>
                 </NavItem>
               </Nav>

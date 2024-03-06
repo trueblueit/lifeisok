@@ -12,13 +12,13 @@ function Aboutbody() {
             <Col lg="5" className="order-lg-1 mb-4 mb-lg-0">
               <div className="features-box mt-5 mt-lg-0">
                 <h3>About Us</h3>
-                <p className="text-muted web-desc">
+                <p className="text-muted web-desc home-desc">
                   Life is OK is seeking to provide care support services under
                   the National Disability Insurance Scheme (NDIS) in NT, seeking
                   to deliver services that include:
                 </p>
 
-                <ul className="mt-4 features-item-list list-group list-group-flush">
+                <ul className="mt-4 features-item-list list-group list-group-flush home-desc">
                   <li className="list-group-item">
                     Assistance with social and community participation
                   </li>
