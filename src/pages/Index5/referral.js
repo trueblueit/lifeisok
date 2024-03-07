@@ -6,13 +6,13 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 function Referral() {
   return (
-    <div class="container mt-5">
-      <div class="row">
+    <div className="container mt-5">
+      <div>
         <Form className="m-3">
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Group className="mb-3" controlId="name">
             <Form.Label>Participant Details</Form.Label>
             <Row>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="f-name"
                   label="Participant Name"
@@ -21,7 +21,7 @@ function Referral() {
                   <Form.Control type="text" />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="NDIS Number"
                   label="NDIS Number"
@@ -35,7 +35,7 @@ function Referral() {
               <Form.Control type="text" />
             </FloatingLabel>
             <Row>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="pnone"
                   label="Contact Number"
@@ -44,7 +44,7 @@ function Referral() {
                   <Form.Control type="text" />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col xs={12} md={6}>
                 <Form.Select aria-label="Default select example">
                   <option>Select the Service </option>
                   <option value="Daily Activities &amp; Improved living Choice">
@@ -80,7 +80,7 @@ function Referral() {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Referee Details</Form.Label>
             <Row>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="f-name"
                   label="Referee Name"
@@ -89,7 +89,7 @@ function Referral() {
                   <Form.Control type="text" />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="Organisation Name"
                   label="Organisation Name"
@@ -100,7 +100,7 @@ function Referral() {
               </Col>
             </Row>
             <Row>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="email"
                   label=" Email"
@@ -109,7 +109,7 @@ function Referral() {
                   <Form.Control type="text" />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col xs={12} md={6}>
                 <Form.Select aria-label="Default select example">
                   <option>Relation to Participant </option>
                   <option value="Support Coordinator">
@@ -122,7 +122,7 @@ function Referral() {
             </Row>
 
             <Row>
-              <Col>
+              <Col xs={12} md={6}>
                 <FloatingLabel
                   controlId="pnone"
                   label="Contact Number"
@@ -131,7 +131,7 @@ function Referral() {
                   <Form.Control type="text" />
                 </FloatingLabel>
               </Col>
-              <Col>
+              <Col xs={12} md={6}>
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlTextarea1"

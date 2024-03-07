@@ -42,7 +42,7 @@ const Services = () => {
   const houses = [
     {
       name: "Image-1",
-      imagg: "assets/lifeisok/house/1.jpg",
+      imag: "assets/lifeisok/house/1.jpg",
     },
     {
       name: "Image-2",
@@ -165,6 +165,7 @@ const Services = () => {
                           alt={house.name}
                           rounded
                           fluid
+                          loading="lazy"
                         />
                         <Carousel.Caption>
                           <h3>{house.name}</h3>

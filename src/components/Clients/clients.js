@@ -25,7 +25,15 @@ class Clients extends Component {
             <h1 className="text-center mycolor">Our Values</h1>
             <Row>
               {this.state.clients.map((client) => (
-                <Col md="auto" key={client.id}>
+                <Col
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  lg={3}
+                  key={client.id}
+                  className="mb-4"
+                >
+                  {/* Adjust the maximum number of cards in a row for different screen sizes */}
                   <Card
                     className="text-center value-shadow"
                     style={{ maxWidth: "18rem", overflow: "hidden" }}
