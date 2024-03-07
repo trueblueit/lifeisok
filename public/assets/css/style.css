@@ -1265,7 +1265,7 @@ iframe {
 }
 .navbar-custom .navbar-nav li a {
   color: rgba(255, 255, 255, 0.6);
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: "Sarabun", sans-serif;
   font-size: 15px;
   text-transform: capitalize;
   transition: all 0.5s;
@@ -1490,9 +1490,15 @@ iframe {
   background-size: cover;
   background-position: center;
 }
+.bg-refer {
+  background-image: url("../images/contact-us-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .home-title {
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: "Sarabun", sans-serif;
   font-size: 46px;
   line-height: 64px;
 }
@@ -1538,7 +1544,7 @@ iframe {
 
 .home-desc {
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: "Sarabun", sans-serif;
   font-size: 15px;
   max-width: 600px;
   margin: 0 auto;

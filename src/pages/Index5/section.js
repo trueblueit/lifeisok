@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/footer";
 function Section() {
   return (
     <React.Fragment>
-      <section className="section" id="contact us">
+      <section className="section bg-refer home-half" id="contact us">
         <div className="bg-overlay"></div>
         <Container>
           <Row>
