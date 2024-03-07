@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Section from "./section";
-import Clients from "../../components/Clients/clients";
+import Values from "../../components/Values/values";
 import Features from "../../components/Features/features";
 import Services from "../../components/Services/services";
-import { WebsiteDescription } from "../../components/Website Description/website-description";
+import { Career } from "../../components/career/career";
 import AboutUs from "../../components/About Us/about-us";
-import Pricing from "../../components/Pricing/pricing";
-import GetStarted from "../../components/Get Started/get-started";
-import Blog from "../../components/Blog/blog";
+import Accomodation from "../../components/accomodation/accomodation";
+import Feedback from "../../components/Feedback/feedback";
 import ContactUs from "../../components/Contact Us/contact-us";
 import Footer from "../../components/Footer/footer";
 
@@ -20,7 +19,7 @@ class Index2 extends Component {
     };
   }
   componentDidMount() {
-    document.getElementById("colorTheme").href = "assets/colors/red.css";
+    document.getElementById("colorTheme").href = "assets/colors/orange.css";
   }
 
   render() {
@@ -30,19 +29,19 @@ class Index2 extends Component {
         <NavbarPage navClass={this.state.navClass} />
         <Section />
 
-        <Clients />
+        <Values />
 
         <Features />
 
         <Services />
 
-        <WebsiteDescription />
+        <Career />
 
         <AboutUs />
 
-        <Pricing />
+        <Accomodation />
 
-        <Blog />
+        <Feedback />
 
         <ContactUs />
 

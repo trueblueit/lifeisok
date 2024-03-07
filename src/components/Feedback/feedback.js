@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 
-const GetStarted = () => {
+const Feedback = () => {
   const [formData, setFormData] = useState({
     rating: 0,
     description: "",
@@ -56,7 +56,7 @@ const GetStarted = () => {
 
   return (
     <React.Fragment>
-      <section className="section bg-light" id="blog">
+      <section className="section feedback-bg " id="blog">
         {/* Render section title */}
 
         <div className="bg-overlay"></div>
@@ -106,4 +106,4 @@ const GetStarted = () => {
   );
 };
 
-export default GetStarted;
+export default Feedback;

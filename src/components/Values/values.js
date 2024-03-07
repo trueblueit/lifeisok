@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 
 import { clients } from "../../data";
 
-class Clients extends Component {
+class Values extends Component {
   state = {
     clients: clients,
   };
@@ -51,4 +51,4 @@ class Clients extends Component {
   }
 }
 
-export default Clients;
+export default Values;

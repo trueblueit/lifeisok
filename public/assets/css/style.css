@@ -1496,7 +1496,12 @@ iframe {
   background-size: cover;
   background-position: center;
 }
-
+.feedback-bg {
+  background: url("../lifeisok/feedback-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .home-title {
   font-family: "Sarabun", sans-serif;
   font-size: 46px;

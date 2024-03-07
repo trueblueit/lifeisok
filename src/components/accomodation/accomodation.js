@@ -8,7 +8,7 @@ import Carousel from "react-bootstrap/Carousel";
 // Import Section Title
 import SectionTitle from "../common/section-title";
 
-class Pricing extends Component {
+class Accomodation extends Component {
   render() {
     return (
       <React.Fragment>
@@ -64,4 +64,4 @@ class Pricing extends Component {
   }
 }
 
-export default Pricing;
+export default Accomodation;
