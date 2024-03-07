@@ -2,19 +2,10 @@ import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import { images } from "../../data";
 class Gallery extends Component {
   state = {
-    images: [
-      { id: 1, img: "assets/lifeisok/1.jpeg" },
-      {
-        id: 2,
-        img: "assets/lifeisok/about.jpeg",
-      },
-      { id: 3, img: "assets/lifeisok/aboutus.jpeg" },
-      { id: 4, img: "assets/lifeisok/img1.jpeg" },
-      { id: 5, img: "assets/lifeisok/info.jpg" },
-      { id: 6, img: "assets/lifeisok/image3.jpg" },
-    ],
+    images: images,
   };
   render() {
     return (

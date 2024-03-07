@@ -3,18 +3,11 @@ import { Container, Row, Col } from "reactstrap";
 
 import Card from "react-bootstrap/Card";
 
+import { clients } from "../../data";
+
 class Clients extends Component {
   state = {
-    clients: [
-      { id: 1, img: "assets/images/icons/1.png", name: "COMPASSION" },
-      {
-        id: 2,
-        img: "assets/images/icons/2.png",
-        name: "TOGETHERNESS/INTEGRITY",
-      },
-      { id: 3, img: "assets/images/icons/3.png", name: "RESEPCT" },
-      { id: 4, img: "assets/images/icons/4.png", name: "TRUST" },
-    ],
+    clients: clients,
   };
 
   render() {

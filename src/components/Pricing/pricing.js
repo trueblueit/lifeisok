@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Container, Row } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Accordion from "react-bootstrap/Accordion";
 import Image from "react-bootstrap/Image";
-//Import Section Title
+import { house1, house, houses } from "../../data";
+import Carousel from "react-bootstrap/Carousel";
+
+// Import Section Title
 import SectionTitle from "../common/section-title";
-const house1 =
-  "Location: Heart of Darwin City \n3 bedroom Modal \n2 Bathroom \n2 Car Park Space";
-const house =
-  "Location: Stuart Park \n2 bedroom Modal \n1 Bathroom \n1 Car Park Space\nNote:- No Pet allowed";
 
 class Pricing extends Component {
   render() {
@@ -17,29 +16,48 @@ class Pricing extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Our Accomodation"
+              title="Our Accommodation"
               description="Available for Independent Living, Short & Medium-Term Accommodation"
             />
 
             <Row className="mt-5">
-              <Accordion defaultActiveKey={["0"]} alwaysOpen>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>luxury House 1</Accordion.Header>
-                  <Accordion.Body>
-                    <pre>{house1}</pre>
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header>Simple Houes</Accordion.Header>
-                  <Accordion.Body>
-                    <pre>{house}</pre>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
+              <Col xs={12} md={6}>
+                <Accordion defaultActiveKey={["0"]} alwaysOpen>
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>luxury House 1</Accordion.Header>
+                    <Accordion.Body>
+                      <pre>{house1}</pre>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>Simple House</Accordion.Header>
+                    <Accordion.Body>
+                      <pre>{house}</pre>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Col>
+              <Col xs={12} md={6}>
+                <Carousel fade>
+                  {houses.map((house, index) => (
+                    <Carousel.Item key={index}>
+                      <Image
+                        className="mt-3"
+                        src={house.imag}
+                        alt={house.name}
+                        rounded
+                        fluid
+                        loading="lazy"
+                      />
+                      <Carousel.Caption>
+                        <h3>{house.name}</h3>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </Col>
             </Row>
           </Container>
-
-          <Container></Container>
         </section>
       </React.Fragment>
     );
