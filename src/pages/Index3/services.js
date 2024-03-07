@@ -42,7 +42,7 @@ const Services = () => {
   const houses = [
     {
       name: "Image-1",
-      imagg: "assets/lifeisok/house/1.jpg",
+      imag: "assets/lifeisok/house/1.jpg",
     },
     {
       name: "Image-2",
