@@ -33,23 +33,6 @@ class Section extends Component {
                   <Lottie animationData={animationdata}></Lottie>
                 </p>
 
-                <p className="animationbox1">
-                  <motion.img
-                    src="assets/lifeisok/Photo-1.jpg"
-                    width="350"
-                    height="auto"
-                    class="rounded-circle"
-                    initial={{ y: 0 }}
-                    animate={{ y: [0, -30, 0] }}
-                    transition={{
-                      duration: 4,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                    }}
-                  />
-                </p>
-
                 <Col
                   lg={{ size: 8, offset: 2 }}
                   className="text-white text-center"
