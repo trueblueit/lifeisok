@@ -18,6 +18,7 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer footerbg">
+        <div className="ft-overlay"></div>
         <Container fluid>
           <Row className="mb-4">
             <Col xs={12} md={4} lg={4}>
@@ -56,12 +57,13 @@ class Footer extends Component {
               </div>
             </Col>
           </Row>
-
-          <p className="mt-4 text-center">
-            We acknowledge and pay our respects to the traditional custodians of
-            this land, their deep cultural heritage, and their vital role in
-            shaping our community and country.
-          </p>
+          <Row>
+            <p className="text-white">
+              We acknowledge and pay our respects to the traditional custodians
+              of this land, their deep cultural heritage, and their vital role
+              in shaping our community and country.
+            </p>
+          </Row>
 
           <Row className="mt-4">
             <Col xs={12} md={6} className="text-center text-md-left">

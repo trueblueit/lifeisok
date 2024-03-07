@@ -1,38 +1,34 @@
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
 import Container from "react-bootstrap/Container";
+
 function Contactus() {
   return (
-    <Container fluid class="mt-5">
-      <div class="row">
-        <Form class="col text-center">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Full Name</Form.Label>
-            <Form.Control type="text" placeholder="FullName" />
+    <Container fluid className="mt-5">
+      <div className="row justify-content-center">
+        <Form className="col-md-8 text-center">
+          <Form.Text className="text-muted">
+            We'll never share your details with anyone else.
+          </Form.Text>
+          <Form.Group className="mb-3" controlId="formFullName">
+            <Form.Control type="text" placeholder="Full Name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Subject</Form.Label>
-            <Form.Control type="text" placeholder="subject" />
+          <Form.Group className="mb-3" controlId="formSubject">
+            <Form.Control type="text" placeholder="Subject" />
           </Form.Group>
-
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Type your message here</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+          <Form.Group className="mb-3" controlId="formMessage">
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Type your message here"
+            />
           </Form.Group>
-          <div>
-            <Button
-              className="position-absolute top-90 start-50 translate-middle mt-5"
-              variant="primary"
-              type="submit"
-            >
+          <div className="d-grid gap-2 mb-3">
+            <Button variant="primary" type="submit">
               Submit
             </Button>
           </div>

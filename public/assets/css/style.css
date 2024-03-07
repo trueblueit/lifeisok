@@ -170,7 +170,7 @@ p {
   background-position: center;
 }
 .footerbg {
-  background: url("../lifeisok/Texture-2.png");
+  background: url("../lifeisok/f-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -180,7 +180,18 @@ p {
 
 .bg-overlay {
   background: linear-gradient(to right, #ff6900, #ff8911);
-  opacity: 0.8;
+  opacity: 0.85;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+.ft-overlay {
+  background: #ff6900;
+  opacity: 0.5;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1994,7 +2005,7 @@ textarea.form-control {
 
 .footer {
   padding: 50px 0;
-  background-color: var(--bs-footer-bg);
+  position: relative;
 }
 .footer h4 {
   color: #ffffff;
@@ -2018,99 +2029,7 @@ textarea.form-control {
   font-family: "Sarabun", sans-serif;
 }
 .footer p {
-  color: #98a0aa;
-}
-
-.subscribe {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
-.subscribe input {
-  height: 40px;
-  background-color: var(--bs-footer-alt-bg);
-  box-shadow: none !important;
-  border: none;
-  padding-right: 50px;
-  color: #ffffff !important;
-}
-.subscribe input::-moz-placeholder {
-  color: #666e77 !important;
-}
-.subscribe input::placeholder {
-  color: #666e77 !important;
-}
-.subscribe input:focus {
-  background-color: var(--bs-footer-alt-bg) !important;
-}
-.subscribe .submit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 20px;
-  width: 50px;
-  line-height: 45px;
-  text-align: center;
-  color: #acacac !important;
-}
-
-.footer-alt {
-  padding: 15px 0;
-  background-color: var(--bs-footer-alt-bg);
-}
-.footer-alt .copy-rights {
-  margin-bottom: 0;
-  line-height: 36px;
-}
-.footer-alt p {
-  color: #98a0aa !important;
-}
-
-.social-icon {
-  border: 2px solid #40434e;
-  border-radius: 50%;
-  color: #6b707d !important;
-  width: 36px;
-  height: 36px;
-  display: block;
-  font-size: 15px;
-  line-height: 32px;
-  text-align: center;
-}
-
-.bg-account-pages {
-  background: linear-gradient(to right, #363795, #005c97);
-  opacity: 0.9;
-}
-
-.account-home-btn {
-  position: absolute;
-  top: 18px;
-  right: 28px;
-  z-index: 1;
-}
-
-.account-pages-logo {
-  letter-spacing: 2px;
-}
-
-.account-card form .form-control {
-  height: 45px;
-}
-
-.account-card form label {
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.account-card .alert {
-  font-size: 14px;
-}
-
-#style-switcher div h3 {
-  font-size: 16px;
-  margin: 8px 3px 12px;
+  color: #ffffff;
 }
 
 #style-switcher {

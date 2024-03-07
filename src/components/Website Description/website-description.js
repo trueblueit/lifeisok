@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { color } from "framer-motion";
 
 export function DemoModal(props) {
   return (
@@ -14,46 +15,39 @@ export function DemoModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <div className="m-5 ">
+      <div className="m-3 m-lg-5">
         <Form>
           <Row>
-            <Col>
-              <FloatingLabel
-                controlId="f-name"
-                label="First Name"
-                className="mb-3"
-              >
-                <Form.Control type="text" placeholder="name@example.com" />
+            <h1 style={{ color: "#ff6900" }} className="mb-3">
+              Register your Intrest
+            </h1>
+          </Row>
+          <Row className="mb-3">
+            <Col md={6}>
+              <FloatingLabel controlId="f-name" label="First Name">
+                <Form.Control type="text" placeholder="First Name" />
               </FloatingLabel>
             </Col>
-            <Col>
-              <FloatingLabel
-                controlId="l-name"
-                label="Last Name"
-                className="mb-3"
-              >
-                <Form.Control type="text" placeholder="name@example.com" />
+            <Col md={6}>
+              <FloatingLabel controlId="l-name" label="Last Name">
+                <Form.Control type="text" placeholder="Last Name" />
               </FloatingLabel>
             </Col>
           </Row>
           <FloatingLabel controlId="email" label="Email" className="mb-3">
             <Form.Control type="email" placeholder="name@example.com" />
           </FloatingLabel>
-          <Row>
-            <Col>
-              <FloatingLabel
-                controlId="qual"
-                label="Qualifications"
-                className="mb-3"
-              >
-                <Form.Control type="text" placeholder="name@example.com" />
+          <Row className="mb-3">
+            <Col md={6}>
+              <FloatingLabel controlId="qual" label="Qualifications">
+                <Form.Control type="text" placeholder="Qualifications" />
               </FloatingLabel>
             </Col>
-            <Col>
-              <Form.Select aria-label="Default select example">
-                <option>Select the position </option>
+            <Col md={6}>
+              <Form.Select aria-label="Position">
+                <option>Select the position</option>
                 <option value="1">Support Worker</option>
-                <option value="2">Support Coordinator </option>
+                <option value="2">Support Coordinator</option>
               </Form.Select>
             </Col>
           </Row>
@@ -62,7 +56,11 @@ export function DemoModal(props) {
             <Form.Control as="textarea" rows={3} placeholder="Type Here" />
           </Form.Group>
 
-          <Button className="mx-auto" variant="primary" type="submit">
+          <Button
+            className="mx-auto"
+            style={{ background: "#ff6900" }}
+            type="submit"
+          >
             Submit
           </Button>
         </Form>
@@ -85,7 +83,7 @@ export function WebsiteDescription() {
               for people with difficulties.
             </p>
             <Button
-              className="mt-5"
+              className="mt-3 mt-lg-5"
               variant="primary"
               onClick={() => setModalShow(true)}
             >

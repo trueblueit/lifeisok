@@ -27,29 +27,12 @@ class Section extends Component {
         <section className="section bg-home home-half" id="home">
           <div className="bg-overlay"></div>
           <Container fluid>
-            <Container>
-              <Row>
+            <Container fluid>
+              <Row className="justify-content-center align-items-center">
                 <p className="animationbox">
                   <Lottie animationData={animationdata}></Lottie>
                 </p>
-                /*
-                <p className="animationbox1">
-                  <motion.img
-                    src="assets/lifeisok/Photo-1.jpg"
-                    width="350"
-                    height="auto"
-                    class="rounded-circle"
-                    initial={{ y: 0 }}
-                    animate={{ y: [0, -30, 0] }}
-                    transition={{
-                      duration: 4,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                    }}
-                  />
-                </p>
-                */
+
                 <Col
                   lg={{ size: 8, offset: 2 }}
                   className="text-white text-center"
@@ -69,7 +52,7 @@ class Section extends Component {
                     transition={{ duration: 3 }}
                   >
                     Dedicated to improving the quality of life for people with
-                    disabilites. Aims to build a partnership with NDIS
+                    disabilities. Aims to build a partnership with NDIS
                     Participants to learn what they want to learn and achieve.
                   </motion.p>
                 </Col>
@@ -77,29 +60,31 @@ class Section extends Component {
             </Container>
 
             <div className="wave-effect wave-anim">
-              <div className="waves-shape shape-one">
-                <div
-                  className="wave wave-one"
-                  style={{
-                    backgroundImage: `url(assets/images/wave-shape/wave1.png)`,
-                  }}
-                ></div>
-              </div>
-              <div className="waves-shape shape-two">
-                <div
-                  className="wave wave-two"
-                  style={{
-                    backgroundImage: `url(assets/images/wave-shape/wave2.png)`,
-                  }}
-                ></div>
-              </div>
-              <div className="waves-shape shape-three">
-                <div
-                  className="wave wave-three"
-                  style={{
-                    backgroundImage: `url(assets/images/wave-shape/wave3.png)`,
-                  }}
-                ></div>
+              <div className="wave-effect wave-anim">
+                <div className="waves-shape shape-one">
+                  <div
+                    className="wave wave-one"
+                    style={{
+                      backgroundImage: `url(assets/images/wave-shape/wave1.png)`,
+                    }}
+                  ></div>
+                </div>
+                <div className="waves-shape shape-two">
+                  <div
+                    className="wave wave-two"
+                    style={{
+                      backgroundImage: `url(assets/images/wave-shape/wave2.png)`,
+                    }}
+                  ></div>
+                </div>
+                <div className="waves-shape shape-three">
+                  <div
+                    className="wave wave-three"
+                    style={{
+                      backgroundImage: `url(assets/images/wave-shape/wave3.png)`,
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
           </Container>

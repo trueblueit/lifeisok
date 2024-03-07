@@ -18,7 +18,8 @@ class ServiceBox extends Component {
             </div>
             <Link
               to="/index3"
-              className="btn btn-orange class mt-5 waves-effect waves-light"
+              className="btn class mt-5"
+              style={{ background: "#ff6900" }}
             >
               Read More
             </Link>
