@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import Container from "react-bootstrap/Container";
+import Footer from "../../components/Footer/footer";
 function Contactus() {
   return (
     <Container fluid class="mt-5">
@@ -40,6 +41,7 @@ function Contactus() {
       </div>
     </Container>
   );
+  <Footer />;
 }
 
 export default Contactus;

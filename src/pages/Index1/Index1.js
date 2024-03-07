@@ -3,6 +3,7 @@ import Section from "./section";
 import Contactus from "./contact-us";
 
 import NavbarPage from "../../components/Navbar/NavbarPage";
+import Footer from "../../components/Footer/footer";
 class Index1 extends Component {
   constructor(props) {
     super(props);

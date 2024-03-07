@@ -32,7 +32,7 @@ class Section extends Component {
                 <p className="animationbox">
                   <Lottie animationData={animationdata}></Lottie>
                 </p>
-                /*
+
                 <p className="animationbox1">
                   <motion.img
                     src="assets/lifeisok/Photo-1.jpg"
@@ -49,7 +49,7 @@ class Section extends Component {
                     }}
                   />
                 </p>
-                */
+
                 <Col
                   lg={{ size: 8, offset: 2 }}
                   className="text-white text-center"

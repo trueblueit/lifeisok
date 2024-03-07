@@ -5,7 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 function Section() {
   return (
     <React.Fragment>
-      <section className="section" id="contact us">
+      <section className="section bg-contact home-half" id="contact us">
         <div className="bg-overlay"></div>
         <Container>
           <Row className="justify-content-center">

@@ -1450,12 +1450,10 @@ iframe {
 }
 
 .bg-home {
-  background-image: url("../images/bg-home.jpg");
-  background-image: url("../images/img-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  animation: slide 30s infinite alternate;
+  animation: slide 20s infinite alternate;
 }
 
 @keyframes slide {
@@ -1474,6 +1472,12 @@ iframe {
   100% {
     background-image: url("../images/bg-home.jpg");
   }
+}
+.bg-contact {
+  background-image: url("../images/contact-us-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .home-title {
