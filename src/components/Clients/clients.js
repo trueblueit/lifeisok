@@ -21,7 +21,7 @@ class Clients extends Component {
     return (
       <React.Fragment>
         <section className="section-sm bg-light">
-          <Container>
+          <Container fluid>
             <h1 className="text-center mycolor">Our Values</h1>
             <Row>
               {this.state.clients.map((client) => (

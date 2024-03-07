@@ -98,7 +98,7 @@ class Navbar_Page extends Component {
                   </NavItem>
                 ))}
               </Nav>
-              <Nav className="" navbar>
+              <Nav className="me-3" navbar>
                 <NavItem>
                   <DropdownButton
                     id="dropdown-basic-button"
