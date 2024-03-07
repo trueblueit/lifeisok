@@ -19,14 +19,12 @@ class Index3 extends Component {
     return (
       <React.Fragment>
         {/* Importing Navbar */}
-        <NavbarPage navClass={this.state.navClass} />
+        <NavbarPage />
 
         {/* Importing Section */}
         <Section />
 
         <Services />
-
-        {/* Importing Get Footer */}
         <Footer />
       </React.Fragment>
     );

@@ -5,6 +5,8 @@ import Image from "react-bootstrap/Image";
 import { house1, house, houses } from "../../data";
 import Carousel from "react-bootstrap/Carousel";
 
+import { Link } from "react-router-dom";
+
 // Import Section Title
 import SectionTitle from "../common/section-title";
 
@@ -57,6 +59,13 @@ class Accomodation extends Component {
                 </Carousel>
               </Col>
             </Row>
+            <Link
+              to="/index3"
+              className="btn class mt-5"
+              style={{ background: "#ff6900" }}
+            >
+              Read More
+            </Link>
           </Container>
         </section>
       </React.Fragment>

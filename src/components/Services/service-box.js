@@ -1,21 +1,39 @@
 import React, { Component } from "react";
 import { Col } from "reactstrap";
-
 import { Link } from "react-router-dom";
 
 class ServiceBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isHovered: false,
+    };
+  }
+
+  handleMouseEnter = () => {
+    this.setState({ isHovered: true });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({ isHovered: false });
+  };
+
   render() {
     return (
-      <React.Fragment>
-        <Col lg="4" className="mt-4">
-          <div className="services-box text-center hover-effect ">
-            <div className="d-flex">
-              <i className={this.props.icon + " text-primary"}></i>
-              <div className="ms-4">
-                <h4>{this.props.title}</h4>
-                <p className="pt-2 text-muted">{this.props.description}</p>
-              </div>
+      <Col lg="4" className="mt-4">
+        <div
+          className="services-box text-center hover-effect"
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        >
+          <div className="d-flex">
+            <i className={this.props.icon + " text-primary"}></i>
+            <div className="ms-4">
+              <h4>{this.props.title}</h4>
+              <p className="pt-2 text-muted">{this.props.description}</p>
             </div>
+          </div>
+          {this.state.isHovered && (
             <Link
               to="/index3"
               className="btn class mt-5"
@@ -23,9 +41,9 @@ class ServiceBox extends Component {
             >
               Read More
             </Link>
-          </div>
-        </Col>
-      </React.Fragment>
+          )}
+        </div>
+      </Col>
     );
   }
 }
