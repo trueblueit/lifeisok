@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { color } from "framer-motion";
+import Container from "react-bootstrap/Container";
 
 export function DemoModal(props) {
   return (
@@ -75,24 +76,26 @@ export function Career() {
     <React.Fragment>
       <section className="section mybg" id="get-started">
         <div className="bg-overlay"></div>
-        <Row>
-          <Col lg="12" className="text-center">
-            <h2 className="text-white">Join Our Team Today</h2>
-            <p className="pt-3 home-desc mx-auto">
-              Founded by a team of professionals to improve the quality of life
-              for people with difficulties.
-            </p>
-            <Button
-              className="mt-3 mt-lg-5"
-              variant="primary"
-              onClick={() => setModalShow(true)}
-            >
-              Join Us
-            </Button>
+        <Container fluid>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2 className="text-white">Join Our Team Today</h2>
+              <p className="pt-3 home-desc mx-auto">
+                Founded by a team of professionals to improve the quality of
+                life for people with difficulties.
+              </p>
+              <Button
+                className="mt-3 mt-lg-5"
+                variant="primary"
+                onClick={() => setModalShow(true)}
+              >
+                Join Us
+              </Button>
 
-            <DemoModal show={modalShow} onHide={() => setModalShow(false)} />
-          </Col>
-        </Row>
+              <DemoModal show={modalShow} onHide={() => setModalShow(false)} />
+            </Col>
+          </Row>
+        </Container>
       </section>
     </React.Fragment>
   );

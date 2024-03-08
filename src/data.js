@@ -31,7 +31,7 @@ export const house1 =
 export const house =
   "Location: Stuart Park \n2 bedroom Modal \n1 Bathroom \n1 Car Park Space\nNote:- No Pet allowed";
 // our values
-export const clients = [
+export const values = [
   { id: 1, img: "assets/images/icons/1.png", name: "COMPASSION" },
   {
     id: 2,
@@ -45,22 +45,22 @@ export const clients = [
 //services
 export const services = [
   {
-    title: "DAILY ACTIVITIES & IMPROVED LIVING CHOICE",
+    title: "Core Outreach Support",
     icon: "pe-7s-diamond",
     description:
-      "Outreach support to the core (home-bound or community place).",
+      "24/7 assistance for home-bound individuals, including personal and self-care support, and community access support.",
   },
   {
-    title: "COMMUNITY ACCESS/ SOCIAL AND PARTICIPATION",
+    title: "Capacity Building Outreach Supports",
     icon: "pe-7s-chat ",
     description:
-      "Non-clinical capacity-building services includes social skills, life skills, and support.",
+      "Non-clinical services like social skills development, employment support, life skills training, and tenancy support, with a focus on person-centred recovery.",
   },
   {
     title: "ACCOMMODATION SUPPORT",
     icon: "pe-7s-home",
     description:
-      "Funding for Accommodation Supports generally comes from the Core funding section of your NDIS plan..",
+      "Funding for accommodations, including Supported Independent Living (SIL) for safe and supportive long-term living environments, and Short Term Accommodation (STA) for temporary respite.",
   },
   {
     title: "SUPPORTED INDEPENDENT LIVING (SIL)",

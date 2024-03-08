@@ -1,43 +1,40 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-
 import Card from "react-bootstrap/Card";
-
-import { clients } from "../../data";
+import { values } from "../../data";
 
 class Values extends Component {
   state = {
-    clients: clients,
+    values: values,
   };
 
   render() {
     return (
       <React.Fragment>
         <section className="section-sm bg-light">
-          <Container fluid>
+          <Container>
             <h1 className="text-center mycolor">Our Values</h1>
-            <Row>
-              {this.state.clients.map((client) => (
+            <Row className="justify-content-center">
+              {this.state.values.map((value) => (
                 <Col
+                  key={value.id}
                   xs={12}
                   sm={6}
                   md={4}
                   lg={3}
-                  key={client.id}
-                  className="mb-4"
+                  className="mb-4 d-flex align-items-stretch"
                 >
-                  {/* Adjust the maximum number of cards in a row for different screen sizes */}
                   <Card
                     className="text-center value-shadow"
-                    style={{ maxWidth: "18rem", overflow: "hidden" }}
+                    style={{ width: "100%" }}
                   >
                     <Card.Body>
-                      <Card.Title>{client.name}</Card.Title>
+                      <Card.Title>{value.name}</Card.Title>
                       <Card.Img
                         variant="top"
-                        src={client.img}
+                        src={value.img}
                         alt="logo-img"
-                        className="image-fluid"
+                        className="img-fluid"
                       />
                     </Card.Body>
                   </Card>

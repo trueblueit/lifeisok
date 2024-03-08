@@ -60,7 +60,7 @@ const Feedback = () => {
         {/* Render section title */}
 
         <div className="bg-overlay"></div>
-        <Container>
+        <Container fluid>
           <Row>
             <h1 className="get-started-title text-white text-center">
               Rate our Service

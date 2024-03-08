@@ -9,7 +9,7 @@ class Features extends Component {
     return (
       <React.Fragment>
         <section className="section" id="features">
-          <Container>
+          <Container fluid>
             <Row className="align-items-center">
               <Col lg="5" className="order-2 order-lg-1">
                 <div className="features-box mt-5 mt-lg-0">

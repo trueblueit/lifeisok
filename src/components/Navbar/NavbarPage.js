@@ -15,6 +15,15 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 
 import Dropdown from "react-bootstrap/Dropdown";
 
+function mydirection(num) {
+  if (num == 2) {
+    return "/index3";
+  } else if (num == 3) {
+    return "/index4";
+  } else if (num == 4) {
+    return "/index3";
+  }
+}
 class Navbar_Page extends Component {
   constructor(props) {
     super(props);
@@ -68,7 +77,7 @@ class Navbar_Page extends Component {
             }`}
           >
             <NavbarBrand
-              className="logo text-uppercase order-1 order-lg-0 me-lg-0 me-2"
+              className="logo order-1 order-lg-0 me-lg-0 me-2"
               href="/"
             >
               <img
@@ -77,7 +86,7 @@ class Navbar_Page extends Component {
                 width={50}
                 className="d-inline-block align-text-top"
                 alt="Life is ok Logo"
-              />{" "}
+              />
               <span className="d-none d-lg-inline">Life is ok</span>
             </NavbarBrand>
 
@@ -92,7 +101,9 @@ class Navbar_Page extends Component {
                     key={key}
                     className={item.idnm === "Home" ? "active" : ""}
                   >
-                    <NavLink href={key == 3 ? "/index4" : `/#${item.idnm}`}>
+                    <NavLink
+                      href={key >= 2 ? mydirection(key) : `/#${item.idnm}`}
+                    >
                       {key < 5 ? item.navheading : null}
                     </NavLink>
                   </NavItem>

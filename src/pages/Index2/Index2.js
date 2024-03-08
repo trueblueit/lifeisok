@@ -28,24 +28,15 @@ class Index2 extends Component {
         {/* Importing Navbar */}
         <NavbarPage navClass={this.state.navClass} />
         <Section />
-
         <Values />
-
         <Features />
-
         <Services />
-
         <Career />
-
         <AboutUs />
-
         <Accomodation />
-
         <Feedback />
-
         <ContactUs />
-
-        <Footer />
+        <Footer />*
       </React.Fragment>
     );
   }
