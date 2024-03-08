@@ -50,13 +50,19 @@ const ContactUs = () => {
             </div>
           </Container>
           <Row className="justify-content-center">
-            <Col lg="3" md="6" sm="12" className="mb-3">
-              <Link to="/index5" className="btn btn-orange class mt-3">
+            <Col className="mb-3">
+              <Link
+                to="/index5"
+                className="btn btn-orange d-flex align-items-start mt-3 text-center"
+              >
                 Referral
               </Link>
             </Col>
-            <Col lg="3" md="6" sm="12" className="mb-3">
-              <Link to="/index1" className="btn btn-orange class mt-3">
+            <Col className="mb-3">
+              <Link
+                to="/index1"
+                className="btn btn-orange d-flex align-items-start mt-3 text-center"
+              >
                 Enquire
               </Link>
             </Col>

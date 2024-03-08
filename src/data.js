@@ -47,56 +47,37 @@ export const services = [
   {
     title: "Core Outreach Support",
     icon: "pe-7s-diamond",
+    mylink: "/service1",
     description:
       "24/7 assistance for home-bound individuals, including personal and self-care support, and community access support.",
   },
   {
     title: "Capacity Building Outreach Supports",
     icon: "pe-7s-chat ",
+    mylink: "/service2",
     description:
       "Non-clinical services like social skills development, employment support, life skills training, and tenancy support, with a focus on person-centred recovery.",
   },
   {
     title: "ACCOMMODATION SUPPORT",
     icon: "pe-7s-home",
+    mylink: "/service3",
     description:
       "Funding for accommodations, including Supported Independent Living (SIL) for safe and supportive long-term living environments, and Short Term Accommodation (STA) for temporary respite.",
   },
   {
-    title: "SUPPORTED INDEPENDENT LIVING (SIL)",
+    title: "Support Coordination",
     icon: "pe-7s-paper-plane ",
+    mylink: "/service4",
     description:
-      "In our SIL, you will find a safe, comfortable, and supportive living environment.",
+      "We’re dedicated to providing exceptional NDIS Support Coordination services in Darwin, NT, Australia. Our experienced and professional team believes in open communication and breaking barriers as a small provider. We’re on a mission to enrich lives, and we’re here to make it happen.",
   },
   {
-    title: "SHORT TERM ACCOMMODATION (STA)",
+    title: "Supports in Employment",
     icon: "pe-7s-clock",
+    mylink: "/service5",
     description:
-      "Our STA offers a safe place for you to experience time away from your normal place of residence.",
-  },
-  {
-    title: "MEDIUM TERM ACCOMMODATION (MTA)",
-    icon: "pe-7s-news-paper",
-    description:
-      "NDIS participants can stay at our MTA during transitions, like post-hospital or corrections release.",
-  },
-  {
-    title: "SUPPORTS IN EMPLOYMENT",
-    icon: "pe-7s-check",
-    description:
-      "As a registered NDIS provider of Supports in employment supports, we assist participants with employment.",
-  },
-  {
-    title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)box",
-    icon: "pe-7s-folder",
-    description:
-      "SLES is an NDIS support that assists graduating students towards employment.",
-  },
-  {
-    title: "Capacity Building Outreach Supports",
-    icon: "pe-7s-comment",
-    description:
-      "Person-centred recovery focuses on social skills, employment, life training, and tenancy support.",
+      "Assistance beyond standard employment services, including personal care and assistive technology, with a focus on building relationships with mainstream providers and the community to understand the employment needs of people with disabilities. This support includes school-leaver employment support (SLES).",
   },
 ];
 //gallery

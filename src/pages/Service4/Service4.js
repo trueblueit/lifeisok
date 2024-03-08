@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Section from "./section";
-import Services from "./services";
 import Footer from "../../components/Footer/footer";
 
-class Index3 extends Component {
+import Container from "react-bootstrap/Container";
+import ContactUs from "../../components/Contact Us/contact-us";
+
+class Service4 extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      navClass: "",
-    };
+    this.state = {};
   }
   componentDidMount() {
     document.getElementById("colorTheme").href = "assets/colors/orange.css";
@@ -23,12 +23,11 @@ class Index3 extends Component {
 
         {/* Importing Section */}
         <Section />
-
-        <Services />
+        <ContactUs />
         <Footer />
       </React.Fragment>
     );
   }
 }
 
-export default Index3;
+export default Service4;

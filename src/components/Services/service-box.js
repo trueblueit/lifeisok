@@ -8,10 +8,12 @@ class ServiceBox extends Component {
     this.state = {
       isHovered: false,
     };
+    const link = this.props.link;
   }
 
   handleMouseEnter = () => {
     this.setState({ isHovered: true });
+    console.log(this.props.link);
   };
 
   handleMouseLeave = () => {
@@ -35,7 +37,7 @@ class ServiceBox extends Component {
           </div>
           {this.state.isHovered && (
             <Link
-              to="/index3"
+              to={this.props.mylink}
               className="btn class mt-5"
               style={{ background: "#ff6900" }}
             >

@@ -31,6 +31,7 @@ class Services extends Component {
                   title={service.title}
                   icon={service.icon}
                   description={service.description}
+                  mylink={service.mylink}
                 />
               ))}
             </Row>
