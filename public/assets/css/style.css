@@ -1427,7 +1427,8 @@ iframe {
 }
 /*made the navbar orange */
 .nav-sticky.navbar-custom.sticky-dark {
-  background-color: #ff6900;
+  background-color: whitesmoke;
+  color: #ff6900;
 }
 .nav-sticky .navbar-nav li.active a {
   color: #ffffff !important;
@@ -1573,8 +1574,8 @@ iframe {
 
 /* ------------- Demo 1 bg-pattern ------------- */
 .home-half {
-  padding-bottom: 150px;
-  padding-top: 220px;
+  padding-bottom: 200px;
+  padding-top: 300px;
 }
 
 .bg-pattern-effect {

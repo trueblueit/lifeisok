@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Card from "react-bootstrap/Card";
 import { values } from "../../data";
+import animationdata from "../../animation/Animation - 1708004346894.json";
+import Lottie from "lottie-react";
 
 class Values extends Component {
   state = {
@@ -14,6 +16,7 @@ class Values extends Component {
         <section className="section-sm bg-light">
           <Container>
             <h1 className="text-center mycolor">Our Values</h1>
+
             <Row className="justify-content-center">
               {this.state.values.map((value) => (
                 <Col
