@@ -7,7 +7,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
-import { servicesDetail, houses, accordionData } from "../../data";
+import { services, servicesDetail, houses, accordionData } from "../../data";
+
+import { Link } from "react-router-dom";
 
 const RenderAccordionItems = () => {
   return accordionData.map((item, index) => (
@@ -18,8 +20,6 @@ const RenderAccordionItems = () => {
   ));
 };
 const Services = () => {
-  const services = servicesDetail;
-
   const [key, setCount] = useState(0);
   const handleKey = (number) => {
     setCount(number);
@@ -36,7 +36,7 @@ const Services = () => {
                 vertical
                 className="d-md-flex flex-md-row"
               >
-                {services.map((service, index) => (
+                {servicesDetail.map((service, index) => (
                   <Button
                     key={index}
                     variant={key === index ? "primary" : "secondary"}
@@ -54,15 +54,22 @@ const Services = () => {
               <>
                 <Col>
                   <h2 className="mx-auto text-success text-center">
-                    {services[key].name}
+                    {servicesDetail[key].name}
                   </h2>
-                  <p className="ml-auto">{services[key].description}</p>
+                  <p className="ml-auto">{servicesDetail[key].description}</p>
+                  <Link
+                    to={services[key].mylink}
+                    className="btn class mt-5"
+                    style={{ background: "#ff6900" }}
+                  >
+                    Read More
+                  </Link>
                 </Col>
                 <Col xs={12} md={6}>
                   <Image
                     className="mt-3"
-                    src={services[key].imag}
-                    alt={services[key].name}
+                    src={servicesDetail[key].imag}
+                    alt={servicesDetail[key].name}
                     rounded
                     fluid
                   />
@@ -75,6 +82,13 @@ const Services = () => {
                   <Accordion defaultActiveKey="0">
                     <RenderAccordionItems />
                   </Accordion>
+                  <Link
+                    to={services[key].mylink}
+                    className="btn class mt-5"
+                    style={{ background: "#ff6900" }}
+                  >
+                    Read More
+                  </Link>
                 </Col>
                 <Col xs={12} md={6}>
                   <Carousel fade>
