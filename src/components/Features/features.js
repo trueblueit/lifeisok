@@ -13,7 +13,7 @@ class Features extends Component {
             <Row className="align-items-center">
               <Col lg="5" className="order-2 order-lg-1">
                 <div className="features-box mt-5 mt-lg-0">
-                  <h3>Why Life Is Ok?</h3>
+                  <h3 className="">Why Life Is Ok?</h3>
                   <p className="text-muted home-desc">
                     At Life is OK, we partner with NDIS to provide
                     person-centric services that promote well-being, cultural
@@ -49,6 +49,8 @@ class Features extends Component {
                     src="assets/lifeisok/img1.jpeg"
                     alt="macbook"
                     className="img-fluid"
+                    height={750}
+                    width={750}
                   />
                 </div>
               </Col>

@@ -29,14 +29,7 @@ class Section extends Component {
           <Container fluid>
             <Container fluid>
               <Row className="justify-content-center align-items-center">
-                <p className="animationbox">
-                  <Lottie animationData={animationdata}></Lottie>
-                </p>
-
-                <Col
-                  lg={{ size: 8, offset: 2 }}
-                  className="text-white text-center"
-                >
+                <Col className="text-white text-center">
                   <motion.h1
                     className="home-title"
                     initial={{ opacity: 0, scale: 0.75 }}
