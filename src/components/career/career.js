@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import { color } from "framer-motion";
 import Container from "react-bootstrap/Container";
 
 export function DemoModal(props) {
@@ -74,7 +73,7 @@ export function Career() {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <React.Fragment>
-      <section className="section mybg" id="get-started">
+      <section className="section mybg" id="Career">
         <div className="bg-overlay"></div>
         <Container fluid>
           <Row>

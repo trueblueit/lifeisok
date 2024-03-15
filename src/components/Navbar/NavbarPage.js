@@ -15,27 +15,22 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 
 import Dropdown from "react-bootstrap/Dropdown";
 
-function mydirection(num) {
-  if (num == 2) {
-    return "/index3";
-  } else if (num == 3) {
-    return "/index4";
-  } else if (num == 4) {
-    return "/index3";
-  }
-}
 class Navbar_Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
       navItems: [
-        { id: 1, idnm: "home", navheading: "Home" },
-        { id: 2, idnm: "features", navheading: "Features" },
-        { id: 3, idnm: "services", navheading: "Services" },
-        { id: 4, idnm: "about", navheading: "About" },
-        { id: 5, idnm: "accomodation", navheading: "Accomodation" },
-        { id: 6, idnm: "blog", navheading: "Blog" },
-        { id: 7, idnm: "get-started", navheading: "Blog" },
+        { id: 1, link: "/#home", idnm: "home", navheading: "Home" },
+        { id: 2, link: "/#feature", idnm: "features", navheading: "Features" },
+        { id: 3, link: "/index3", idnm: "services", navheading: "Services" },
+        { id: 4, link: "/index4", idnm: "about", navheading: "About" },
+        {
+          id: 5,
+          link: "/index3",
+          idnm: "accomodation",
+          navheading: "Accomodation",
+        },
+        { id: 6, link: "/#Career", idnm: "Career", navheading: "Career" },
       ],
       isNavSticky: false,
       isOpenMenu: false,
@@ -81,13 +76,12 @@ class Navbar_Page extends Component {
               href="/"
             >
               <img
-                src="assets/lifeisok/favicon.png"
+                src="assets/lifeisok/logo.png"
                 height={50}
-                width={50}
-                className="d-inline-block align-text-top"
+                width={250}
+                className="d-inline-block align-text-top img-fluid"
                 alt="Life is ok Logo"
               />
-              <span className="d-none d-lg-inline">Life is ok</span>
             </NavbarBrand>
 
             <NavbarToggler className="" onClick={this.toggle}>
@@ -101,11 +95,7 @@ class Navbar_Page extends Component {
                     key={key}
                     className={item.idnm === "Home" ? "active" : ""}
                   >
-                    <NavLink
-                      href={key >= 2 ? mydirection(key) : `/#${item.idnm}`}
-                    >
-                      {key < 5 ? item.navheading : null}
-                    </NavLink>
+                    <NavLink href={item.link}>{item.navheading}</NavLink>
                   </NavItem>
                 ))}
               </Nav>
