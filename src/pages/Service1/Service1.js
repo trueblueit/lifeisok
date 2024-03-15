@@ -11,9 +11,6 @@ class Service1 extends Component {
     super(props);
     this.state = {};
   }
-  componentDidMount() {
-    document.getElementById("colorTheme").href = "assets/colors/orange.css";
-  }
 
   render() {
     return (

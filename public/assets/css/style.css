@@ -454,12 +454,12 @@ p {
 .nav-sticky .navbar-custom {
   margin-top: 0px;
   padding: 10px 0px;
-  background-color: #ff6900;
+  background-color: #ffffff;
   box-shadow: 0 10px 33px rgba(255, 255, 255, 0.1);
 }
 
 [data-bs-theme="dark"] .nav-sticky.navbar-custom.sticky-dark {
-  background-color: #ff6900;
+  background-color: #ffffff;
 }
 .service4-bg {
   /* The image used */
