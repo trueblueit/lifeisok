@@ -27,7 +27,7 @@ export function DemoModal(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://154.41.240.103/process_form.php", {
+      const response = await fetch("http://154.41.240.103/main.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,11 +44,14 @@ export function DemoModal(props) {
   };
 
   return (
-    <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
       <div className="m-3 m-lg-5">
         <Form onSubmit={handleSubmit}>
-          <div className="m-3 m-lg-5">
-        <Form>
           <Row>
             <h1 style={{ color: "#ff6900" }} className="mb-3">
               Register your Intrest
@@ -97,8 +100,6 @@ export function DemoModal(props) {
           </Button>
         </Form>
       </div>
-        </Form>
-      </div>
     </Modal>
   );
 }
@@ -107,7 +108,7 @@ export function Career() {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-     <React.Fragment>
+    <React.Fragment>
       <section className="section mybg" id="Career">
         <div className="bg-overlay"></div>
         <Container fluid>
