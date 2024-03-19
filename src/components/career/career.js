@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -8,14 +8,46 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Container from "react-bootstrap/Container";
 
 export function DemoModal(props) {
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    qualification: "",
+    position: "",
+    description: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://154.41.240.103/process_form.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      console.log(data); // Response from PHP script
+      // Optionally, show a success message or handle further actions
+    } catch (error) {
+      console.error("Error:", error);
+      // Optionally, show an error message or handle error cases
+    }
+  };
+
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+    <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
       <div className="m-3 m-lg-5">
+        <Form onSubmit={handleSubmit}>
+          <div className="m-3 m-lg-5">
         <Form>
           <Row>
             <h1 style={{ color: "#ff6900" }} className="mb-3">
@@ -65,14 +97,17 @@ export function DemoModal(props) {
           </Button>
         </Form>
       </div>
+        </Form>
+      </div>
     </Modal>
   );
 }
 
 export function Career() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
+
   return (
-    <React.Fragment>
+     <React.Fragment>
       <section className="section mybg" id="Career">
         <div className="bg-overlay"></div>
         <Container fluid>
