@@ -21,16 +21,15 @@ class Navbar_Page extends Component {
     this.state = {
       navItems: [
         { id: 1, link: "/#home", idnm: "home", navheading: "Home" },
-        { id: 2, link: "/#feature", idnm: "features", navheading: "Features" },
-        { id: 3, link: "/index3", idnm: "services", navheading: "Services" },
-        { id: 4, link: "/index4", idnm: "about", navheading: "About" },
+        { id: 2, link: "/#features", idnm: "features", navheading: "Features" },
+        { id: 3, link: "/#services", idnm: "services", navheading: "Services" },
+        { id: 4, link: "/#about", idnm: "about", navheading: "About" },
         {
           id: 5,
-          link: "/index3",
+          link: "/#accomodation",
           idnm: "accomodation",
           navheading: "Accomodation",
         },
-        { id: 6, link: "/#Career", idnm: "Career", navheading: "Career" },
       ],
       isNavSticky: false,
       isOpenMenu: false,
@@ -107,31 +106,30 @@ class Navbar_Page extends Component {
                     title="Contact Us"
                     data-bs-theme="dark"
                   >
-                    {/* Animation for the first item */}
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <Dropdown.Item href="/index5">Referal</Dropdown.Item>
+                      <Dropdown.Item href="/#contact">Referal</Dropdown.Item>
                     </motion.div>
-                    {/* Animation for the second item, with a slight delay */}
+
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1, duration: 0.5 }}
                     >
-                      <Dropdown.Item href="/index1">Enquire</Dropdown.Item>
+                      <Dropdown.Item href="/#contact">Enquire</Dropdown.Item>
                     </motion.div>
-                    {/* Animation for the third item, with a further delay */}
+
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                      <Dropdown.Item href="/#get-started">Career</Dropdown.Item>
+                      <Dropdown.Item href="/#career">Career</Dropdown.Item>
                     </motion.div>
-                    {/* Animation for the fourth item, with the longest delay */}
+
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}

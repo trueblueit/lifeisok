@@ -12,10 +12,20 @@ function Contactus() {
             We'll never share your details with anyone else.
           </Form.Text>
           <Form.Group className="mb-3" controlId="formFullName">
-            <Form.Control type="text" placeholder="Full Name" />
+            <Form.Control
+              type="text"
+              placeholder="Full Name"
+              id="fullname"
+              name="fullname"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              id="email"
+              name="email"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formSubject">
             <Form.Control type="text" placeholder="Subject" />
