@@ -31,9 +31,9 @@ class Index2 extends Component {
         <Values />
         <Features />
         <Services />
+        <Accomodation />
         <Career />
         <AboutUs />
-        <Accomodation />
         <Feedback />
         <ContactUs />
         <Footer />*
