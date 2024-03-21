@@ -813,3 +813,72 @@ textarea.form-control {
     max-width: 1140px !important;
   }
 } /*# sourceMappingURL=style.css.map */
+
+/* Enhanced Text Styling */
+.enhancedText {
+  font-family: "Lato", sans-serif;
+  color: #33475b; /* Darker shade for better readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Enhanced Text Styling */
+.enhancedText {
+  font-family: "Lato", sans-serif;
+  color: #33475b;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+@keyframes fadeSlideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeSlideFromLeft {
+  opacity: 0; /* Start with the element hidden */
+  animation: fadeSlideFromLeft 1s ease-out forwards;
+}
+@keyframes fadeSlideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeSlideFromLeft {
+  opacity: 0; /* Start with the element hidden */
+  animation: fadeSlideFromLeft 1s ease-out forwards;
+}
+@keyframes flipIn {
+  from {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+  30% {
+    transform: perspective(400px) rotateY(-10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: perspective(400px) rotateY(10deg);
+  }
+  50% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.flipIn {
+  backface-visibility: hidden;
+  animation: flipIn 1s ease-out forwards;
+}
