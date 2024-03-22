@@ -11,11 +11,21 @@ class Values extends Component {
   };
 
   render() {
+    const textColor = "#34568B";
     return (
       <React.Fragment>
         <section className="section-sm bg-light">
           <Container>
-            <h1 className="text-center mycolor">Our Values</h1>
+            <h2
+              className="section-heading"
+              style={{
+                textAlign: "center",
+                color: textColor,
+                marginBottom: "20px",
+              }}
+            >
+              Our Values
+            </h2>
 
             <Row className="justify-content-center">
               {this.state.values.map((value) => (

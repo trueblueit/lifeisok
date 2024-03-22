@@ -49,37 +49,45 @@ export const services = [
     icon: "pe-7s-diamond",
     mylink: "/service1",
     description:
-      "24/7 assistance for home-bound individuals, including personal and self-care support, and community access support.",
+      "Offering round-the-clock support for personal care and community engagement to enhance the independence of home-bound individuals.",
   },
   {
     title: "Capacity Building Outreach Supports",
     icon: "pe-7s-chat ",
     mylink: "/service2",
     description:
-      "Non-clinical services like social skills development, employment support, life skills training, and tenancy support, with a focus on person-centred recovery.",
+      "Empowering you with social, employment, and life skills development for a holistic person-centred recovery journey.",
   },
   {
     title: "ACCOMMODATION SUPPORT",
     icon: "pe-7s-home",
     mylink: "/service3",
     description:
-      "Funding for accommodations, including Supported Independent Living (SIL) for safe and supportive long-term living environments, and Short Term Accommodation (STA) for temporary respite.",
+      "Providing safe, supportive living solutions, from long-term SIL to temporary STA, tailored to your needs.",
   },
   {
     title: "Support Coordination",
-    icon: "pe-7s-paper-plane ",
+    icon: "pe-7s-paper-plane",
     mylink: "/service4",
     description:
-      "We’re dedicated to providing exceptional NDIS Support Coordination services in Darwin, NT, Australia. Our experienced and professional team believes in open communication and breaking barriers as a small provider. We’re on a mission to enrich lives, and we’re here to make it happen.",
+      "Exceptional support coordination in Darwin, fostering open communication and tailored assistance to enrich your life.",
   },
   {
     title: "Supports in Employment",
     icon: "pe-7s-clock",
     mylink: "/service5",
     description:
-      "Assistance beyond standard employment services, including personal care and assistive technology, with a focus on building relationships with mainstream providers and the community to understand the employment needs of people with disabilities. This support includes school-leaver employment support (SLES).",
+      "Extensive employment support focusing on personal and professional growth, including SLES, to ensure successful career paths.",
+  },
+  {
+    title: "House Cleaning and Maintenance",
+    icon: "pe-7s-tools",
+    mylink: "/service3",
+    description:
+      "Expert cleaning and maintenance services to keep your living spaces pristine and well-maintained, ensuring comfort and peace of mind.",
   },
 ];
+
 //gallery
 export const images = [
   { id: 1, img: "assets/lifeisok/1.jpeg" },

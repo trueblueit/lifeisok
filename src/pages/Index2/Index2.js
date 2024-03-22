@@ -29,8 +29,8 @@ class Index2 extends Component {
         <NavbarPage navClass={this.state.navClass} />
         <Section />
         <Values />
-        <Features />
         <Services />
+        <Features />
         <Accomodation />
         <Career />
         <AboutUs />

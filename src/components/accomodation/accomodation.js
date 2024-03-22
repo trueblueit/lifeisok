@@ -70,17 +70,26 @@ const AccommodationsSection = () => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000,
   };
-
+  const textColor = "#34568B";
   return (
     <section className="section bg-light" id="accomodation">
       <Container>
-        <div className="section-title" style={{ textAlign: "center" }}>
-          <h2>Our Accommodation</h2>
-          <br />
-          <p>
-            Available for Independent Living, Short & Medium-Term Accommodation
-          </p>
-        </div>
+        <h2
+          className="section-heading"
+          style={{
+            textAlign: "center",
+            color: textColor,
+            marginBottom: "20px",
+          }}
+        >
+          Our Accomodation
+        </h2>
+        <p
+          className="text-center"
+          style={{ color: textColor, marginBottom: "40px" }}
+        >
+          Available for Independent Living, Short & Medium-Term Accomodation
+        </p>
 
         <Row className="mt-5">
           {accommodations.map((accommodation, index) => (
