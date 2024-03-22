@@ -6,11 +6,12 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Container from "react-bootstrap/Container";
+import axios from "axios";
 
 export function DemoModal(props) {
   const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
+    first_name: "",
+    last_name: "",
     email: "",
     qualification: "",
     position: "",
@@ -26,16 +27,10 @@ export function DemoModal(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData);
     try {
-      const response = await fetch("http://154.41.240.103/main.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      console.log(data); // Response from PHP script
+      const response = await axios.post("http://localhost:80", formData);
+      const data = response.data; // Response from PHP script
       // Optionally, show a success message or handle further actions
     } catch (error) {
       console.error("Error:", error);
@@ -59,36 +54,66 @@ export function DemoModal(props) {
           </Row>
           <Row className="mb-3">
             <Col md={6}>
-              <FloatingLabel controlId="f-name" label="First Name">
-                <Form.Control type="text" placeholder="First Name" />
+              <FloatingLabel controlId="first_name" label="First Name">
+                <Form.Control
+                  type="text"
+                  name="first_name"
+                  placeholder="First Name"
+                  onChange={handleChange}
+                />
               </FloatingLabel>
             </Col>
             <Col md={6}>
-              <FloatingLabel controlId="l-name" label="Last Name">
-                <Form.Control type="text" placeholder="Last Name" />
+              <FloatingLabel controlId="last_name" label="Last Name">
+                <Form.Control
+                  type="text"
+                  name="last_name"
+                  placeholder="Last Name"
+                  onChange={handleChange}
+                />
               </FloatingLabel>
             </Col>
           </Row>
           <FloatingLabel controlId="email" label="Email" className="mb-3">
-            <Form.Control type="email" placeholder="name@example.com" />
+            <Form.Control
+              type="email"
+              placeholder="name@example.com"
+              name="email"
+              onChange={handleChange}
+            />
           </FloatingLabel>
           <Row className="mb-3">
             <Col md={6}>
-              <FloatingLabel controlId="qual" label="Qualifications">
-                <Form.Control type="text" placeholder="Qualifications" />
+              <FloatingLabel controlId="qualifications" label="Qualifications">
+                <Form.Control
+                  type="text"
+                  name="qualifications"
+                  placeholder="Qualifications"
+                  onChange={handleChange}
+                />
               </FloatingLabel>
             </Col>
             <Col md={6}>
-              <Form.Select aria-label="Position">
+              <Form.Select
+                aria-label="position"
+                onChange={handleChange}
+                name="position"
+              >
                 <option>Select the position</option>
                 <option value="1">Support Worker</option>
                 <option value="2">Support Coordinator</option>
               </Form.Select>
             </Col>
           </Row>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Group className="mb-3" controlId="description">
             <Form.Label>Description</Form.Label>
-            <Form.Control as="textarea" rows={3} placeholder="Type Here" />
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Type Here"
+              name="description"
+              onChange={handleChange}
+            />
           </Form.Group>
 
           <Button
