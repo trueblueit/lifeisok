@@ -416,46 +416,54 @@ p {
 }
 
 /*---NAVBAR STICKY--*/
+.top-navbar {
+  background-color: #007bff; /* Keeping the top bar color */
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 16px;
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-info p {
+  margin: 0;
+  color: #ffffff;
+}
+/* Adjusting navbar padding for a shorter height */
+.navbar-custom {
+  background-color: #ffffff !important; /* White background */
+  padding: 5px 0; /* Reduced padding for a shorter navbar */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.navbar-custom .navbar-nav .nav-link {
+  color: #ff6900 !important; /* Orange color */
+  font-weight: bolder; /* Making font bolder */
+}
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus {
+  color: #f38b36 !important; /* Different shade of orange on hover/focus */
+  background-color: transparent;
+}
+.navbar-custom .navbar-nav .active > .nav-link,
+.navbar-custom .navbar-nav .nav-link.active,
+.navbar-custom .navbar-nav .nav-link.show {
+  color: #f38b36 !important; /* Different shade of orange for active link */
+  font-weight: lighter; /* Lighter font weight for active link */
+}
 .nav-sticky.navbar-custom {
-  margin-top: 0px;
-  padding: 10px 0px;
+  padding: 5px 0; /* Ensuring the sticky navbar also has reduced padding */
   box-shadow: 0px 3px 10px 0px rgba(38, 107, 193, 0.08);
 }
-/*made the navbar orange */
 .nav-sticky.navbar-custom.sticky-dark {
-  background-color: whitesmoke;
+  background-color: #ffffff; /* White background for sticky navbar */
 }
-.nav-sticky .navbar-nav li a {
-  color: #ff6900 !important;
-  font-weight: bolder;
+.navbar-brand img {
+  transition: transform 0.3s ease-in-out;
 }
-.nav-sticky .navbar-nav li.active a {
-  color: #f38b36 !important;
-  font-weight: lighter;
-}
-
-.nav-sticky.navbar-custom .navbar-nav li a.active,
-.nav-sticky.navbar-custom .navbar-nav li a:hover,
-.nav-sticky.navbar-custom .navbar-nav li a:active {
-  color: #f38b36;
-  font-weight: lighter;
-}
-
-.nav-sticky.navbar-custom .navbar-toggles {
-  padding: 0.25rem 0.75rem;
-  border: 1px solid transparent;
-  outline: 0;
-}
-
-.nav-sticky .navbar-nav {
-  margin-top: 0px;
-}
-
-.nav-sticky .navbar-custom {
-  margin-top: 0px;
-  padding: 10px 0px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 33px rgba(255, 255, 255, 0.1);
+.nav-sticky .navbar-brand img {
+  transform: scale(0.8);
 }
 
 [data-bs-theme="dark"] .nav-sticky.navbar-custom.sticky-dark {
@@ -540,8 +548,8 @@ p {
   margin: 0 auto;
 }
 .home-half {
-  padding-bottom: 200px;
-  padding-top: 300px;
+  padding-bottom: 325px; /* Increased bottom padding */
+  padding-top: 425px; /* Increased top padding */
 }
 /* ------- Demo 2 wave animation --------- */
 .wave-effect {
