@@ -11,11 +11,12 @@ $method =$_SERVER['REQUEST_METHOD'];
 switch($method) {
     case "POST":
     $new_member=json_decode(file_get_contents("php://input")); 
-    $sql = "INSERT INTO career_applications (id, first_name, last_name, email, qualifications, position, description) VALUES (null, :first_name, :last_name, :email, :qualifications, :position, :description)";
+    $sql = "INSERT INTO career_applications (id, first_name, last_name, email,phone, qualifications, position, description) VALUES (null, :first_name, :last_name, :email, :phone, :qualifications, :position, :description)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':first_name', $new_member->first_name);
     $stmt->bindParam(':last_name', $new_member->last_name);
     $stmt->bindParam(':email', $new_member->email);
+    $stmt->bindParam(':phone', $new_member->phone);
     $stmt->bindParam(':qualifications', $new_member->qualifications);
     $stmt->bindParam(':position', $new_member->position);
     $stmt->bindParam(':description', $new_member->description);

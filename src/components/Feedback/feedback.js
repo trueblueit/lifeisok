@@ -8,12 +8,15 @@ import {
   OverlayTrigger,
   Tooltip,
 } from "react-bootstrap";
+import axios from "axios";
+import { useToast } from "@chakra-ui/react";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
     rating: 0,
     description: "",
   });
+  const toast = useToast();
 
   const handleStarClick = (rating) => {
     setFormData({
@@ -29,13 +32,10 @@ const Feedback = () => {
       [name]: value,
     });
   };
+  const [submitMessage, setSubmitMessage] = useState(null);
+  // Handles form submission and posts feedback to the server
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Perform additional actions on form submission if needed
-    console.log("Form submitted:", formData);
-  };
-
+  // Renders a star for each rating value
   const renderStar = (value, index) => {
     const filled = value <= formData.rating;
     const tooltip = (
@@ -52,6 +52,24 @@ const Feedback = () => {
         </span>
       </OverlayTrigger>
     );
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:80/feedback.php",
+        formData
+      );
+      const data = response.data; // Response from PHP script
+      if (data.success) {
+        setSubmitMessage(data.message); // Set the success message
+      } else {
+        setSubmitMessage(data.message); // Set the error message
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // Optionally, show an error message or handle error cases
+    }
   };
 
   return (
@@ -71,7 +89,7 @@ const Feedback = () => {
               and let us know what you liked. Your feedback is valuable in
               helping us enhance our services.
             </p>
-
+            {/* Render feedback form */}
             <Form onSubmit={handleSubmit} className="mt-4">
               <Form.Group controlId="rating">
                 <Form.Label>Star Rating:</Form.Label>
@@ -81,9 +99,15 @@ const Feedback = () => {
                   )}
                 </div>
               </Form.Group>
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="email">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  name="email"
+                />
               </Form.Group>
 
               <Form.Group controlId="description">
