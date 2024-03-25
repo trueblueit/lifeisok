@@ -3,9 +3,9 @@
 
 class DbConnect {
     private $server = "localhost";
-    $username = 'u966329698_lifeisok'; // Replace with your MySQL username
-$password = 'Lifeisok083'; // Replace with your MySQL password
-$database = 'u966329698_react_lifeisok'; // Replace with your MySQL database name
+    private $username = "root";
+    private $password = "";
+    private $database = "myname";
 
     public function connect() {
         try{
