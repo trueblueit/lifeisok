@@ -1,3 +1,10 @@
+/**
+ * This is the core outreach support page
+ * This page displays the information of the core outreach support
+ * This page is exported as a default component
+ *
+ */
+
 import React, { Component } from "react";
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Section from "./section";

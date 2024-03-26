@@ -1,3 +1,8 @@
+/**
+ * This is the root file of React Router. All the page routes are defined here.
+ * It is used by the BrowserRouter component to render the pages based on the url path.
+ */
+
 import Index1 from "./pages/Index1/Index1";
 import Index2 from "./pages/Index2/Index2";
 import Index3 from "./pages/Index3/Index3";

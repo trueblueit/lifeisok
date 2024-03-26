@@ -29,7 +29,10 @@ export function DemoModal(props) {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post("http://localhost:80", formData);
+      const response = await axios.post(
+        "http://localhost:80/career.php",
+        formData
+      );
       const data = response.data; // Response from PHP script
       // Optionally, show a success message or handle further actions
     } catch (error) {
@@ -58,7 +61,6 @@ export function DemoModal(props) {
                 <Form.Control
                   type="text"
                   name="first_name"
-                  placeholder="First Name"
                   onChange={handleChange}
                 />
               </FloatingLabel>
@@ -68,27 +70,38 @@ export function DemoModal(props) {
                 <Form.Control
                   type="text"
                   name="last_name"
-                  placeholder="Last Name"
                   onChange={handleChange}
                 />
               </FloatingLabel>
             </Col>
           </Row>
-          <FloatingLabel controlId="email" label="Email" className="mb-3">
-            <Form.Control
-              type="email"
-              placeholder="name@example.com"
-              name="email"
-              onChange={handleChange}
-            />
-          </FloatingLabel>
+          <Row>
+            <Col md={6}>
+              <FloatingLabel controlId="email" label="Email" className="mb-3">
+                <Form.Control
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                />
+              </FloatingLabel>
+            </Col>
+            <Col md={6}>
+              <FloatingLabel controlId="phone" label="Phone" className="mb-3">
+                <Form.Control
+                  type="text"
+                  name="phone"
+                  onChange={handleChange}
+                />
+              </FloatingLabel>
+            </Col>
+          </Row>
+
           <Row className="mb-3">
             <Col md={6}>
               <FloatingLabel controlId="qualifications" label="Qualifications">
                 <Form.Control
                   type="text"
                   name="qualifications"
-                  placeholder="Qualifications"
                   onChange={handleChange}
                 />
               </FloatingLabel>
@@ -100,8 +113,8 @@ export function DemoModal(props) {
                 name="position"
               >
                 <option>Select the position</option>
-                <option value="1">Support Worker</option>
-                <option value="2">Support Coordinator</option>
+                <option>Support Worker</option>
+                <option>Support Coordinator</option>
               </Form.Select>
             </Col>
           </Row>
@@ -134,7 +147,7 @@ export function Career() {
 
   return (
     <React.Fragment>
-      <section className="section mybg" id="Career">
+      <section className="section mybg" id="career">
         <div className="bg-overlay"></div>
         <Container fluid>
           <Row>
