@@ -8,6 +8,8 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Container from "react-bootstrap/Container";
 import axios from "axios";
 
+import { useToast } from "@chakra-ui/react";
+
 export function DemoModal(props) {
   const [formData, setFormData] = useState({
     first_name: "",
@@ -18,12 +20,18 @@ export function DemoModal(props) {
     description: "",
   });
 
+  const toast = useToast();
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
+
+  // Handles form submission and posts feedback to the server
+
+  const [submitMessage, setSubmitMessage] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,11 +41,47 @@ export function DemoModal(props) {
         "http://localhost:80/career.php",
         formData
       );
-      const data = response.data; // Response from PHP script
-      // Optionally, show a success message or handle further actions
+      const data = response.data;
+      setSubmitMessage(data.message); // Response from PHP script
+      if (data.success) {
+        // Set the success message
+        // Show success toast
+        toast({
+          title: "Sucessful",
+          description: data.message,
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+        });
+        // Reset form data after toast is displayed
+        setFormData({
+          first_name: "",
+          last_name: "",
+          email: "",
+          qualification: "",
+          position: "",
+          description: "",
+        });
+      } else {
+        setSubmitMessage(data.message); // Set the error message
+        toast({
+          title: "Error",
+          description: data.message,
+          status: "error",
+          duration: 1000,
+          isClosable: true,
+        });
+      }
     } catch (error) {
       console.error("Error:", error);
       // Optionally, show an error message or handle error cases
+      toast({
+        title: "Error",
+        description: "Cannot access your server",
+        status: "error",
+        duration: 1000,
+        isClosable: true,
+      });
     }
   };
 

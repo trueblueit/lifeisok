@@ -11,6 +11,25 @@ $method =$_SERVER['REQUEST_METHOD'];
 switch($method) {
     case "POST":
     $feedback=json_decode(file_get_contents("php://input")); 
+    // Check if rating is null or empty
+    if ($feedback->rating === null) {
+        $response = [
+            'success' => false,
+            
+            'heading' => 'Rating is required',
+            'message' => 'Please select your rating before submitting'
+        ];
+    }
+    // Check if email is empty
+    elseif (empty($feedback->email)) {
+        $response = [
+            'success' => false,
+            'heading' => 'Email is required',
+            'message' => 'Please enter your email'
+        ];
+    } else
+    {
+        // Insert data into database
     $sql = "INSERT INTO feedback (rating, email, description) VALUES (:rating, :email, :description)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':email', $feedback->email);
@@ -27,6 +46,7 @@ switch($method) {
             'message' => 'Error inserting data: ' . $stmt->error
         ];
     }
+}
     break;
 }
 echo json_encode($response); 

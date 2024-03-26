@@ -13,8 +13,9 @@ import { useToast } from "@chakra-ui/react";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
-    rating: 0,
+    rating: null,
     description: "",
+    email: "",
   });
   const toast = useToast();
 
@@ -32,8 +33,9 @@ const Feedback = () => {
       [name]: value,
     });
   };
-  const [submitMessage, setSubmitMessage] = useState(null);
+
   // Handles form submission and posts feedback to the server
+  const [submitMessage, setSubmitMessage] = useState(null);
 
   // Renders a star for each rating value
   const renderStar = (value, index) => {
@@ -60,11 +62,33 @@ const Feedback = () => {
         "http://localhost:80/feedback.php",
         formData
       );
-      const data = response.data; // Response from PHP script
+      const data = response.data;
+      // Set the  message
+      setSubmitMessage(data.message); // Response from PHP script
       if (data.success) {
-        setSubmitMessage(data.message); // Set the success message
+        // Show success toast
+        toast({
+          title: "Sucessful",
+          description: data.message,
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+        });
+        // Reset form data after toast is displayed
+        setFormData({
+          rating: 0,
+          description: "",
+          email: "",
+        });
       } else {
         setSubmitMessage(data.message); // Set the error message
+        toast({
+          title: data.heading,
+          description: data.message,
+          status: "warning",
+          duration: 2000,
+          isClosable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
