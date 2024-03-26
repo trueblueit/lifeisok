@@ -1,3 +1,10 @@
+/**
+ * This component is a reusable Navbar component for Reactstrap framework
+ * It handles the responsive navbar toggling and links
+ * This component is exported as a default
+ *
+ */
+
 import React, { Component } from "react";
 import {
   Nav,
@@ -22,11 +29,11 @@ class Navbar_Page extends Component {
       navItems: [
         { id: 1, link: "/#home", idnm: "home", navheading: "Home" },
         { id: 2, link: "/#features", idnm: "features", navheading: "Features" },
-        { id: 3, link: "/#services", idnm: "services", navheading: "Services" },
-        { id: 4, link: "/#about", idnm: "about", navheading: "About" },
+        { id: 3, link: "/index3", idnm: "services", navheading: "Services" },
+        { id: 4, link: "/index4", idnm: "about", navheading: "About" },
         {
           id: 5,
-          link: "/#accomodation",
+          link: "/service3",
           idnm: "accomodation",
           navheading: "Accomodation",
         },
@@ -106,22 +113,25 @@ class Navbar_Page extends Component {
                     title="Contact Us"
                     data-bs-theme="dark"
                   >
+                    {/* DropdownItem for Contact Us */}
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <Dropdown.Item href="/#contact">Referal</Dropdown.Item>
+                      <Dropdown.Item href="/index5">Referal</Dropdown.Item>
                     </motion.div>
 
+                    {/* DropdownItem for enquire */}
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1, duration: 0.5 }}
                     >
-                      <Dropdown.Item href="/#contact">Enquire</Dropdown.Item>
+                      <Dropdown.Item href="/index1">Enquire</Dropdown.Item>
                     </motion.div>
 
+                    {/* DropdownItem for career */}
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
@@ -129,13 +139,13 @@ class Navbar_Page extends Component {
                     >
                       <Dropdown.Item href="/#career">Career</Dropdown.Item>
                     </motion.div>
-
+                    {/* DropdownItem for Feedback */}
                     <motion.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.3, duration: 0.5 }}
                     >
-                      <Dropdown.Item href="/#blog">Feedback</Dropdown.Item>
+                      <Dropdown.Item href="/#feedback">Feedback</Dropdown.Item>
                     </motion.div>
                   </DropdownButton>
                 </NavItem>

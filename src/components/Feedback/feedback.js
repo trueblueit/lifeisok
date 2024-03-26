@@ -74,7 +74,7 @@ const Feedback = () => {
 
   return (
     <React.Fragment>
-      <section className="section feedback-bg " id="blog">
+      <section className="section feedback-bg " id="feedback">
         {/* Render section title */}
 
         <div className="bg-overlay"></div>

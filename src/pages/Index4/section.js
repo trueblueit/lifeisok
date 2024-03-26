@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 function Section() {
   return (
     <React.Fragment>
-      <section className="section bg-home h-75">
+      <section className="section bg-home home-half">
         <div className="bg-overlay"></div>
         <Container>
           <Container>

@@ -1,3 +1,12 @@
+/**
+ * This file contains data for the app
+ * It is seperated from the app code to make it easy
+ * to work with and manage data.
+ *
+ * It exports the data as constants that can be imported
+ * into the app code.
+ */
+
 // accommodationData
 export const houses = [
   {
