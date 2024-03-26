@@ -2,8 +2,53 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import {
+  FaHandHoldingHeart,
+  FaPeopleCarry,
+  FaHeartbeat,
+  FaTools,
+  FaBriefcase,
+  FaLightbulb,
+  FaHome,
+  FaGraduationCap,
+} from "react-icons/fa";
+
+const services = [
+  {
+    title: "Assistance with social and community participation",
+    Icon: FaPeopleCarry,
+  },
+  {
+    title: "Increased social and community participation",
+    Icon: FaHandHoldingHeart,
+  },
+  { title: "Improve health and wellbeing", Icon: FaHeartbeat },
+  { title: "Improve daily living", Icon: FaHome },
+  { title: "Finding and keeping the job", Icon: FaBriefcase },
+  { title: "Improve life choices", Icon: FaLightbulb },
+  { title: "Assistance with daily living", Icon: FaTools },
+  { title: "School Leavers Employment", Icon: FaGraduationCap },
+];
 
 function Aboutbody() {
+  const listStyle = {
+    listStyleType: "none",
+    paddingLeft: "0",
+    marginTop: "20px",
+  };
+
+  const listItemStyle = {
+    marginBottom: "15px",
+    display: "flex",
+    alignItems: "center",
+  };
+
+  const iconStyle = {
+    marginRight: "10px",
+    minWidth: "24px",
+    fontSize: "20px",
+  };
+
   return (
     <React.Fragment>
       <Container fluid>
@@ -17,26 +62,12 @@ function Aboutbody() {
                   the National Disability Insurance Scheme (NDIS) in NT, seeking
                   to deliver services that include:
                 </p>
-
-                <ul className="mt-4 features-item-list list-group list-group-flush home-desc">
-                  <li className="list-group-item">
-                    Assistance with social and community participation
-                  </li>
-                  <li className="list-group-item">
-                    Increased social and community participation
-                  </li>
-                  <li className="list-group-item">
-                    Improve health and wellbeing
-                  </li>
-                  <li className="list-group-item">Improve daily living</li>
-                  <li className="list-group-item">
-                    Finding and keeping the job
-                  </li>
-                  <li className="list-group-item">Improve life choices </li>
-                  <li className="list-group-item">
-                    Assistance with daily living
-                  </li>
-                  <li className="list-group-item">School Leavers Employment</li>
+                <ul style={listStyle}>
+                  {services.map(({ title, Icon }, index) => (
+                    <li key={index} style={listItemStyle}>
+                      <Icon style={iconStyle} /> {title}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <Link to="/index3" className="btn btn-orange m-3">

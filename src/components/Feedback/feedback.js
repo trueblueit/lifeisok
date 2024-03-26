@@ -3,25 +3,24 @@ import {
   Container,
   Form,
   Button,
-  Col,
-  Row,
-  OverlayTrigger,
   Tooltip,
+  OverlayTrigger,
+  Row,
 } from "react-bootstrap";
-import axios from "axios";
-import { useToast } from "@chakra-ui/react";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
-    rating: 0,
+    rating: "", // Adjusted for emoji rating
     description: "",
   });
-  const toast = useToast();
 
-  const handleStarClick = (rating) => {
+  // Define emojis for the rating system
+  const emojis = ["😡", "😟", "😐", "😊", "😍"];
+
+  const handleEmojiClick = (emoji) => {
     setFormData({
       ...formData,
-      rating,
+      rating: emoji,
     });
   };
 
@@ -32,51 +31,35 @@ const Feedback = () => {
       [name]: value,
     });
   };
-  const [submitMessage, setSubmitMessage] = useState(null);
-  // Handles form submission and posts feedback to the server
 
-  // Renders a star for each rating value
-  const renderStar = (value, index) => {
-    const filled = value <= formData.rating;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  const renderEmoji = (emoji, index) => {
     const tooltip = (
-      <Tooltip id={`star-${index}`}>{`Rate ${index} stars`}</Tooltip>
+      <Tooltip id={`emoji-${index}`}>{`Rate as ${emoji}`}</Tooltip>
     );
 
     return (
       <OverlayTrigger key={index} overlay={tooltip}>
         <span
-          className={`star ${filled ? "filled" : ""}`}
-          onClick={() => handleStarClick(index)}
+          className="emoji"
+          role="img"
+          aria-label={`rate-${emoji}`}
+          style={{ cursor: "pointer", fontSize: "36px" }} // Emoji size adjusted previously
+          onClick={() => handleEmojiClick(emoji)}
         >
-          ★
+          {emoji}
         </span>
       </OverlayTrigger>
     );
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://localhost:80/feedback.php",
-        formData
-      );
-      const data = response.data; // Response from PHP script
-      if (data.success) {
-        setSubmitMessage(data.message); // Set the success message
-      } else {
-        setSubmitMessage(data.message); // Set the error message
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      // Optionally, show an error message or handle error cases
-    }
-  };
 
   return (
     <React.Fragment>
-      <section className="section feedback-bg " id="feedback">
-        {/* Render section title */}
-
+      <section className="section feedback-bg" id="blog">
         <div className="bg-overlay"></div>
         <Container fluid>
           <Row>
@@ -89,27 +72,30 @@ const Feedback = () => {
               and let us know what you liked. Your feedback is valuable in
               helping us enhance our services.
             </p>
-            {/* Render feedback form */}
-            <Form onSubmit={handleSubmit} className="mt-4">
+
+            {/* Updated form design */}
+            <Form
+              onSubmit={handleSubmit}
+              className="mt-4"
+              style={{
+                maxWidth: "600px",
+                margin: "auto",
+                background: "rgba(255, 255, 255, 0.9)",
+                padding: "30px",
+                borderRadius: "8px",
+                boxShadow: "0 2px 4px rgba(0,0,0,.1)",
+              }}
+            >
               <Form.Group controlId="rating">
-                <Form.Label>Star Rating:</Form.Label>
-                <div className="star-rating text-white">
-                  {[1, 2, 3, 4, 5].map((value, index) =>
-                    renderStar(value, index + 1)
-                  )}
+                <Form.Label>Rate Us:</Form.Label>
+                <div className="emoji-rating text-white">
+                  {emojis.map(renderEmoji)}
                 </div>
               </Form.Group>
-              <Form.Group controlId="email">
+              <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  name="email"
-                />
+                <Form.Control type="email" placeholder="Enter email" />
               </Form.Group>
-
               <Form.Group controlId="description">
                 <Form.Label>Additional Comments:</Form.Label>
                 <Form.Control
@@ -120,8 +106,16 @@ const Feedback = () => {
                   onChange={handleChange}
                 />
               </Form.Group>
-
-              <Button type="submit">Submit</Button>
+              <Button
+                type="submit"
+                style={{
+                  width: "100%",
+                  background: "#007bff",
+                  borderColor: "#007bff",
+                }}
+              >
+                Submit
+              </Button>
             </Form>
           </Row>
         </Container>
