@@ -109,7 +109,7 @@ class Navbar_Page extends Component {
                 <NavItem>
                   <DropdownButton
                     id="dropdown-basic-button"
-                    className="home-desc"
+                    className=""
                     title="Contact Us"
                     data-bs-theme="dark"
                   >

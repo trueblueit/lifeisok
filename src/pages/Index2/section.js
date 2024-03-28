@@ -25,16 +25,16 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section className="section bg-home home-half" id="home">
-          <div className="bg-overlay"></div>
           <Container fluid>
             <Container fluid>
               <Row className="justify-content-center align-items-center">
-                <Col className="text-white text-center">
+                <Col className="text-center">
                   <motion.h1
                     className="home-title"
                     initial={{ opacity: 0, scale: 0.75 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2 }}
+                    style={{ color: "#000000" }} // Setting the color to orange for the heading
                   >
                     Providing best Support for Your Choice
                   </motion.h1>
@@ -43,6 +43,7 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.75 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 3 }}
+                    style={{ color: "#000000" }} // Setting the color to orange for the paragraph
                   >
                     Dedicated to improving the quality of life for people with
                     disabilities. Aims to build a partnership with NDIS

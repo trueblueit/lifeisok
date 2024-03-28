@@ -105,6 +105,9 @@ export const images = [
     img: "assets/lifeisok/about.jpeg",
   },
   { id: 3, img: "assets/lifeisok/aboutus.jpeg" },
+  { id: 4, img: "assets/lifeisok/3.jpeg" },
+  { id: 5, img: "assets/lifeisok/1.jpeg" },
+  { id: 6, img: "assets/lifeisok/aboutus.jpeg" },
 ];
 
 export const servicesDetail = [

@@ -548,8 +548,8 @@ p {
   margin: 0 auto;
 }
 .home-half {
-  padding-bottom: 325px; /* Increased bottom padding */
-  padding-top: 425px; /* Increased top padding */
+  padding-bottom: 340px; /* Increased bottom padding */
+  padding-top: 440px; /* Increased top padding */
 }
 /* ------- Demo 2 wave animation --------- */
 .wave-effect {
@@ -889,4 +889,32 @@ textarea.form-control {
 .flipIn {
   backface-visibility: hidden;
   animation: flipIn 1s ease-out forwards;
+}
+.bg-service1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/core.jpg");
+}
+.bg-service2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/capacity.jpg");
+}
+.bg-service4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/support.jpg");
+}
+.bg-service5 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/employment.jpg");
+}
+.service-half {
+  padding-bottom: 275px; /* Increased bottom padding */
+  padding-top: 375px; /* Increased top padding */
 }
