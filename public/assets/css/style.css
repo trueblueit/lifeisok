@@ -517,7 +517,7 @@ p {
   background-position: center;
 }
 .bg-refer {
-  background-image: url("../images/referral-bg.jpg");
+  background-image: url("../images/refer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -917,4 +917,12 @@ textarea.form-control {
 .service-half {
   padding-bottom: 275px; /* Increased bottom padding */
   padding-top: 375px; /* Increased top padding */
+}
+.refer-half {
+  padding-bottom: 200px; /* Increased bottom padding */
+  padding-top: 300px; /* Increased top padding */
+}
+.contact-half {
+  padding-bottom: 200px; /* Increased bottom padding */
+  padding-top: 300px; /* Increased top padding */
 }

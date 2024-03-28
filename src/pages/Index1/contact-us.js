@@ -7,10 +7,10 @@ import { useToast } from "@chakra-ui/react"; // Assuming you're using Chakra UI 
 
 function Contactus() {
   const [formData, setFormData] = useState({
-    fullname: "",
+    Name: "",
     email: "",
     subject: "",
-    message: "",
+    description: "",
   });
   const toast = useToast();
 
@@ -26,7 +26,7 @@ function Contactus() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://your-backend-api-url/contactus.php", // Update with your backend API URL
+        "http://localhost:80/enquire.php", // Update with your backend API URL
         formData
       );
       const data = response.data;
@@ -56,7 +56,7 @@ function Contactus() {
     } catch (error) {
       console.error("Error:", error);
       toast({
-        title: "Error",
+        title: "Error main",
         description: "An error occurred while submitting the form.",
         status: "error",
         duration: 3000,
@@ -105,7 +105,7 @@ function Contactus() {
                 as="textarea"
                 rows={3}
                 placeholder="Type your message here"
-                name="message"
+                name="description"
                 value={formData.message}
                 onChange={handleChange}
               />

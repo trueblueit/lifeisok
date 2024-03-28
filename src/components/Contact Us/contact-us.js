@@ -77,38 +77,6 @@ const ContactUs = () => {
               </div>
             </Col>
           </Row>
-
-          <Row className="justify-content-center mt-4">
-            <Col className="text-center">
-              <Link
-                to="/index5"
-                className="btn"
-                style={{
-                  backgroundColor: "#ff9800",
-                  color: "#ffffff",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  textDecoration: "none",
-                  marginRight: "10px",
-                }}
-              >
-                Referral
-              </Link>
-              <Link
-                to="/index1"
-                className="btn"
-                style={{
-                  backgroundColor: "#ff9800",
-                  color: "#ffffff",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  textDecoration: "none",
-                }}
-              >
-                Enquire
-              </Link>
-            </Col>
-          </Row>
         </Container>
       </section>
     </React.Fragment>

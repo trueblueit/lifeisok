@@ -8,26 +8,24 @@ import {
   Row,
 } from "react-bootstrap";
 import axios from "axios";
-
 import { toast } from "react-toastify";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
-    rating: "", // Adjusted for emoji rating
-
-    rating: null,
-
+    rating: "", // Initialize rating as an empty string
     description: "",
     email: "",
   });
 
   // Define emojis for the rating system
   const emojis = ["😡", "😟", "😐", "😊", "😍"];
+  const emojiRatings = { "😡": 1, "😟": 2, "😐": 3, "😊": 4, "😍": 5 };
 
   const handleEmojiClick = (emoji) => {
+    const numericalRating = emojiRatings[emoji]; // Convert emoji to numerical rating
     setFormData({
       ...formData,
-      rating: emoji,
+      rating: numericalRating,
     });
   };
 
@@ -39,13 +37,12 @@ const Feedback = () => {
     });
   };
 
-  // Handles form submission and posts feedback to the server
-  const [submitMessage, setSubmitMessage] = useState(null);
-
   const renderEmoji = (emoji, index) => {
     const tooltip = (
       <Tooltip id={`emoji-${index}`}>{`Rate as ${emoji}`}</Tooltip>
     );
+
+    const isSelected = formData.rating === emojiRatings[emoji]; // Check if this numerical rating is selected
 
     return (
       <OverlayTrigger key={index} overlay={tooltip}>
@@ -53,7 +50,14 @@ const Feedback = () => {
           className="emoji"
           role="img"
           aria-label={`rate-${emoji}`}
-          style={{ cursor: "pointer", fontSize: "36px" }} // Emoji size adjusted previously
+          style={{
+            cursor: "pointer",
+            fontSize: "36px",
+            backgroundColor: isSelected ? "orange" : "transparent", // Highlight selected emoji
+            borderRadius: "50%", // Circular background
+            padding: "5px",
+            margin: "5px",
+          }}
           onClick={() => handleEmojiClick(emoji)}
         >
           {emoji}
@@ -70,80 +74,60 @@ const Feedback = () => {
         formData
       );
       const data = response.data;
-      // Set the  message
-      setSubmitMessage(data.message); // Response from PHP script
+
       if (data.success) {
-        // Show success toast
-        toast({
-          title: "Sucessful",
-          description: data.message,
-          status: "success",
-          duration: 1000,
-          isClosable: true,
-        });
-        // Reset form data after toast is displayed
+        toast.success(data.message);
         setFormData({
-          rating: 0,
+          rating: "",
           description: "",
           email: "",
         });
       } else {
-        setSubmitMessage(data.message); // Set the error message
-        toast({
-          title: data.heading,
-          description: data.message,
-          status: "warning",
-          duration: 2000,
-          isClosable: true,
-        });
+        toast.error(data.message);
       }
     } catch (error) {
       console.error("Error:", error);
-      // Optionally, show an error message or handle error cases
+      toast.error("An error occurred while submitting your feedback.");
     }
   };
 
   return (
-    <React.Fragment>
-      <section className="section feedback-bg" id="blog">
-        <div className="bg-overlay"></div>
-        <Container fluid>
-          <Row>
-            <h1 className="get-started-title text-white text-center">
-              Rate our Service
-            </h1>
-            <div className="section-title-border mt-4 bg-white"></div>
-            <p className="section-subtitle font-secondary text-white text-center pt-4">
-              Share your thoughts on our service! Rate your experience with us
-              and let us know what you liked. Your feedback is valuable in
-              helping us enhance our services.
-            </p>
-
-            {/* Updated form design */}
-            <Form
-              onSubmit={(e) => {
-                e.preventDefault();
-                console.log("Form submitted:", formData);
-              }}
-              className="mt-4"
-              style={{
-                maxWidth: "600px",
-                margin: "auto",
-                background: "rgba(255, 255, 255, 0.9)",
-                padding: "30px",
-                borderRadius: "8px",
-                boxShadow: "0 2px 4px rgba(0,0,0,.1)",
-              }}
-            >
-              <Form.Group controlId="rating">
+    <section className="section feedback-bg" id="blog">
+      <div className="bg-overlay"></div>
+      <Container fluid>
+        <Row>
+          <div
+            className="mx-auto"
+            style={{
+              maxWidth: "600px",
+              padding: "20px",
+              backgroundColor: "white",
+              borderRadius: "8px",
+              boxShadow: "0 2px 4px rgba(0,0,0,.1)",
+            }}
+          >
+            <div className="col-12 text-center">
+              <h1 className="text-dark">Rate Our Service</h1>
+              <p className="text-muted">
+                Share your thoughts on our service! Rate your experience with us
+                and let us know what you liked. Your feedback is valuable in
+                helping us enhance our services.
+              </p>
+            </div>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group>
                 <Form.Label>Rate Us:</Form.Label>
-                <div className="emoji-rating text-white">
-                  {emojis.map(renderEmoji)}
-                </div>
+                <div>{emojis.map(renderEmoji)}</div>
               </Form.Group>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter email"
+                />
               </Form.Group>
               <Form.Group controlId="description">
                 <Form.Label>Additional Comments:</Form.Label>
@@ -155,21 +139,14 @@ const Feedback = () => {
                   onChange={handleChange}
                 />
               </Form.Group>
-              <Button
-                type="submit"
-                style={{
-                  width: "100%",
-                  background: "#007bff",
-                  borderColor: "#007bff",
-                }}
-              >
+              <Button variant="primary" type="submit" style={{ width: "100%" }}>
                 Submit
               </Button>
             </Form>
-          </Row>
-        </Container>
-      </section>
-    </React.Fragment>
+          </div>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

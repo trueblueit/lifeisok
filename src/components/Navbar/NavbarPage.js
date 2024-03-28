@@ -1,10 +1,3 @@
-/**
- * This component is a reusable Navbar component for Reactstrap framework
- * It handles the responsive navbar toggling and links
- * This component is exported as a default
- *
- */
-
 import React, { Component } from "react";
 import {
   Nav,
@@ -16,10 +9,11 @@ import {
 } from "reactstrap";
 
 import Container from "react-bootstrap/Container";
-import { motion } from "framer-motion";
+
+// Import custom styles or CSS module here if needed, for example:
+// import './NavbarPage.css';
 
 import DropdownButton from "react-bootstrap/DropdownButton";
-
 import Dropdown from "react-bootstrap/Dropdown";
 
 class Navbar_Page extends Component {
@@ -74,7 +68,7 @@ class Navbar_Page extends Component {
         <Container>
           <div
             className={`navbar navbar-expand-lg fixed-top navbar-custom sticky ${
-              isNavSticky ? "nav-sticky  sticky-dark" : ""
+              isNavSticky ? "nav-sticky sticky-dark" : ""
             }`}
           >
             <NavbarBrand
@@ -111,42 +105,24 @@ class Navbar_Page extends Component {
                     id="dropdown-basic-button"
                     className=""
                     title="Contact Us"
-                    data-bs-theme="dark"
+                    data-bs-theme=""
+                    // Custom styling applied here for the dropdown
                   >
-                    {/* DropdownItem for Contact Us */}
-                    <motion.div
-                      initial={{ x: -100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.5 }}
+                    <Dropdown.Item href="/index5" style={{ color: "orange" }}>
+                      Referal
+                    </Dropdown.Item>
+                    <Dropdown.Item href="/index1" style={{ color: "orange" }}>
+                      Enquire
+                    </Dropdown.Item>
+                    <Dropdown.Item href="/#career" style={{ color: "orange" }}>
+                      Career
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      href="/#feedback"
+                      style={{ color: "orange" }}
                     >
-                      <Dropdown.Item href="/index5">Referal</Dropdown.Item>
-                    </motion.div>
-
-                    {/* DropdownItem for enquire */}
-                    <motion.div
-                      initial={{ x: -100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.1, duration: 0.5 }}
-                    >
-                      <Dropdown.Item href="/index1">Enquire</Dropdown.Item>
-                    </motion.div>
-
-                    {/* DropdownItem for career */}
-                    <motion.div
-                      initial={{ x: -100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.2, duration: 0.5 }}
-                    >
-                      <Dropdown.Item href="/#career">Career</Dropdown.Item>
-                    </motion.div>
-                    {/* DropdownItem for Feedback */}
-                    <motion.div
-                      initial={{ x: -100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: 0.3, duration: 0.5 }}
-                    >
-                      <Dropdown.Item href="/#feedback">Feedback</Dropdown.Item>
-                    </motion.div>
+                      Feedback
+                    </Dropdown.Item>
                   </DropdownButton>
                 </NavItem>
               </Nav>
