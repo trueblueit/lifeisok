@@ -11,7 +11,11 @@ import {
 const Feedback = () => {
   const [formData, setFormData] = useState({
     rating: "", // Adjusted for emoji rating
+
+    rating: null,
+
     description: "",
+    email: "",
   });
 
   // Define emojis for the rating system
@@ -32,10 +36,8 @@ const Feedback = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+  // Handles form submission and posts feedback to the server
+  const [submitMessage, setSubmitMessage] = useState(null);
 
   const renderEmoji = (emoji, index) => {
     const tooltip = (
@@ -57,6 +59,47 @@ const Feedback = () => {
     );
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:80/feedback.php",
+        formData
+      );
+      const data = response.data;
+      // Set the  message
+      setSubmitMessage(data.message); // Response from PHP script
+      if (data.success) {
+        // Show success toast
+        toast({
+          title: "Sucessful",
+          description: data.message,
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+        });
+        // Reset form data after toast is displayed
+        setFormData({
+          rating: 0,
+          description: "",
+          email: "",
+        });
+      } else {
+        setSubmitMessage(data.message); // Set the error message
+        toast({
+          title: data.heading,
+          description: data.message,
+          status: "warning",
+          duration: 2000,
+          isClosable: true,
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // Optionally, show an error message or handle error cases
+    }
+  };
+
   return (
     <React.Fragment>
       <section className="section feedback-bg" id="blog">
@@ -75,7 +118,10 @@ const Feedback = () => {
 
             {/* Updated form design */}
             <Form
-              onSubmit={handleSubmit}
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log("Form submitted:", formData);
+              }}
               className="mt-4"
               style={{
                 maxWidth: "600px",

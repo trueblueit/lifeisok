@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { LinkBox, LinkOverlay, Heading, Text, Box } from "@chakra-ui/react";
 
 class ServiceBox extends Component {
   constructor(props) {
@@ -31,37 +31,38 @@ class ServiceBox extends Component {
 
     return (
       <Col lg="4" className="mt-4">
-        <div
+        <LinkBox
+          p="5"
+          borderWidth="1px"
+          rounded="md"
           className="services-box text-center hover-effect"
           style={boxStyle}
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
         >
-          <div>
+          <Heading size="md" my="2">
             <div className="d-flex justify-content-center">
               <i
                 className={this.props.icon + " text-primary"}
                 style={{ fontSize: "24px" }}
               ></i>
             </div>
-            <div>
+            <LinkOverlay href={this.props.mylink}>
               <h4 style={{ color: darkBlueColor }}>{this.props.title}</h4>
-              <p className="pt-2" style={{ color: blackColor }}>
-                {this.props.description}
-              </p>{" "}
-              {/* Black color applied here */}
-            </div>
-          </div>
+            </LinkOverlay>
+          </Heading>
+          <Text mb="3">{this.props.description}</Text>
           {this.state.isHovered && (
-            <Link
-              to={this.props.mylink}
-              className="btn mt-5"
-              style={{ background: "#ff6900", color: "#fff" }}
+            <Box
+              as="a"
+              color="orange.400"
+              href={this.props.mylink}
+              fontWeight="bold"
             >
-              Read More
-            </Link>
+              Read more
+            </Box>
           )}
-        </div>
+        </LinkBox>
       </Col>
     );
   }

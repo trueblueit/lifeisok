@@ -4,11 +4,14 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+
 import axios from "axios";
+import { useToast } from "@chakra-ui/react";
 function Referral() {
   const [formData, setFormData] = useState({
     participant_name: "",
     ndis_number: "",
+    email: "",
     address: "",
     contact_number: "",
     service_type: "",
@@ -21,6 +24,8 @@ function Referral() {
     callback_request: false,
   });
   const [submitMessage, setSubmitMessage] = useState(null);
+  const [submitHeadinh, setSubmitHeading] = useState(null);
+  const toast = useToast();
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Perform additional actions on form submission if needed
@@ -30,11 +35,27 @@ function Referral() {
         "http://localhost:80/referral.php",
         formData
       );
-      const data = response.data; // Response from PHP script
+      const data = response.data;
+      setSubmitMessage(data.message);
+      setSubmitMessage(data.message); // Response from PHP script
+
       if (data.success) {
-        setSubmitMessage(data.message);
+        toast({
+          title: "Sucessful",
+          description: data.message,
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+        });
       } else {
-        setSubmitMessage(data.message); // Set the error message
+        // Set the error message
+        toast({
+          title: data.heading,
+          description: data.message,
+          status: "warning",
+          duration: 2500,
+          isClosable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
@@ -86,16 +107,41 @@ function Referral() {
                 </FloatingLabel>
               </Col>
             </Row>
-            <FloatingLabel controlId="address" label="Address" className="mb-3">
-              <Form.Control
-                type="text"
-                name="address"
-                value={formData.address}
-                onChange={(e) =>
-                  setFormData({ ...formData, address: e.target.value })
-                }
-              />
-            </FloatingLabel>
+            <Row>
+              <Col xs={12} md={6}>
+                <FloatingLabel
+                  controlId="email"
+                  label="Email Address"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                  />
+                </FloatingLabel>
+              </Col>
+              <Col>
+                <FloatingLabel
+                  controlId="address"
+                  label="Address"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    type="text"
+                    name="address"
+                    value={formData.address}
+                    onChange={(e) =>
+                      setFormData({ ...formData, address: e.target.value })
+                    }
+                  />
+                </FloatingLabel>
+              </Col>
+            </Row>
+
             <Row>
               <Col xs={12} md={6}>
                 <FloatingLabel

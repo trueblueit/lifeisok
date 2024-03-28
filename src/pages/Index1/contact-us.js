@@ -1,52 +1,125 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
-import Footer from "../../components/Footer/footer";
+import axios from "axios";
+import { useToast } from "@chakra-ui/react"; // Assuming you're using Chakra UI for toast notifications
+
 function Contactus() {
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const toast = useToast();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://your-backend-api-url/contactus.php", // Update with your backend API URL
+        formData
+      );
+      const data = response.data;
+      if (data.success) {
+        toast({
+          title: "Success",
+          description: data.message,
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        setFormData({
+          fullname: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: data.message,
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast({
+        title: "Error",
+        description: "An error occurred while submitting the form.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
-    <Container fluid className="mt-5">
-      <div className="row justify-content-center">
-        <Form className="col-md-8 text-center">
-          <Form.Text className="text-muted">
-            We'll never share your details with anyone else.
-          </Form.Text>
-          <Form.Group className="mb-3" controlId="formFullName">
-            <Form.Control
-              type="text"
-              placeholder="Full Name"
-              id="fullname"
-              name="fullname"
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control
-              type="email"
-              placeholder="Enter email"
-              id="email"
-              name="email"
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formSubject">
-            <Form.Control type="text" placeholder="Subject" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formMessage">
-            <Form.Control
-              as="textarea"
-              rows={3}
-              placeholder="Type your message here"
-            />
-          </Form.Group>
-          <div className="d-grid gap-2 mb-3">
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </div>
-        </Form>
-      </div>
-    </Container>
+    <>
+      <Container fluid className="mt-5">
+        <div className="row justify-content-center">
+          <Form className="col-md-8 text-center" onSubmit={handleSubmit}>
+            <Form.Text className="text-muted">
+              We'll never share your details with anyone else.
+            </Form.Text>
+            <Form.Group className="mb-3" controlId="formFullName">
+              <Form.Control
+                type="text"
+                placeholder="Full Name"
+                name="fullname"
+                value={formData.fullname}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formSubject">
+              <Form.Control
+                type="text"
+                placeholder="Subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formMessage">
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Type your message here"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <div className="d-grid gap-2 mb-3">
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </div>
+          </Form>
+        </div>
+      </Container>
+    </>
   );
-  <Footer />;
 }
 
 export default Contactus;

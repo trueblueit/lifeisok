@@ -11,6 +11,29 @@ $method =$_SERVER['REQUEST_METHOD'];
 switch($method) {
     case "POST":
     $new_member=json_decode(file_get_contents("php://input")); 
+    // Check if the email already exists
+    $checkEmailSql = "SELECT COUNT(*) AS count FROM career WHERE email = :email";
+    $checkEmailStmt = $conn->prepare($checkEmailSql);
+    $checkEmailStmt->bindParam(':email', $new_member->email);
+    $checkEmailStmt->execute();
+    $emailCount = $checkEmailStmt->fetchColumn();
+
+   if(empty($new_member->email) || empty($new_member->phone) || empty($new_member->first_name) || empty($new_member->last_name) ){
+        $response = [
+            'success' => false,
+            'heading' => 'Missing Information',
+            'message' => 'Make sure you enter your name, email and contact number'
+        ];
+
+    }
+    elseif ($emailCount > 0) {
+        $response = [
+            'success' => false,
+            'heading' => 'Email already exists'
+            'message' => 'Try again with a different email'
+        ];
+    } 
+    else {
     $sql = "INSERT INTO career (id, first_name, last_name, email,phone, qualifications, position, description) VALUES (null, :first_name, :last_name, :email, :phone, :qualifications, :position, :description)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':first_name', $new_member->first_name);
@@ -31,6 +54,7 @@ switch($method) {
             'message' => 'Error inserting data: ' . $stmt->error
         ];
     }
+}
     break;
 }
     
