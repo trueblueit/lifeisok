@@ -44,11 +44,11 @@ class Footer extends Component {
 
             <Col xs={12} md={4} lg={4} className="text-center mt-4 mt-md-0">
               <h3 className="text-white">Follow Us</h3>
-              <div className="mt-3">
+              <div className="d-flex flex-wrap justify-content-center mt-3">
                 {this.state.socials.map((social, index) => (
                   <a key={index} href={social.link}>
                     <img
-                      className={index > 0 ? "ms-3" : ""}
+                      className={"mx-3"}
                       src={`assets/lifeisok/${social.icon}.png`}
                       alt={`Social Icon ${index}`}
                     />

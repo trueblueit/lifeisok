@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { LinkBox, LinkOverlay, Heading, Text } from "@chakra-ui/react";
 
 const ContactUs = () => {
   return (
@@ -21,60 +21,62 @@ const ContactUs = () => {
 
           <Row className="justify-content-center">
             <Col lg="6" className="mb-4 mb-lg-0">
-              <div
-                className="text-center"
-                style={{
-                  padding: "20px",
-                  backgroundColor: "#fff",
-                  borderRadius: "10px",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                }}
+              <LinkBox
+                p="4"
+                bg="white"
+                borderRadius="lg"
+                boxShadow="md"
+                textAlign="center"
+                mb="4"
               >
-                <i
-                  className="pe-7s-mail icon"
-                  style={{ fontSize: "24px", marginBottom: "15px" }}
-                ></i>
-                <h4>Message Us At</h4>
-                <p>
+                <Heading size="md" mb="3">
+                  <i
+                    className="pe-7s-mail icon me-3"
+                    style={{ fontSize: "24px" }}
+                  ></i>
+                  Message Us At
+                </Heading>
+                <Text>
                   Email:{" "}
-                  <a
+                  <LinkOverlay
                     href="mailto:admin@lifeisok.info"
-                    style={{ textDecoration: "none", color: "#007bff" }}
+                    color="blue.500"
                   >
                     admin@lifeisok.info
-                  </a>
-                </p>
-              </div>
+                  </LinkOverlay>
+                </Text>
+              </LinkBox>
             </Col>
 
             <Col lg="6">
-              <div
-                className="text-center"
-                style={{
-                  padding: "20px",
-                  backgroundColor: "#fff",
-                  borderRadius: "10px",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                }}
+              <LinkBox
+                p="4"
+                bg="white"
+                borderRadius="lg"
+                boxShadow="md"
+                textAlign="center"
+                mb="4"
               >
-                <i
-                  className="pe-7s-map icon"
-                  style={{ fontSize: "24px", marginBottom: "15px" }}
-                ></i>
-                <h4>Location</h4>
-                <p>
+                <Heading size="md" mb="3">
+                  Location
+                  <i
+                    className="pe-7s-map icon ms-3"
+                    style={{ fontSize: "24px" }}
+                  ></i>
+                </Heading>
+                <Text>
                   Address:{" "}
-                  <a
+                  <LinkOverlay
                     href="https://www.google.com/maps/search/?api=1&query=48+Trower+Rd,+Millner+NT+0810"
+                    color="blue.500"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ textDecoration: "none", color: "#007bff" }}
                   >
                     Shop 16 (Rapid Creek Shopping Village) 48 Trower Road,
                     Milner, NT 0810
-                  </a>
-                </p>
-              </div>
+                  </LinkOverlay>
+                </Text>
+              </LinkBox>
             </Col>
           </Row>
         </Container>
