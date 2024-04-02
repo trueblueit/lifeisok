@@ -6,50 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath, faCar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
-const accommodations = [
-  {
-    name: "Luxury House",
-    description:
-      "This stunning luxury house offers unparalleled comfort and elegance, featuring state-of-the-art amenities and exquisite design for a truly opulent living experience.",
-    bedrooms: 4,
-    bathrooms: 3,
-    parking: 2,
-    imgSrc: [
-      ".././assets/lifeisok/house/1.jpg",
-      ".././assets/lifeisok/house/3.jpg", // Additional images
-      ".././assets/lifeisok/house/5.jpg",
-    ],
-  },
-  {
-    name: "Cozy Cottage",
-    description:
-      "Our Cozy Cottage provides a cozy and inviting atmosphere, perfect for those seeking a peaceful and comfortable retreat from the hustle and bustle of daily life.",
-    bedrooms: 2,
-    bathrooms: 3,
-    parking: 2,
-    imgSrc: [
-      ".././assets/lifeisok/house/2.jpg",
-      ".././assets/lifeisok/house/4.jpg",
-      ".././assets/lifeisok/house/6.jpg",
-    ],
-  },
-  {
-    name: "Modern Apartment",
-    description:
-      "Experience modern living in our stylish apartment, equipped with contemporary furnishings and smart home features for a convenient and sophisticated lifestyle.",
-    bedrooms: 3,
-    bathrooms: 3,
-    parking: 2,
-    imgSrc: [
-      ".././assets/lifeisok/house/3.jpg",
-      ".././assets/lifeisok/house/1.jpg",
-      ".././assets/lifeisok/house/3.jpg",
-    ],
-  },
-
-  // Add more accommodations as needed
-];
+import { accommodations } from "../../data";
 
 const AccommodationsSection = () => {
   const [show, setShow] = useState(false);

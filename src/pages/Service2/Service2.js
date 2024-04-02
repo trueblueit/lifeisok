@@ -78,11 +78,13 @@ class Service2 extends React.Component {
                     <Card.Text style={textStyle}>
                       Our wide range of non-clinical capacity-building services
                       includes social skills, employment, life skills, and
-                      tenancy support. As part of our person-centered recovery
-                      approach, we also provide life transition planning,
-                      mentoring, and peer support. These supports for you are
-                      available 7 days a week Your NDIS plan may include the
-                      following funding sections for capacity-building support:
+                      tenancy support.
+                      <br /> As part of our person-centered recovery approach,
+                      we also provide life transition planning, mentoring, and
+                      peer support. These supports for you are available 7 days
+                      a week Your NDIS plan may include the following funding
+                      sections for capacity-building support:
+                      <br />
                       <p>→ Improved living arrangement</p>
                       <p>→ Increased social and community participation</p>
                       <p>→ Finding and keeping a job</p>
