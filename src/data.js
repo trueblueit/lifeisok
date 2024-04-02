@@ -54,46 +54,46 @@ export const values = [
 //services
 export const services = [
   {
-    title: "Core Outreach Support",
-    icon: "pe-7s-diamond",
+    title: "DAILY ACTIVITIES & IMPROVED LIVING CHOICE",
+    icon: "pe-7s-rocket",
     mylink: "/service1",
     description:
-      "Offering round-the-clock support for personal care and community engagement to enhance the independence of home-bound individuals.",
+      "We are excellent in providing all home-bound personal and self-care support as well as community access supports to assist you in visiting family and friends or participating in daily scheduled or innovative activities or social events.",
   },
   {
-    title: "Capacity Building Outreach Supports",
+    title: "ASSISTANCE WITH SOCIAL AND COMMUNITY PARTICIPATION",
     icon: "pe-7s-chat ",
     mylink: "/service2",
     description:
-      "Empowering you with social, employment, and life skills development for a holistic person-centred recovery journey.",
+      "Our wide range of non-clinical capacity-building services includes social skills, employment, life skills, and tenancy support. As part of our person-centered recovery approach.",
   },
   {
     title: "ACCOMMODATION SUPPORT",
     icon: "pe-7s-home",
     mylink: "/service3",
     description:
-      "Providing safe, supportive living solutions, from long-term SIL to temporary STA, tailored to your needs.",
+      "Funding for Accommodation Supports generally comes from the Core funding section of your NDIS plan and is usually pre-planned with the agency when your plan is established or reviewed.",
   },
   {
-    title: "Support Coordination",
-    icon: "pe-7s-paper-plane",
+    title: "SUPPORTS IN EMPLOYMENT",
+    icon: "pe-7s-map-2",
     mylink: "/service4",
     description:
-      "Exceptional support coordination in Darwin, fostering open communication and tailored assistance to enrich your life.",
+      "Funding for support in employment is in the Core budget of a participant’s plan under the support category Assistance with Social Economic and Community Participation. The NDIS also funds capacity building employment supports.",
   },
   {
-    title: "Supports in Employment",
-    icon: "pe-7s-clock",
+    title: "SUPPORTED INDEPENDENT LIVING (SIL)",
+    icon: "pe-7s-key",
     mylink: "/service5",
     description:
-      "Extensive employment support focusing on personal and professional growth, including SLES, to ensure successful career paths.",
+      "In our SIL, you will find a safe, comfortable, and supportive living environment, where all your everyday needs will be met. You will receive person-centred care from our SIL team; they will assist you in planning your recovery journey.",
   },
   {
-    title: "House Cleaning and Maintenance",
-    icon: "pe-7s-tools",
-    mylink: "/service3",
+    title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)",
+    icon: "pe-7s-portfolio",
+    mylink: "/service6",
     description:
-      "Expert cleaning and maintenance services to keep your living spaces pristine and well-maintained, ensuring comfort and peace of mind.",
+      "A SLES is an NDIS support available to students leaving secondary school that helps them on a pathway to employment.",
   },
 ];
 

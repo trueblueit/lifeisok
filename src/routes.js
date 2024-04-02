@@ -13,6 +13,7 @@ import Service2 from "./pages/Service2/Service2";
 import Service3 from "./pages/Service3/Service3";
 import Service4 from "./pages/Service4/Service4";
 import Service5 from "./pages/Service5/Service5";
+import Service6 from "./pages/Service6/Service6";
 const routes = [
   { path: "/index5", component: <Index5 /> },
   { path: "/index4", component: <Index4 /> },
@@ -24,6 +25,7 @@ const routes = [
   { path: "/service3", component: <Service3 /> },
   { path: "/service4", component: <Service4 /> },
   { path: "/service5", component: <Service5 /> },
+  { path: "/service6", component: <Service6 /> },
 ];
 
 export default routes;
