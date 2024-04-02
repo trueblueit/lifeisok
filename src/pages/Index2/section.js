@@ -31,7 +31,7 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.75 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2 }}
-                    style={{ color: "#ff6600" }} // Orange color for the heading
+                    style={{ color: "#ffffff" }} // Setting the color to orange for the heading
                   >
                     Providing best Support for Your Choice
                   </motion.h1>
@@ -39,8 +39,7 @@ class Section extends Component {
                     className="home-desc"
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 3 }}
-                    style={{ color: "#ff6600" }} // Orange color for the paragraph
+                    transition={{ duration: 3 }} // Setting the color to orange for the paragraph
                   >
                     Dedicated to improving the quality of life for people with
                     disabilities. Aims to build a partnership with NDIS
