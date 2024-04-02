@@ -3,10 +3,6 @@ import { Row, Col } from "reactstrap";
 import { motion } from "framer-motion";
 
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-
-import Lottie from "lottie-react";
-import animationdata from "../../animation/Animation - 1708004346894.json";
 
 class Section extends Component {
   constructor() {
@@ -25,6 +21,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section className="section bg-home home-half" id="home">
+          <div className="bg-overlay"></div>
           <Container fluid>
             <Container fluid>
               <Row className="justify-content-center align-items-center">
@@ -34,7 +31,7 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.75 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2 }}
-                    style={{ color: "#ff6600" }} // Setting the color to orange for the heading
+                    style={{ color: "#ff6600" }} // Orange color for the heading
                   >
                     Providing best Support for Your Choice
                   </motion.h1>
@@ -43,7 +40,7 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 3 }}
-                    style={{ color: "#ff6600" }} // Setting the color to orange for the paragraph
+                    style={{ color: "#ff6600" }} // Orange color for the paragraph
                   >
                     Dedicated to improving the quality of life for people with
                     disabilities. Aims to build a partnership with NDIS
