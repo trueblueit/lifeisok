@@ -16,10 +16,14 @@ function Section() {
               >
                 <h1 className="home-title">About Us</h1>
                 <p className="pt-3 home-desc mx-auto">
-                  “Life Is OK” aspires to be business role models through
-                  cultural awareness and person-centric support strategies; we
-                  also have the vision to uphold our commitment to serving NDIS
-                  participants with excellence.
+                  Founded by a team of disability professionals with over a
+                  decade of experience, Life is Ok is dedicated to improving the
+                  quality of life for people with disabilities. Life is OK Pty
+                  Ltd aims to build a partnership with NDIS Participants to
+                  learn what they want and hope to achieve, then deliver
+                  services to meet those needs to feel their life dignified and
+                  happy. We aspire to be business role models through cultural
+                  awareness and person-centric support ALL SERVICES
                 </p>
               </Col>
             </Row>

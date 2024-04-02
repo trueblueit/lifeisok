@@ -4,7 +4,10 @@ import Section from "./section";
 import Footer from "../../components/Footer/footer";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import ContactUs from "../../components/Contact Us/contact-us";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 class Service4 extends React.Component {
   render() {
@@ -72,96 +75,46 @@ class Service4 extends React.Component {
                 <Card style={cardStyle}>
                   <motion.div variants={itemVariants}>
                     <Card.Title style={titleStyle}>
-                      Support Coordination
+                      Supports In Employment
                     </Card.Title>
                     <Card.Text style={textStyle}>
-                      <Container fluid>
-                        <div className="align-items-center mt-5 ">
-                          <div className="features-box mt-5 mt-lg-0">
-                            <p className="text-muted home-desc">
-                              Support coordination helps you to make the best
-                              use of your supports in plan. Support coordination
-                              is a capacity building support which helps you to:
-                            </p>
-                            <ul className="text-muted list-unstyled mt-4 features-item-list home-desc">
-                              <li className="">
-                                Understand and use you NDIS plan to pursue your
-                                goals
-                              </li>
-                              <li className="">
-                                Connect you with NDIS providers, community,
-                                mainstream and other government services
-                              </li>
-                              <li className="">
-                                Build your confidence and skills to use and
-                                coordinate your supports.
-                              </li>
-                            </ul>
-                            <br />
-                          </div>
-
-                          <h1 className="text-center">
-                            Specialised Support Coordination Services
-                          </h1>
-
-                          <p className="text-muted home-desc">
-                            Specialist support coordination is a higher level of
-                            Support. The focus is on reducing complexity in the
-                            participant’s support environment and helping the
-                            participant overcome immediate and/or significant
-                            barriers in plan implementation.
-                          </p>
-                          <ul className="text-black mt-4 features-item-list home-desc">
-                            <li>
-                              <strong>Cultural Understanding: </strong>We deeply
-                              respect and appreciate the cultural heritage of
-                              our Aboriginal clients. Our team is trained to
-                              understand the unique needs and preferences within
-                              this community, ensuring that our support is
-                              respectful, sensitive, and aligned with cultural
-                              values.
-                            </li>
-                            <br />
-                            <li>
-                              <strong>Community Connection: </strong>Being an
-                              integral part of the Darwin community, we have
-                              established strong connections and partnerships.
-                              We can connect you with culturally appropriate
-                              support networks and services that can enhance
-                              your NDIS experience.
-                            </li>
-                            <br />
-                            <li>
-                              <strong>Individualised Guidance: </strong>Our
-                              Support Coordinators work closely with you to
-                              understand your specific needs, goals, and
-                              aspirations. We tailor our support to ensure it
-                              aligns with your cultural background, preferences,
-                              and circumstances.
-                            </li>
-                            <br />
-                            <li>
-                              <strong>Advocacy and Empowerment: </strong>We
-                              advocate for your rights and choices within the
-                              NDIS framework. Our aim is to empower you to make
-                              informed decisions, assisting you in navigating
-                              the NDIS process while upholding your cultural
-                              identity.
-                            </li>
-                            <br />
-                            <li>
-                              <strong>Transparent Communication : </strong>Our
-                              Support We believe in open and clear
-                              communication. Our team ensures that you are
-                              well-informed about your options, the services
-                              available, and how they can benefit you. We
-                              encourage dialogue, questions, and active
-                              participation in your NDIS journey.
-                            </li>
-                          </ul>
-                        </div>
-                      </Container>
+                      As a registered NDIS provider of Supports in employment
+                      supports, we provide the following:{" "}
+                      <p>
+                        <FontAwesomeIcon icon={faThumbsUp} /> Supports to assist
+                        participants with employment where it is beyond the
+                        requirements of employment services and employers.
+                      </p>
+                      <p>
+                        <FontAwesomeIcon icon={faThumbsUp} /> Supports the
+                        participants would require regardless of the activity
+                        they are undertaking (Personal care, assist with
+                        transport, assistive technology etc.)
+                      </p>{" "}
+                      We also provide services for building relationships with
+                      mainstream providers and the local community to improve
+                      our understanding of the employment needs of people with
+                      disabilities. Funding for support in employment is in the
+                      Core budget of a participant’s plan under the support
+                      category Assistance with Social Economic and Community
+                      Participation. The NDIS also funds capacity building
+                      employment supports, such as:
+                      <p>
+                        <FontAwesomeIcon icon={faArrowRight} />{" "}
+                        Employment-related assessment and counselling
+                      </p>
+                      <p>
+                        <FontAwesomeIcon icon={faArrowRight} /> Workplace
+                        assistance
+                      </p>
+                      <p>
+                        <FontAwesomeIcon icon={faArrowRight} /> School leaver
+                        employment supports (SLES)
+                      </p>
                     </Card.Text>
+                    <Link to="/index1" className="btn btn-orange m-3">
+                      Enquire Now
+                    </Link>
                   </motion.div>
                 </Card>
               </Col>

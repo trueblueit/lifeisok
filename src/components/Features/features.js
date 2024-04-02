@@ -45,31 +45,30 @@ class Features extends Component {
                     icon: <FaRegSmile style={{ color: iconColor }} />,
                     title: "Cultural Sensitivity",
                     description:
-                      "Our team's exceptional cultural awareness enriches your experience.",
+                      "Experience worker with exceptional cultural awareness",
                   },
                   {
                     icon: <FaHeart style={{ color: iconColor }} />,
                     title: "Life Enrichment",
                     description:
-                      "Dedicated to enhancing your life, ensuring you feel valued and respected.",
+                      "Ability to dignify your life and to make you feel your life is ok",
                   },
                   {
                     icon: <FaUserFriends style={{ color: iconColor }} />,
                     title: "Expert Guidance",
                     description:
-                      "Benefit from complimentary consultation with our seasoned experts.",
+                      "Free consultation sessions with our experienced team",
                   },
                   {
                     icon: <FaBalanceScaleRight style={{ color: iconColor }} />,
                     title: "Integrity and Respect",
                     description:
-                      "Interact with utmost integrity, fairness, and honesty.",
+                      "Our policies ensure our team treat you with fairness, respect, and honesty",
                   },
                   {
                     icon: <FaThumbsUp style={{ color: iconColor }} />,
                     title: "Empowered Decisions",
-                    description:
-                      "Your preferences and decisions are paramount; we support, not dictate.",
+                    description: "You have the choice and control, always.",
                   },
                 ].map((feature, index) => (
                   <div

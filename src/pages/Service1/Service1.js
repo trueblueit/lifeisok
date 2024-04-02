@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/footer";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import ContactUs from "../../components/Contact Us/contact-us";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 class Service1 extends React.Component {
   render() {
@@ -72,19 +73,23 @@ class Service1 extends React.Component {
                 <Card style={cardStyle}>
                   <motion.div variants={itemVariants}>
                     <Card.Title style={titleStyle}>
-                      Core Outreach Support
+                      Daily Activities & Improved living Choice
                     </Card.Title>
                     <Card.Text style={textStyle}>
-                      We are excellent in providing all home-bound personal and
-                      self-care support as well as community access supports to
-                      assist you in visiting family and friends or participating
-                      in daily scheduled or innovative activities or social
-                      events in the community. Your core funding section of your
-                      NDIS plan enables you to get the core outreach support.
-                      Supports for you will be available 24 hours a day, 7 days
-                      a week. These supports are currently available in the
-                      Greater Darwin regions.
+                      Outreach support to the core (home-bound or community
+                      place). We are excellent in providing all home-bound
+                      personal and self-care support as well as community access
+                      supports to assist you in visiting family and friends or
+                      participating in daily scheduled or innovative activities
+                      or social events in the community. Your core funding
+                      section of your NDIS plan back you up for your Core
+                      outreach support. Supports for you will be available 24
+                      hours a day, 7 days a week. These supports are currently
+                      available in the Greater Darwin regions.
                     </Card.Text>
+                    <Link to="/index1" className="btn btn-orange m-3">
+                      Enquire Now
+                    </Link>
                   </motion.div>
                 </Card>
               </Col>

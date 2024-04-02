@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/footer";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import ContactUs from "../../components/Contact Us/contact-us";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 class Service5 extends React.Component {
   render() {
@@ -72,20 +73,21 @@ class Service5 extends React.Component {
                 <Card style={cardStyle}>
                   <motion.div variants={itemVariants}>
                     <Card.Title style={titleStyle}>
-                      Supports in Employment
+                      Supported Independent Living (SIL)
                     </Card.Title>
                     <Card.Text style={textStyle}>
-                      We are excellent in providing all home-bound personal and
-                      self-care support as well as community access supports to
-                      assist you in visiting family and friends or participating
-                      in daily scheduled or innovative activities or social
-                      events in the community. Your core funding section of your
-                      NDIS plan enable you to get the core outreach support.
-                      Supports for you will be available 24 hours a day, 7 days
-                      a week. These supports are currently available in the
-                      Greater Darwin regions.
+                      In our SIL, you will find a safe, comfortable, and
+                      supportive living environment, where all your everyday
+                      needs will be met. You will receive person-centred care
+                      from our SIL team; they will assist you in planning your
+                      recovery journey, strengthening you to build your
+                      independence, and reaching your goals. Our long-term basis
+                      SIL services are available in Palmerston and in Darwin.
                     </Card.Text>
                   </motion.div>
+                  <Link to="/index1" className="btn btn-orange m-3">
+                    Enquire Now
+                  </Link>
                 </Card>
               </Col>
             </Row>

@@ -7,7 +7,7 @@ import ContactUs from "../../components/Contact Us/contact-us";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-class Service2 extends React.Component {
+class Service5 extends React.Component {
   render() {
     const cardStyle = {
       boxShadow: "0 8px 15px rgba(0, 0, 0, 0.1)",
@@ -73,21 +73,24 @@ class Service2 extends React.Component {
                 <Card style={cardStyle}>
                   <motion.div variants={itemVariants}>
                     <Card.Title style={titleStyle}>
-                      Assistance with Social and Community Participation
+                      School Leaver Employment Supports(SLES)
                     </Card.Title>
                     <Card.Text style={textStyle}>
-                      Our wide range of non-clinical capacity-building services
-                      includes social skills, employment, life skills, and
-                      tenancy support. As part of our person-centered recovery
-                      approach, we also provide life transition planning,
-                      mentoring, and peer support. These supports for you are
-                      available 7 days a week Your NDIS plan may include the
-                      following funding sections for capacity-building support:
-                      <p>→ Improved living arrangement</p>
-                      <p>→ Increased social and community participation</p>
-                      <p>→ Finding and keeping a job</p>
-                      <p>→ Improved relationships</p>
-                      <p>→ Improved daily living skills</p>
+                      Life Is OK provides School Leaver Employment Support
+                      (SLES) in NT Australia. A SLES is an NDIS support
+                      available to students leaving secondary school that helps
+                      them on a pathway to employment. SELS and other individual
+                      and group based supports to achieve your employment goals.
+                      <br />
+                      Supports can help you learn more about your work skills
+                      and develop your confidence to begin job seeking. For
+                      example, you might like to ‘try and test’ work, with
+                      supports in place, to identify your work skills, learn how
+                      to communicate with others at work, or better understand
+                      what an employer might expect from you.
+                      <br />
+                      You might also like to become more independent at work or
+                      progress your career goals.
                     </Card.Text>
                     <Link to="/index1" className="btn btn-orange m-3">
                       Enquire Now
@@ -106,4 +109,4 @@ class Service2 extends React.Component {
   }
 }
 
-export default Service2;
+export default Service5;
