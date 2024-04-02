@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-import Card from "react-bootstrap/Card";
 import { values } from "../../data";
-import animationdata from "../../animation/Animation - 1708004346894.json";
-import Lottie from "lottie-react";
 
 class Values extends Component {
   state = {
@@ -26,32 +23,39 @@ class Values extends Component {
             >
               Our Values
             </h2>
+            {/* List of features on the left */}
 
-            <Row className="justify-content-center">
-              {this.state.values.map((value) => (
-                <Col
-                  key={value.id}
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={3}
-                  className="mb-4 d-flex align-items-stretch"
+            <Row>
+              {this.state.values.map((value, index) => (
+                <div
+                  key={index}
+                  style={{
+                    marginBottom: "10px",
+                    padding: "5px",
+                    backgroundColor: "#f2f2f2",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
                 >
-                  <Card
-                    className="text-center value-shadow"
-                    style={{ width: "100%" }}
-                  >
-                    <Card.Body>
-                      <Card.Title>{value.name}</Card.Title>
-                      <Card.Img
-                        variant="top"
-                        src={value.img}
-                        alt="logo-img"
-                        className="img-fluid"
-                      />
-                    </Card.Body>
-                  </Card>
-                </Col>
+                  <div style={{ fontSize: "24px" }}>
+                    <img
+                      variant="top"
+                      src={value.img}
+                      alt="logo-img"
+                      className="img-fluid"
+                      style={{
+                        width: "100px",
+                        height: "auto",
+                        mixBlendMode: "darken",
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <h5 style={{ color: textColor }}>{value.name}</h5>
+                    <p>{value.description}</p>
+                  </div>
+                </div>
               ))}
             </Row>
           </Container>

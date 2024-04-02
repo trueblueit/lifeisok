@@ -41,14 +41,41 @@ export const house =
   "Location: Stuart Park \n2 bedroom Modal \n1 Bathroom \n1 Car Park Space\nNote:- No Pet allowed";
 // our values
 export const values = [
-  { id: 1, img: "assets/images/icons/1.png", name: "COMPASSION" },
+  {
+    id: 1,
+    img: "assets/images/icons/1.png",
+    name: "COMPASSION",
+    description:
+      "We offer support from our desire to help individuals and emphasize on the operational environment is less stressful and more satisfying.",
+  },
   {
     id: 2,
     img: "assets/images/icons/2.png",
     name: "TOGETHERNESS/INTEGRITY",
+    description:
+      "We cement our relationship by encouraging each other to strive together, feel safe and belong to a group.",
   },
-  { id: 3, img: "assets/images/icons/3.png", name: "RESEPCT" },
-  { id: 4, img: "assets/images/icons/4.png", name: "TRUST" },
+  {
+    id: 3,
+    img: "assets/images/icons/3.png",
+    name: "RESEPCT",
+    description:
+      "We recognise individual rights and dignity. We do care about the diversity and social cohesion/inclusion.",
+  },
+  {
+    id: 4,
+    img: "assets/images/icons/4.png",
+    name: "TRUST",
+    description:
+      "We trust our ability to contribute to a positive change. We thrive to achieve the best potential of individual.",
+  },
+  {
+    id: 5,
+    img: "assets/images/icons/5.png",
+    name: "EXPLORE",
+    description:
+      "To grow in an everyday changing environment, we keep questioning and challenging ourselves and the status quo.",
+  },
 ];
 
 //services
@@ -144,14 +171,14 @@ export const servicesDetail = [
 // housing service
 export const accordionData = [
   {
-    title: "Supported independent living",
+    title: "Supported independent living (SIL)",
     content:
-      " In our SIL, you’ll enjoy a safe, comfortable, and supportive living environment where your daily needs are met. Our dedicated SIL team provides person-centered care to help plan your recovery journey, build independence, and achieve your goals. Long-term SIL services are offered in Palmerston and Darwin.",
+      " In our SIL, you will find a safe, comfortable, and supportive living environment, where all your everyday needs will be met. You will receive person-centred care from our SIL team; they will assist you in planning your recovery journey, strengthening you to build your independence, and reaching your goals. Our long-term basis SIL services are available in Palmerston and in Darwin.",
   },
   {
-    title: "Short term accommodation",
+    title: "Short Term Accommodation (STA)",
     content:
-      " Our Short-Term Accommodation (STA) provides a safe haven away from your usual residence. During your stay, we offer personalized support that covers appointments, social outings, family visits, daily living, self-care, and planning for psychosocial recovery and NDIS. STA is available for up to 14 days at shared residential sites in Darwin.",
+      "Our STA offers a safe place for you to experience time away from your normal place of residence. While at STA, you will experience a personalized service which will accommodate all your needs, including appointments, social outings, family and friend visits, day-to-day living, self-care support, and planning for psychosocial recovery and NDIS. For a period of up to 14 days, we provide STA at shared residential sites across Darwin.",
   },
   {
     title: "Medium term accommodation (MTA)",

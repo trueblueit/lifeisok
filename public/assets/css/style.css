@@ -19,7 +19,7 @@ h6 {
 }
 .h1,
 h1 {
-  font-size: 36px;
+  font-size: 40px;
 }
 
 .h2,
@@ -530,7 +530,7 @@ p {
 }
 .home-title {
   font-family: "Sarabun", sans-serif;
-  font-size: 46px;
+  font-size: 50px;
   line-height: 64px;
 }
 
@@ -543,8 +543,8 @@ p {
 .home-desc {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Sarabun", sans-serif;
-  font-size: 15px;
-  max-width: 600px;
+  font-size: 20px;
+  max-width: 500px;
   margin: 0 auto;
 }
 .home-half {

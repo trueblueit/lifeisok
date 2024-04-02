@@ -34,16 +34,16 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.75 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2 }}
-                    style={{ color: "#000000" }} // Setting the color to orange for the heading
+                    style={{ color: "#ff6600" }} // Setting the color to orange for the heading
                   >
                     Providing best Support for Your Choice
                   </motion.h1>
                   <motion.p
                     className="home-desc"
-                    initial={{ opacity: 0, scale: 0.75 }}
+                    initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 3 }}
-                    style={{ color: "#000000" }} // Setting the color to orange for the paragraph
+                    style={{ color: "#ff6600" }} // Setting the color to orange for the paragraph
                   >
                     Dedicated to improving the quality of life for people with
                     disabilities. Aims to build a partnership with NDIS
