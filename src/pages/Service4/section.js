@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
+import Navbar_Page from "../../components/Navbar/NavbarPage";
+import Service4 from "./Service4";
+import ContactUs from "../../components/Contact Us/contact-us";
+import Footer from "../../components/Footer/footer";
 
 class Section extends Component {
   constructor() {
@@ -17,6 +21,7 @@ class Section extends Component {
   render() {
     return (
       <React.Fragment>
+        <Navbar_Page />
         <section className="section bg-service4 service-half">
           <Container>
             <div className="wave-effect wave-anim">
@@ -47,6 +52,9 @@ class Section extends Component {
             </div>
           </Container>
         </section>
+        <Service4 />
+        <ContactUs />
+        <Footer />
       </React.Fragment>
     );
   }

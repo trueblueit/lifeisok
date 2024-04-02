@@ -35,39 +35,9 @@ class Service3 extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* Importing Navbar */}
-        <NavbarPage />
-
-        {/* Importing Section */}
-        <Section />
-        <Row className="mt-5">
-          <Col>
-            <Accordion defaultActiveKey="0">
-              <RenderAccordionItems />
-            </Accordion>
-          </Col>
-          <Col xs={12} md={6}>
-            <Carousel fade>
-              {houses.map((house, index) => (
-                <Carousel.Item key={index}>
-                  <Image
-                    className="mt-1"
-                    src={house.imag}
-                    alt={house.name}
-                    rounded
-                    fluid
-                    loading="lazy"
-                  />
-                  <Carousel.Caption>
-                    <h3>{house.name}</h3>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Col>
-        </Row>
-        <ContactUs />
-        <Footer />
+        <Accordion defaultActiveKey="0">
+          <RenderAccordionItems />
+        </Accordion>
       </React.Fragment>
     );
   }

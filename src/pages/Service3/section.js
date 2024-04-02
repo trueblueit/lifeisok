@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
+import Navbar_Page from "../../components/Navbar/NavbarPage";
+
+import Footer from "../../components/Footer/footer";
+import ContactUs from "../../components/Contact Us/contact-us";
+import Service3 from "./Service3";
 
 class Section extends Component {
   constructor() {
@@ -17,6 +22,7 @@ class Section extends Component {
   render() {
     return (
       <React.Fragment>
+        <Navbar_Page />
         <section className="section bg-home home-half" id="home">
           <div className="bg-overlay"></div>
           <Container>
@@ -57,6 +63,9 @@ class Section extends Component {
             </div>
           </div>
         </section>
+        <Service3 />
+        <ContactUs />
+        <Footer />
       </React.Fragment>
     );
   }

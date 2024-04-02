@@ -8,12 +8,12 @@ import Index2 from "./pages/Index2/Index2";
 import Index3 from "./pages/Index3/Index3";
 import Index4 from "./pages/Index4/Index4";
 import Index5 from "./pages/Index5/Index5";
-import Service1 from "./pages/Service1/Service1";
-import Service2 from "./pages/Service2/Service2";
-import Service3 from "./pages/Service3/Service3";
-import Service4 from "./pages/Service4/Service4";
-import Service5 from "./pages/Service5/Service5";
-import Service6 from "./pages/Service6/Service6";
+import Service1 from "./pages/Service1/section";
+import Service2 from "./pages/Service2/section";
+import Service3 from "./pages/Service3/section";
+import Service4 from "./pages/Service4/section";
+import Service5 from "./pages/Service5/section";
+import Service6 from "./pages/Service6/section";
 const routes = [
   { path: "/index5", component: <Index5 /> },
   { path: "/index4", component: <Index4 /> },

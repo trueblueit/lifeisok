@@ -1,9 +1,5 @@
 import React from "react";
-import NavbarPage from "../../components/Navbar/NavbarPage";
-import Section from "./section";
-import Footer from "../../components/Footer/footer";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import ContactUs from "../../components/Contact Us/contact-us";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -59,9 +55,6 @@ class Service5 extends React.Component {
 
     return (
       <React.Fragment>
-        <NavbarPage />
-        <Section />
-
         <Container style={{ marginTop: "60px", marginBottom: "60px" }}>
           <motion.div
             variants={containerVariants}
@@ -102,9 +95,6 @@ class Service5 extends React.Component {
             </Row>
           </motion.div>
         </Container>
-
-        <ContactUs />
-        <Footer />
       </React.Fragment>
     );
   }

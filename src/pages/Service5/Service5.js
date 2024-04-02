@@ -59,9 +59,6 @@ class Service5 extends React.Component {
 
     return (
       <React.Fragment>
-        <NavbarPage />
-        <Section />
-
         <Container style={{ marginTop: "60px", marginBottom: "60px" }}>
           <motion.div
             variants={containerVariants}
@@ -95,9 +92,6 @@ class Service5 extends React.Component {
             </Row>
           </motion.div>
         </Container>
-
-        <ContactUs />
-        <Footer />
       </React.Fragment>
     );
   }
