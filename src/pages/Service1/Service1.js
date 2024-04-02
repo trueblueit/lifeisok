@@ -77,15 +77,18 @@ class Service1 extends React.Component {
                     </Card.Title>
                     <Card.Text style={textStyle}>
                       Outreach support to the core (home-bound or community
-                      place). We are excellent in providing all home-bound
+                      place).
+                      <br />
+                      <br /> We are excellent in providing all home-bound
                       personal and self-care support as well as community access
                       supports to assist you in visiting family and friends or
                       participating in daily scheduled or innovative activities
-                      or social events in the community. Your core funding
-                      section of your NDIS plan back you up for your Core
-                      outreach support. Supports for you will be available 24
-                      hours a day, 7 days a week. These supports are currently
-                      available in the Greater Darwin regions.
+                      or social events in the community.
+                      <br /> <br /> Your core funding section of your NDIS plan
+                      back you up for your Core outreach support. Supports for
+                      you will be available 24 hours a day, 7 days a week. These
+                      supports are currently available in the Greater Darwin
+                      regions.
                     </Card.Text>
                     <Link to="/index1" className="btn btn-orange m-3">
                       Enquire Now

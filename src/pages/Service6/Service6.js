@@ -79,8 +79,9 @@ class Service5 extends React.Component {
                       Life Is OK provides School Leaver Employment Support
                       (SLES) in NT Australia. A SLES is an NDIS support
                       available to students leaving secondary school that helps
-                      them on a pathway to employment. SELS and other individual
-                      and group based supports to achieve your employment goals.
+                      them on a pathway to employment.
+                      <br /> SELS and other individual and group based supports
+                      to achieve your employment goals.
                       <br />
                       Supports can help you learn more about your work skills
                       and develop your confidence to begin job seeking. For

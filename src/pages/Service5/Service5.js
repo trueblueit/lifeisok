@@ -81,13 +81,15 @@ class Service5 extends React.Component {
                       needs will be met. You will receive person-centred care
                       from our SIL team; they will assist you in planning your
                       recovery journey, strengthening you to build your
-                      independence, and reaching your goals. Our long-term basis
-                      SIL services are available in Palmerston and in Darwin.
+                      independence, and reaching your goals.
+                      <br />
+                      <br /> Our long-term basis SIL services are available in
+                      Palmerston and in Darwin.
                     </Card.Text>
+                    <Link to="/index1" className="btn btn-orange m-3">
+                      Enquire Now
+                    </Link>
                   </motion.div>
-                  <Link to="/index1" className="btn btn-orange m-3">
-                    Enquire Now
-                  </Link>
                 </Card>
               </Col>
             </Row>
