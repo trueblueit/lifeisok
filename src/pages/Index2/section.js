@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
 class Section extends Component {
@@ -39,12 +39,32 @@ class Section extends Component {
                     className="home-desc"
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 3 }} // Setting the color to orange for the paragraph
+                    transition={{ duration: 3 }}
+                    style={{ color: "#ffffff" }} // Setting the color to orange for the heading
                   >
                     Dedicated to improving the quality of life for people with
                     disabilities. Aims to build a partnership with NDIS
                     Participants to learn what they want to learn and achieve.
                   </motion.p>
+                  <Link
+                    to="/index3"
+                    className="btn mt-4"
+                    style={{
+                      background: "linear-gradient(45deg, #FFA849, #FF7A5A)", // Gradient example
+                      color: "#fff",
+                      padding: "10px 30px",
+                      borderRadius: "30px",
+                      transition: "transform 0.3s ease",
+                    }}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.style.transform = "scale(1.05)")
+                    }
+                    onMouseOut={(e) =>
+                      (e.currentTarget.style.transform = "scale(1)")
+                    }
+                  >
+                    Our Services
+                  </Link>
                 </Col>
               </Row>
             </Container>

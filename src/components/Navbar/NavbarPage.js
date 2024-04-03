@@ -6,62 +6,101 @@ import {
   NavItem,
   NavLink,
   Collapse,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
 } from "reactstrap";
-
 import Container from "react-bootstrap/Container";
 
-// Import custom styles or CSS module here if needed, for example:
-// import './NavbarPage.css';
-
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
-
-class Navbar_Page extends Component {
+class NavbarPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       navItems: [
         { id: 1, link: "/#home", idnm: "home", navheading: "Home" },
         { id: 2, link: "/#features", idnm: "features", navheading: "Features" },
-        { id: 3, link: "/index3", idnm: "services", navheading: "Services" },
+        {
+          id: 3,
+          link: "/index3",
+          idnm: "services",
+          navheading: "Services",
+          dropdown: [
+            {
+              id: 5,
+              link: "/service1",
+              idnm: "service1",
+              navheading: "Daily Activities & Improved Living Choice",
+            },
+            {
+              id: 6,
+              link: "/service2",
+              idnm: "service2",
+              navheading: "Assistance With Social And Community Participation",
+            },
+            {
+              id: 7,
+              link: "/service3",
+              idnm: "service3",
+              navheading: "Accommodation Support",
+            },
+            {
+              id: 8,
+              link: "/service4",
+              idnm: "service4",
+              navheading: "Supports in Employment",
+            },
+            {
+              id: 9,
+              link: "/service5",
+              idnm: "service5",
+              navheading: "Supported Independent Living (SIL)",
+            },
+            {
+              id: 10,
+              link: "/service6",
+              idnm: "service6",
+              navheading: "School Leaver Employment Supports (SLES)",
+            },
+          ],
+          isOpen: false,
+        },
         { id: 4, link: "/index4", idnm: "about", navheading: "About" },
         {
-          id: 5,
+          id: 11,
           link: "/service3",
           idnm: "accomodation",
           navheading: "Accomodation",
         },
       ],
+      contactUsOpen: false,
       isNavSticky: false,
       isOpenMenu: false,
     };
   }
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const { isNavSticky } = this.state;
-    const scrollY = window.scrollY;
-
-    if (scrollY >= 50 && !isNavSticky) {
-      this.setState({ isNavSticky: true });
-    } else if (scrollY < 50 && isNavSticky) {
-      this.setState({ isNavSticky: false });
-    }
+  toggleNavbar = () => {
+    this.setState((prevState) => ({
+      isOpenMenu: !prevState.isOpenMenu,
+    }));
   };
 
-  toggle = () => {
-    this.setState((prevState) => ({ isOpenMenu: !prevState.isOpenMenu }));
+  // Adjusted to manage hover for dropdowns effectively
+  toggleDropdown = (dropdownId, isOpen) => {
+    this.setState((prevState) => ({
+      navItems: prevState.navItems.map((item) => {
+        if (item.id === dropdownId) {
+          return { ...item, isOpen: isOpen };
+        }
+        return item;
+      }),
+      contactUsOpen:
+        dropdownId === "contactUs" ? isOpen : prevState.contactUsOpen,
+    }));
   };
 
   render() {
-    const { isNavSticky, isOpenMenu, navItems } = this.state;
+    const { isNavSticky, isOpenMenu, navItems, contactUsOpen } = this.state;
 
     return (
       <React.Fragment>
@@ -79,52 +118,78 @@ class Navbar_Page extends Component {
                 src="assets/lifeisok/logo.png"
                 height={50}
                 width={250}
-                className="d-inline-block align-text-top img-fluid"
                 alt="Life is ok Logo"
               />
             </NavbarBrand>
 
-            <NavbarToggler className="" onClick={this.toggle}>
-              <i className="mdi mdi-menu"></i>
-            </NavbarToggler>
+            <NavbarToggler
+              onClick={this.toggleNavbar}
+              className="mdi mdi-menu"
+            />
 
-            <Collapse id="navbarCollapse" isOpen={isOpenMenu} navbar>
+            <Collapse isOpen={isOpenMenu} navbar>
               <Nav className="navbar-nav navbar-center ms-auto" id="mySidenav">
-                {navItems.map((item, key) => (
-                  <NavItem
-                    key={key}
-                    className={item.idnm === "Home" ? "active" : ""}
-                  >
-                    <NavLink href={item.link}>{item.navheading}</NavLink>
-                  </NavItem>
-                ))}
+                {navItems.map((item, key) =>
+                  item.dropdown ? (
+                    <Dropdown
+                      nav
+                      inNavbar
+                      isOpen={item.isOpen}
+                      key={item.id}
+                      onMouseOver={() => this.toggleDropdown(item.id, true)}
+                      onMouseLeave={() => this.toggleDropdown(item.id, false)}
+                      toggle={() => {}} // Keep this as a no-op function.
+                    >
+                      <DropdownToggle nav caret style={{ color: "orange" }}>
+                        {item.navheading}
+                      </DropdownToggle>
+                      <DropdownMenu>
+                        {item.dropdown.map((subItem) => (
+                          <DropdownItem
+                            key={subItem.id}
+                            href={subItem.link}
+                            style={{ color: "orange" }}
+                          >
+                            {subItem.navheading}
+                          </DropdownItem>
+                        ))}
+                      </DropdownMenu>
+                    </Dropdown>
+                  ) : (
+                    <NavItem
+                      key={key}
+                      className={item.idnm === "home" ? "active" : ""}
+                    >
+                      <NavLink href={item.link}>{item.navheading}</NavLink>
+                    </NavItem>
+                  )
+                )}
               </Nav>
               <Nav className="me-3" navbar>
-                <NavItem>
-                  <DropdownButton
-                    id="dropdown-basic-button"
-                    className=""
-                    title="Contact Us"
-                    data-bs-theme=""
-                    // Custom styling applied here for the dropdown
-                  >
-                    <Dropdown.Item href="/index5" style={{ color: "orange" }}>
-                      Referal
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/index1" style={{ color: "orange" }}>
+                <Dropdown
+                  isOpen={contactUsOpen}
+                  onMouseOver={() => this.toggleDropdown("contactUs", true)}
+                  onMouseLeave={() => this.toggleDropdown("contactUs", false)}
+                  toggle={() => {}}
+                >
+                  <DropdownToggle nav caret style={{ color: "orange" }}>
+                    Contact Us
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem href="/index5" style={{ color: "orange" }}>
+                      Referral
+                    </DropdownItem>
+                    <DropdownItem href="/index1" style={{ color: "orange" }}>
                       Enquire
-                    </Dropdown.Item>
-                    <Dropdown.Item href="/#career" style={{ color: "orange" }}>
+                    </DropdownItem>
+                    <DropdownItem href="/#career" style={{ color: "orange" }}>
                       Career
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      href="/#feedback"
-                      style={{ color: "orange" }}
-                    >
+                    </DropdownItem>
+                    <DropdownItem href="/#feedback" style={{ color: "orange" }}>
                       Feedback
-                    </Dropdown.Item>
-                  </DropdownButton>
-                </NavItem>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
               </Nav>
             </Collapse>
           </div>
@@ -134,4 +199,4 @@ class Navbar_Page extends Component {
   }
 }
 
-export default Navbar_Page;
+export default NavbarPage;

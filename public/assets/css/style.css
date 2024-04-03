@@ -439,7 +439,6 @@ p {
 }
 .navbar-custom .navbar-nav .nav-link {
   color: #ff6900 !important; /* Orange color */
-  font-weight: bolder; /* Making font bolder */
 }
 .navbar-custom .navbar-nav .nav-link:hover,
 .navbar-custom .navbar-nav .nav-link:focus {
@@ -925,4 +924,14 @@ textarea.form-control {
 .contact-half {
   padding-bottom: 200px; /* Increased bottom padding */
   padding-top: 300px; /* Increased top padding */
+}
+.bg-support {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/core.jpg");
+  padding-bottom: 150px; /* Increased bottom padding */
+  padding-top: 200px;
+  border-top-left-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
 }
