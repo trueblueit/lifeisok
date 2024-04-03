@@ -25,8 +25,7 @@ class Index2 extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* Importing Navbar */}
-        <NavbarPage navClass={this.state.navClass} />
+        <NavbarPage />
         <Section />
         <Values />
         <Services />
@@ -36,7 +35,7 @@ class Index2 extends Component {
         <AboutUs />
         <Feedback />
         <ContactUs />
-        <Footer />*
+        <Footer />
       </React.Fragment>
     );
   }

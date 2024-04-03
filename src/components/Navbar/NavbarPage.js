@@ -164,8 +164,6 @@ class NavbarPage extends Component {
                     </NavItem>
                   )
                 )}
-              </Nav>
-              <Nav className="me-3" navbar>
                 <Dropdown
                   isOpen={contactUsOpen}
                   onMouseOver={() => this.toggleDropdown("contactUs", true)}
