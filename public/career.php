@@ -59,4 +59,21 @@ switch($method) {
 }
     
 echo json_encode($response); 
+
+// Compose email message
+$to = 'recipient_email@example.com';
+$subject = 'Form Submission';
+$body = "Name: $name\nEmail: $email\nMessage: $message";
+
+// Send email
+if (mail($to, $subject, $body)) {
+    echo "Email sent successfully";
+} else {
+    echo "Failed to send email";
+}
+} else {
+// Handle invalid request method
+echo "Invalid request method";
+}
+
 ?>
