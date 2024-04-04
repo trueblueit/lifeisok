@@ -12,19 +12,41 @@ import {
   DropdownToggle,
 } from "reactstrap";
 import Container from "react-bootstrap/Container";
+// Importing icons from react-icons/fa
+import {
+  FaHome,
+  FaStar,
+  FaUser,
+  FaEnvelope,
+  FaCog,
+  FaBed,
+} from "react-icons/fa";
 
 class NavbarPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       navItems: [
-        { id: 1, link: "/#home", idnm: "home", navheading: "Home" },
-        { id: 2, link: "/#features", idnm: "features", navheading: "Features" },
+        {
+          id: 1,
+          link: "/#home",
+          idnm: "home",
+          navheading: "Home",
+          icon: FaHome,
+        },
+        {
+          id: 2,
+          link: "/#features",
+          idnm: "features",
+          navheading: "Features",
+          icon: FaStar,
+        },
         {
           id: 3,
           link: "/index3",
           idnm: "services",
           navheading: "Services",
+          icon: FaCog,
           dropdown: [
             {
               id: 5,
@@ -65,12 +87,19 @@ class NavbarPage extends Component {
           ],
           isOpen: false,
         },
-        { id: 4, link: "/index4", idnm: "about", navheading: "About" },
+        {
+          id: 4,
+          link: "/index4",
+          idnm: "about",
+          navheading: "About",
+          icon: FaUser,
+        },
         {
           id: 11,
           link: "/service3",
-          idnm: "accomodation",
-          navheading: "Accomodation",
+          idnm: "accommodation",
+          navheading: "Accommodation",
+          icon: FaBed, // Just as an example, choose an appropriate icon
         },
       ],
       contactUsOpen: false,
@@ -85,7 +114,6 @@ class NavbarPage extends Component {
     }));
   };
 
-  // Adjusted to manage hover for dropdowns effectively
   toggleDropdown = (dropdownId, isOpen) => {
     this.setState((prevState) => ({
       navItems: prevState.navItems.map((item) => {
@@ -107,7 +135,7 @@ class NavbarPage extends Component {
         <Container>
           <div
             className={`navbar navbar-expand-lg fixed-top navbar-custom sticky ${
-              isNavSticky ? "nav-sticky sticky-dark" : ""
+              isNavSticky ? "nav-sticky" : ""
             }`}
           >
             <NavbarBrand
@@ -138,9 +166,12 @@ class NavbarPage extends Component {
                       key={item.id}
                       onMouseOver={() => this.toggleDropdown(item.id, true)}
                       onMouseLeave={() => this.toggleDropdown(item.id, false)}
-                      toggle={() => {}} // Keep this as a no-op function.
+                      toggle={() => {}} // No-op function
                     >
                       <DropdownToggle nav caret style={{ color: "orange" }}>
+                        {React.createElement(item.icon, {
+                          style: { marginRight: "5px" },
+                        })}
                         {item.navheading}
                       </DropdownToggle>
                       <DropdownMenu>
@@ -160,7 +191,12 @@ class NavbarPage extends Component {
                       key={key}
                       className={item.idnm === "home" ? "active" : ""}
                     >
-                      <NavLink href={item.link}>{item.navheading}</NavLink>
+                      <NavLink href={item.link}>
+                        {React.createElement(item.icon, {
+                          style: { marginRight: "5px" },
+                        })}
+                        {item.navheading}
+                      </NavLink>
                     </NavItem>
                   )
                 )}
@@ -171,7 +207,7 @@ class NavbarPage extends Component {
                   toggle={() => {}}
                 >
                   <DropdownToggle nav caret style={{ color: "orange" }}>
-                    Contact Us
+                    <FaEnvelope style={{ marginRight: "5px" }} /> Contact Us
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem href="/index5" style={{ color: "orange" }}>
