@@ -43,7 +43,7 @@ function Referral() {
 
       if (data.success) {
         toast({
-          title: "Sucessful",
+          title: data.heading,
           description: data.message,
           status: data.status,
           duration: 2000,

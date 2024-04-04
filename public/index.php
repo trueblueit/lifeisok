@@ -23,12 +23,14 @@ switch($method) {
     if ($stmt->execute()) {
         $response = [
             'success' => true,
-            'message' => 'Data inserted successfully'
+            'message' => 'Data inserted successfully',
+            'status' => 'success'
         ];
     } else {
         $response = [
             'success' => false,
             'message' => 'Error inserting data: ' . $stmt->error
+            'status' => 'error'
         ];
     }
     break;

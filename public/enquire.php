@@ -14,7 +14,9 @@ switch($method) {
     if (empty($new_member->email)) {
         $response = [
             'success' => false,
-            'message' => 'Email is required'
+            'message' => 'Email is required. Please enter your email',
+            'status' => 'warning',
+            'heading' => 'Missing Email '
         ];
     } else {
         // Check if email already exists
@@ -28,7 +30,9 @@ switch($method) {
             // Email already exists, return response
             $response = [
                 'success' => false,
-                'message' => 'Email already exists'
+                'message' => ' This email already exists. Please try again with a different email',
+                'status' => 'warning',
+                'heading' => 'Email Already Exists'
             ];
         } else {
             
@@ -42,12 +46,16 @@ switch($method) {
     if ($stmt->execute()) {
         $response = [
             'success' => true,
-            'message' => 'Data inserted successfully'
+            'message' => 'Thank you for contacting us. We will get back to you shortly',
+            'status' => 'success',
+            'heading' => 'Enquiry Submitted'
         ];
     } else {
         $response = [
             'success' => false,
-            'message' => 'Error inserting data: ' . $stmt->error
+            'message' => 'Error inserting data: ' . $stmt->error,
+            'status' => 'error',
+            'heading' => 'Error'
         ];
     }
 }

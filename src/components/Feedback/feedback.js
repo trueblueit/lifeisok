@@ -8,7 +8,7 @@ import {
   Row,
 } from "react-bootstrap";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { useToast } from "@chakra-ui/react";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ const Feedback = () => {
     description: "",
     email: "",
   });
-
+  const toast = useToast();
   // Define emojis for the rating system
   const emojis = ["😍", "😊", "😐", "😟", "😡"];
   const emojiRatings = { "😡": 1, "😟": 2, "😐": 3, "😊": 4, "😍": 5 };
@@ -74,7 +74,7 @@ const Feedback = () => {
         formData
       );
       const data = response.data;
-
+      console.log(data);
       if (data.success) {
         toast({
           title: "Success",
@@ -93,7 +93,7 @@ const Feedback = () => {
           title: "Error",
           description: data.message,
           status: data.status,
-          duration: 3000,
+          duration: 3500,
           isClosable: true,
         });
       }

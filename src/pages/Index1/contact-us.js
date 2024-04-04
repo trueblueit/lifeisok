@@ -32,7 +32,7 @@ function Contactus() {
       const data = response.data;
       if (data.success) {
         toast({
-          title: "Success",
+          title: data.heading,
           description: data.message,
           status: data.status,
           duration: 3000,
@@ -46,7 +46,7 @@ function Contactus() {
         });
       } else {
         toast({
-          title: "Error",
+          title: data.heading,
           description: data.message,
           status: data.status,
           duration: 3000,

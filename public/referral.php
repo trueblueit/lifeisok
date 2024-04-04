@@ -23,7 +23,8 @@ switch($method) {
         $response = [
             'success' => false,
             'heading' => 'Missing Information',
-            'message' => 'Make sure you enter your email, name and contact number'
+            'message' => 'Make sure you enter your email, name and contact number',
+            'status' => 'warning'
         ];
     }
     elseif ($existingEmailResult['count'] > 0) {
@@ -31,7 +32,8 @@ switch($method) {
         $response = [
             'success' => false,
             'heading' => 'Email already exists',
-            'message' => 'Your application is being processed'
+            'message' => 'Your application is being processed',
+            'status' => 'warning'
         ];
     }
     else{
@@ -54,12 +56,16 @@ switch($method) {
     if ($stmt->execute()) {
         $response = [
             'success' => true,
-            'message' => 'Data inserted successfully'
+            'message' => 'Your application has been submitted successfully',
+            'heading' => 'Application Submitted',
+            'status' => 'success'
         ];
     } else {
         $response = [
             'success' => false,
-            'message' => 'Error inserting data: ' . $stmt->error
+            'message' => 'Error inserting data: ' . $stmt->error,
+            'heading' => 'Error',
+            'status' => 'error'
         ];
     }
 
