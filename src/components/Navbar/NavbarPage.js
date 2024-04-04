@@ -94,13 +94,6 @@ class NavbarPage extends Component {
           navheading: "About",
           icon: FaUser,
         },
-        {
-          id: 11,
-          link: "/service3",
-          idnm: "accommodation",
-          navheading: "Accommodation",
-          icon: FaBed, // Just as an example, choose an appropriate icon
-        },
       ],
       contactUsOpen: false,
       isNavSticky: false,
@@ -207,7 +200,10 @@ class NavbarPage extends Component {
                   toggle={() => {}}
                 >
                   <DropdownToggle nav caret style={{ color: "orange" }}>
-                    <FaEnvelope style={{ marginRight: "5px" }} /> Contact Us
+                    <FaEnvelope
+                      style={{ marginRight: "150px", marginTop: "4px" }}
+                    />{" "}
+                    Contact Us
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem href="/index5" style={{ color: "orange" }}>

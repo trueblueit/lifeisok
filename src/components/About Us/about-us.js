@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 class AboutUs extends Component {
   render() {
+    const textColor = "#34568B"; // Dark blue color for text
     return (
       <React.Fragment>
         <section
@@ -28,11 +29,16 @@ class AboutUs extends Component {
                   onMouseLeave={(e) => (e.currentTarget.style.top = "0")}
                 >
                   <h2
-                    className="font-weight-light"
-                    style={{ margin: "0 0 24px" }}
+                    className="section-heading"
+                    style={{
+                      textAlign: "center",
+                      color: textColor,
+                      marginBottom: "20px",
+                    }}
                   >
                     About Us
                   </h2>
+
                   <p className="text-muted" style={{ marginBottom: "32px" }}>
                     “Life Is OK” aspires to be business role models through
                     cultural awareness and person-centric support strategies; we

@@ -19,6 +19,7 @@ const Feedback = () => {
 
   // Define emojis for the rating system
   const emojis = ["😍", "😊", "😐", "😟", "😡"];
+  const textColor = "#34568B";
   const emojiRatings = { "😡": 1, "😟": 2, "😐": 3, "😊": 4, "😍": 5 };
   // Reverse order of emojis
   const handleEmojiClick = (emoji) => {
@@ -119,7 +120,16 @@ const Feedback = () => {
             }}
           >
             <div className="col-12 text-center">
-              <h1 className="text-dark">Rate Our Service</h1>
+              <h2
+                className="section-heading"
+                style={{
+                  textAlign: "center",
+                  color: textColor,
+                  marginBottom: "20px",
+                }}
+              >
+                Rate Our Service
+              </h2>
               <p className="text-muted">
                 Share your thoughts on our service! Rate your experience with us
                 and let us know what you liked. Your feedback is valuable in

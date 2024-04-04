@@ -547,8 +547,8 @@ p {
   margin: 0 auto;
 }
 .home-half {
-  padding-bottom: 340px; /* Increased bottom padding */
-  padding-top: 440px; /* Increased top padding */
+  padding-bottom: 300px; /* Increased bottom padding */
+  padding-top: 400px; /* Increased top padding */
 }
 /* ------- Demo 2 wave animation --------- */
 .wave-effect {
@@ -934,4 +934,14 @@ textarea.form-control {
   padding-top: 200px;
   border-top-left-radius: 20px; /* Adjust the radius as needed */
   border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+}
+
+.bg-about {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/dev.png");
+  padding-bottom: 175px; /* Increased bottom padding */
+  padding-top: 250px;
+  border-radius: 50px;
 }
