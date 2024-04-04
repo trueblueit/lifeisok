@@ -82,6 +82,7 @@ export function DemoModal(props) {
         duration: 1000,
         isClosable: true,
       });
+      console.log(error);
     }
   };
 
