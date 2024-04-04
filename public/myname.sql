@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2024 at 02:48 AM
+-- Generation Time: Apr 04, 2024 at 08:16 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,13 +92,6 @@ CREATE TABLE `referrals` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `referrals`
---
-
-INSERT INTO `referrals` (`id`, `participant_name`, `ndis_number`, `email`, `address`, `contact_number`, `service_type`, `funding_body`, `referee_name`, `organisation_name`, `referee_email`, `relation_to_participant`, `referee_contact_number`, `callback_request`, `submitted_at`) VALUES
-(1, 'ewq', '1321', 'ad@sdf.com', 'asdas', '132', 'Daily Activities & Improved living Choice', 'NDIS-Funding', 'czx', 'cxz', 'czx@dsf.com', 'Friend/family', '3123123', 0, '2024-03-28 04:40:51');
-
---
 -- Indexes for dumped tables
 --
 
@@ -136,25 +129,25 @@ ALTER TABLE `referrals`
 -- AUTO_INCREMENT for table `career`
 --
 ALTER TABLE `career`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `enquire`
 --
 ALTER TABLE `enquire`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `referrals`
 --
 ALTER TABLE `referrals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
