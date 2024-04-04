@@ -34,7 +34,7 @@ function Contactus() {
         toast({
           title: "Success",
           description: data.message,
-          status: "success",
+          status: data.status,
           duration: 3000,
           isClosable: true,
         });
@@ -48,7 +48,7 @@ function Contactus() {
         toast({
           title: "Error",
           description: data.message,
-          status: "error",
+          status: data.status,
           duration: 3000,
           isClosable: true,
         });

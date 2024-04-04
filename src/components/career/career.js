@@ -49,7 +49,7 @@ export function DemoModal(props) {
         toast({
           title: "Sucessful",
           description: data.message,
-          status: "success",
+          status: data.status,
           duration: 1000,
           isClosable: true,
         });
@@ -67,7 +67,7 @@ export function DemoModal(props) {
         toast({
           title: "Error",
           description: data.message,
-          status: "error",
+          status: data.status,
           duration: 1000,
           isClosable: true,
         });

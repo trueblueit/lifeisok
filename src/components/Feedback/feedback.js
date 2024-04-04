@@ -18,9 +18,9 @@ const Feedback = () => {
   });
 
   // Define emojis for the rating system
-  const emojis = ["😡", "😟", "😐", "😊", "😍"];
+  const emojis = ["😍", "😊", "😐", "😟", "😡"];
   const emojiRatings = { "😡": 1, "😟": 2, "😐": 3, "😊": 4, "😍": 5 };
-
+  // Reverse order of emojis
   const handleEmojiClick = (emoji) => {
     const numericalRating = emojiRatings[emoji]; // Convert emoji to numerical rating
     setFormData({
@@ -76,14 +76,26 @@ const Feedback = () => {
       const data = response.data;
 
       if (data.success) {
-        toast.success(data.message);
+        toast({
+          title: "Success",
+          description: data.message,
+          status: data.status,
+          duration: 3000,
+          isClosable: true,
+        });
         setFormData({
           rating: "",
           description: "",
           email: "",
         });
       } else {
-        toast.error(data.message);
+        toast({
+          title: "Error",
+          description: data.message,
+          status: data.status,
+          duration: 3000,
+          isClosable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);

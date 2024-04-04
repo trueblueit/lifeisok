@@ -45,7 +45,7 @@ function Referral() {
         toast({
           title: "Sucessful",
           description: data.message,
-          status: "success",
+          status: data.status,
           duration: 2000,
           isClosable: true,
         });
@@ -54,7 +54,7 @@ function Referral() {
         toast({
           title: data.heading,
           description: data.message,
-          status: "warning",
+          status: data.status,
           duration: 2500,
           isClosable: true,
         });
@@ -62,8 +62,14 @@ function Referral() {
     } catch (error) {
       console.error("Error:", error);
       // Optionally, show an error message or handle error cases
+      toast({
+        title: "Error",
+        description: "An error occurred while submitting the form.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     }
-    console.log("message", submitMessage);
   };
 
   return (
