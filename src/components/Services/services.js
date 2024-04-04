@@ -1,71 +1,59 @@
 import React, { Component } from "react";
-import { Col } from "reactstrap";
-import { LinkBox, LinkOverlay, Heading, Text, Box } from "@chakra-ui/react";
+import { Container, Row } from "reactstrap";
 
-class ServiceBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHovered: false,
-    };
-  }
+// Import Section Title
+import SectionTitle from "../common/section-title";
 
-  handleMouseEnter = () => {
-    this.setState({ isHovered: true });
-  };
+// Import Service Box
+import ServiceBox from "./service-box";
+import { services } from "../../data";
 
-  handleMouseLeave = () => {
-    this.setState({ isHovered: false });
+class Services extends Component {
+  state = {
+    services: services,
   };
 
   render() {
-    const boxStyle = {
-      minHeight: "300px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    };
-
-    const darkBlueColor = "#34568B"; // Dark blue color for the title
-    const blackColor = "#000000"; // Black color for the description
-
+    const textColor = "#34568B"; // Dark blue color for text
     return (
-      <Col lg="4" className="mt-4">
-        <LinkBox
-          p="5"
-          borderWidth="1px"
-          rounded="md"
-          className="services-box text-center hover-effect"
-          style={boxStyle}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        >
-          <Heading size="md" my="2">
-            <div className="d-flex justify-content-center">
-              <i
-                className={this.props.icon + " text-primary"}
-                style={{ fontSize: "24px" }}
-              ></i>
-            </div>
-            <LinkOverlay href={this.props.mylink}>
-              <h4 style={{ color: darkBlueColor }}>{this.props.title}</h4>
-            </LinkOverlay>
-          </Heading>
-          <Text mb="3">{this.props.description}</Text>
-          {this.state.isHovered && (
-            <Box
-              as="a"
-              color="orange.400"
-              href={this.props.mylink}
-              fontWeight="bold"
+      <React.Fragment>
+        <section className="section bg-light" id="services">
+          <Container>
+            {/* Render section title with custom styles */}
+            <h2
+              className="section-heading"
+              style={{
+                textAlign: "center",
+                color: textColor,
+                marginBottom: "20px",
+              }}
             >
-              Read more
-            </Box>
-          )}
-        </LinkBox>
-      </Col>
+              Our Services
+            </h2>
+            <p
+              className="text-center"
+              style={{ color: textColor, marginBottom: "40px" }}
+            >
+              Explore our tailored support services designed to empower and
+              provide excellent care on your journey with Life Is Ok.
+            </p>
+            <Row className="mt-5">
+              {/* Render service box */}
+              {this.state.services.map((service, key) => (
+                <ServiceBox
+                  key={key}
+                  title={service.title}
+                  icon={service.icon}
+                  description={service.description}
+                  mylink={service.mylink}
+                />
+              ))}
+            </Row>
+          </Container>
+        </section>
+      </React.Fragment>
     );
   }
 }
 
-export default ServiceBox;
+export default Services;
