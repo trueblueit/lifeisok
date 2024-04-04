@@ -47,7 +47,7 @@ export function DemoModal(props) {
         // Set the success message
         // Show success toast
         toast({
-          title: "Sucessful",
+          title: data.heading,
           description: data.message,
           status: data.status,
           duration: 1000,
@@ -65,10 +65,10 @@ export function DemoModal(props) {
       } else {
         setSubmitMessage(data.message); // Set the error message
         toast({
-          title: "Error",
+          title: data.heading,
           description: data.message,
           status: data.status,
-          duration: 1000,
+          duration: 3000,
           isClosable: true,
         });
       }
@@ -79,7 +79,7 @@ export function DemoModal(props) {
         title: "Error",
         description: "Cannot access your server",
         status: "error",
-        duration: 1000,
+        duration: 3000,
         isClosable: true,
       });
       console.log(error);

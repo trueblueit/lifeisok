@@ -17,7 +17,8 @@ switch($method) {
             'success' => false,
             
             'heading' => 'Rating is required',
-            'message' => 'Please select your rating before submitting'
+            'message' => 'Please select your rating before submitting',
+            'status' => 'warning'
         ];
     }
     // Check if email is empty
@@ -25,7 +26,8 @@ switch($method) {
         $response = [
             'success' => false,
             'heading' => 'Email is required',
-            'message' => 'Please enter your email'
+            'message' => 'Please enter your email',
+            'status' => 'warning'
         ];
     } else
     {
@@ -38,12 +40,14 @@ switch($method) {
     if ($stmt->execute()) {
         $response = [
             'success' => true,
-            'message' => 'Data inserted successfully'
+            'message' => 'Data inserted successfully',
+            'status' => 'success'
         ];
     } else {
         $response = [
             'success' => false,
-            'message' => 'Error inserting data: ' . $stmt->error
+            'message' => 'Error inserting data: ' . $stmt->error,
+            'status' => 'error'
         ];
     }
 }
