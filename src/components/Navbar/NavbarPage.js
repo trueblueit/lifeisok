@@ -7,12 +7,11 @@ import {
   NavLink,
   Collapse,
   Dropdown,
-  DropdownItem,
-  DropdownMenu,
   DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from "reactstrap";
-import Container from "react-bootstrap/Container";
-// Importing icons from react-icons/fa
+
 import {
   FaHome,
   FaStar,
@@ -22,7 +21,10 @@ import {
   FaBed,
 } from "react-icons/fa";
 
-class NavbarPage extends Component {
+import Container from "react-bootstrap/Container";
+import { motion } from "framer-motion";
+
+class Navbar_Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,43 +45,43 @@ class NavbarPage extends Component {
         },
         {
           id: 3,
-          link: "/index3",
+          link: "/#services",
           idnm: "services",
           navheading: "Services",
           icon: FaCog,
-          dropdown: [
+          submenu: [
             {
-              id: 5,
+              id: 7,
               link: "/service1",
               idnm: "service1",
               navheading: "Daily Activities & Improved Living Choice",
             },
             {
-              id: 6,
+              id: 8,
               link: "/service2",
               idnm: "service2",
               navheading: "Assistance With Social And Community Participation",
             },
             {
-              id: 7,
+              id: 9,
               link: "/service3",
               idnm: "service3",
               navheading: "Accommodation Support",
             },
             {
-              id: 8,
+              id: 10,
               link: "/service4",
               idnm: "service4",
               navheading: "Supports in Employment",
             },
             {
-              id: 9,
+              id: 11,
               link: "/service5",
               idnm: "service5",
               navheading: "Supported Independent Living (SIL)",
             },
             {
-              id: 10,
+              id: 12,
               link: "/service6",
               idnm: "service6",
               navheading: "School Leaver Employment Supports (SLES)",
@@ -89,24 +91,58 @@ class NavbarPage extends Component {
         },
         {
           id: 4,
-          link: "/index4",
+          link: "/#about",
           idnm: "about",
           navheading: "About",
           icon: FaUser,
         },
+        {
+          id: 5,
+          link: "/#accomodation",
+          idnm: "accomodation",
+          navheading: "Accomodation",
+          icon: FaBed,
+        },
+        {
+          id: 6,
+          navheading: "Contact Us",
+          icon: FaEnvelope,
+          submenu: [
+            { id: 14, navheading: "Referals", link: "/index5" },
+            { id: 15, navheading: "Enquiry", link: "/index1" },
+            { id: 16, navheading: "Career", link: "/#career" },
+            { id: 17, navheading: "Feedback", link: "/#feedback" },
+          ],
+          isOpen: false,
+        },
       ],
-      contactUsOpen: false,
       isNavSticky: false,
       isOpenMenu: false,
     };
   }
 
-  toggleNavbar = () => {
-    this.setState((prevState) => ({
-      isOpenMenu: !prevState.isOpenMenu,
-    }));
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const { isNavSticky } = this.state;
+    const scrollY = window.scrollY;
+
+    if (scrollY >= 50 && !isNavSticky) {
+      this.setState({ isNavSticky: true });
+    } else if (scrollY < 50 && isNavSticky) {
+      this.setState({ isNavSticky: false });
+    }
   };
 
+  toggle = () => {
+    this.setState((prevState) => ({ isOpenMenu: !prevState.isOpenMenu }));
+  };
   toggleDropdown = (dropdownId, isOpen) => {
     this.setState((prevState) => ({
       navItems: prevState.navItems.map((item) => {
@@ -121,14 +157,14 @@ class NavbarPage extends Component {
   };
 
   render() {
-    const { isNavSticky, isOpenMenu, navItems, contactUsOpen } = this.state;
+    const { isNavSticky, isOpenMenu, navItems } = this.state;
 
     return (
       <React.Fragment>
         <Container>
           <div
             className={`navbar navbar-expand-lg fixed-top navbar-custom sticky ${
-              isNavSticky ? "nav-sticky" : ""
+              isNavSticky ? "nav-sticky  sticky-dark" : ""
             }`}
           >
             <NavbarBrand
@@ -139,87 +175,65 @@ class NavbarPage extends Component {
                 src="assets/lifeisok/logo.png"
                 height={50}
                 width={250}
+                className="d-inline-block align-text-top img-fluid"
                 alt="Life is ok Logo"
               />
             </NavbarBrand>
 
-            <NavbarToggler
-              onClick={this.toggleNavbar}
-              className="mdi mdi-menu"
-            />
+            <NavbarToggler className="" onClick={this.toggle}>
+              <i className="mdi mdi-menu"></i>
+            </NavbarToggler>
 
-            <Collapse isOpen={isOpenMenu} navbar>
+            <Collapse
+              id="navbarCollapse"
+              isOpen={isOpenMenu}
+              navbar
+              className="me-5 mt-4 mt-lg-0"
+            >
               <Nav className="navbar-nav navbar-center ms-auto" id="mySidenav">
-                {navItems.map((item, key) =>
-                  item.dropdown ? (
-                    <Dropdown
-                      nav
-                      inNavbar
-                      isOpen={item.isOpen}
-                      key={item.id}
-                      onMouseOver={() => this.toggleDropdown(item.id, true)}
-                      onMouseLeave={() => this.toggleDropdown(item.id, false)}
-                      toggle={() => {}} // No-op function
-                    >
-                      <DropdownToggle nav caret style={{ color: "orange" }}>
-                        {React.createElement(item.icon, {
-                          style: { marginRight: "5px" },
-                        })}
-                        {item.navheading}
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        {item.dropdown.map((subItem) => (
-                          <DropdownItem
-                            key={subItem.id}
-                            href={subItem.link}
-                            style={{ color: "orange" }}
-                          >
-                            {subItem.navheading}
-                          </DropdownItem>
-                        ))}
-                      </DropdownMenu>
-                    </Dropdown>
-                  ) : (
-                    <NavItem
-                      key={key}
-                      className={item.idnm === "home" ? "active" : ""}
-                    >
+                {navItems.map((item, key) => (
+                  <NavItem
+                    key={key}
+                    className={item.idnm === "Home" ? "active" : ""}
+                  >
+                    {item.submenu ? (
+                      <Dropdown
+                        nav
+                        isOpen={item.isOpen}
+                        toggle={() =>
+                          this.toggleDropdown(item.id, !item.isOpen)
+                        }
+                        onMouseOver={() => this.toggleDropdown(item.id, true)}
+                        onMouseLeave={() => this.toggleDropdown(item.id, false)}
+                      >
+                        <DropdownToggle nav caret>
+                          {React.createElement(item.icon, {
+                            style: { marginRight: "5px" },
+                          })}
+                          {item.navheading}
+                        </DropdownToggle>
+                        <DropdownMenu>
+                          {item.submenu.map((subItem, subKey) => (
+                            <DropdownItem
+                              key={subKey}
+                              href={subItem.link}
+                              style={{ color: "#ff6900" }}
+                            >
+                              {subItem.navheading}
+                            </DropdownItem>
+                          ))}
+                        </DropdownMenu>
+                      </Dropdown>
+                    ) : (
                       <NavLink href={item.link}>
                         {React.createElement(item.icon, {
                           style: { marginRight: "5px" },
                         })}
                         {item.navheading}
                       </NavLink>
-                    </NavItem>
-                  )
-                )}
-                <Dropdown
-                  isOpen={contactUsOpen}
-                  onMouseOver={() => this.toggleDropdown("contactUs", true)}
-                  onMouseLeave={() => this.toggleDropdown("contactUs", false)}
-                  toggle={() => {}}
-                >
-                  <DropdownToggle nav caret style={{ color: "orange" }}>
-                    <FaEnvelope
-                      style={{ marginRight: "150px", marginTop: "4px" }}
-                    />{" "}
-                    Contact Us
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem href="/index5" style={{ color: "orange" }}>
-                      Referral
-                    </DropdownItem>
-                    <DropdownItem href="/index1" style={{ color: "orange" }}>
-                      Enquire
-                    </DropdownItem>
-                    <DropdownItem href="/#career" style={{ color: "orange" }}>
-                      Career
-                    </DropdownItem>
-                    <DropdownItem href="/#feedback" style={{ color: "orange" }}>
-                      Feedback
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
+                    )}
+                  </NavItem>
+                ))}
               </Nav>
             </Collapse>
           </div>
@@ -229,4 +243,4 @@ class NavbarPage extends Component {
   }
 }
 
-export default NavbarPage;
+export default Navbar_Page;

@@ -50,7 +50,7 @@ p {
 
 .section {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -755,6 +755,8 @@ textarea.form-control {
 .footer p {
   color: #ffffff;
 }
+
+/* Media Query */
 @media (min-width: 200px) and (max-width: 1024px) {
   .navbar-custom {
     margin-top: 0px;
@@ -814,12 +816,26 @@ textarea.form-control {
     font-size: 32px;
     line-height: 48px;
   }
+
+  /* Wave Animation for mobile devices */
+  /*
+  @keyframes move_wave {
+    0% {
+      transform: translateX(0) translateZ(0) scaleY(1) scaleX(0.1);
+    }
+    50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    }
+    100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+  }*/
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px !important;
   }
-} /*# sourceMappingURL=style.css.map */
+}
 
 /* Enhanced Text Styling */
 .enhancedText {
@@ -864,6 +880,21 @@ textarea.form-control {
   opacity: 0; /* Start with the element hidden */
   animation: fadeSlideFromLeft 1s ease-out forwards;
 }
+
+@media only screen and (max-width: 768px) {
+  @keyframes move-wave {
+    0% {
+      transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    }
+    100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+  }
+}
+
 @keyframes flipIn {
   from {
     transform: perspective(400px) rotateY(90deg);
@@ -941,7 +972,5 @@ textarea.form-control {
   background-size: cover;
   background-position: center;
   background-image: url("../lifeisok/dev.png");
-  padding-bottom: 175px; /* Increased bottom padding */
-  padding-top: 250px;
-  border-radius: 50px;
+  width: 100%;
 }

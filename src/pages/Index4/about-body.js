@@ -53,7 +53,7 @@ function Aboutbody() {
     <React.Fragment>
       <Container fluid>
         <Container>
-          <Row className="align-items-center">
+          <Row className="align-items-center ">
             <Col lg="5" className="order-lg-1 mb-4 mb-lg-0">
               <div className="features-box mt-5 mt-lg-0">
                 <h3>About Us</h3>
@@ -77,7 +77,7 @@ function Aboutbody() {
             <Col lg="7">
               <div className="features-img mx-auto text-center">
                 <img
-                  src="assets/lifeisok/img2.png"
+                  src="assets/lifeisok/3.jpeg"
                   className="img-fluid"
                   alt="About Us"
                 />

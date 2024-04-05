@@ -1,24 +1,52 @@
 import React, { Component } from "react";
 /* Importing Components */
-import NavbarPage from "../../components/Navbar/NavbarPage";
-import Section from "./section";
-import Footer from "../../components/Footer/footer";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 /* Importing Bootstrap */
 import Accordion from "react-bootstrap/Accordion";
 import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Carousel from "react-bootstrap/Carousel";
-import ContactUs from "../../components/Contact Us/contact-us";
 
 /*Importing datas from data.js */
-import { houses, accordionData } from "../../data";
+import { accordionData } from "../../data";
 
 const RenderAccordionItems = () => {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+  };
   return accordionData.map((item, index) => (
     <Accordion.Item key={index} eventKey={index.toString()}>
       <Accordion.Header>{item.title}</Accordion.Header>
-      <Accordion.Body>{item.content}</Accordion.Body>
+      <Accordion.Body>
+        <Row className="align-items-center">
+          <Col xs={12} md={6} className="align-self-start">
+            {item.content}
+          </Col>
+          <Col xs={12} md={6}>
+            <Slider {...sliderSettings}>
+              {item.imgSrc.map((src, imgIndex) => (
+                <div key={imgIndex} style={{ textAlign: "center" }}>
+                  <Image
+                    src={src}
+                    alt={`${item.name} ${imgIndex + 1}`}
+                    className="img-fluid"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </Col>
+        </Row>
+      </Accordion.Body>
     </Accordion.Item>
   ));
 };
