@@ -12,110 +12,14 @@ import {
   DropdownItem,
 } from "reactstrap";
 
-import {
-  FaHome,
-  FaStar,
-  FaUser,
-  FaEnvelope,
-  FaCog,
-  FaBed,
-} from "react-icons/fa";
-
 import Container from "react-bootstrap/Container";
-import { motion } from "framer-motion";
+import { navItems } from "../../data";
 
 class Navbar_Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navItems: [
-        {
-          id: 1,
-          link: "/#home",
-          idnm: "home",
-          navheading: "Home",
-          icon: FaHome,
-        },
-        {
-          id: 2,
-          link: "/#features",
-          idnm: "features",
-          navheading: "Features",
-          icon: FaStar,
-        },
-        {
-          id: 3,
-          link: "/#services",
-          idnm: "services",
-          navheading: "Services",
-          icon: FaCog,
-          submenu: [
-            {
-              id: 7,
-              link: "/service1",
-              idnm: "service1",
-              navheading: "Daily Activities & Improved Living Choice",
-            },
-            {
-              id: 8,
-              link: "/service2",
-              idnm: "service2",
-              navheading: "Assistance With Social And Community Participation",
-            },
-            {
-              id: 9,
-              link: "/service3",
-              idnm: "service3",
-              navheading: "Accommodation Support",
-            },
-            {
-              id: 10,
-              link: "/service4",
-              idnm: "service4",
-              navheading: "Supports in Employment",
-            },
-            {
-              id: 11,
-              link: "/service5",
-              idnm: "service5",
-              navheading: "Supported Independent Living (SIL)",
-            },
-            {
-              id: 12,
-              link: "/service6",
-              idnm: "service6",
-              navheading: "School Leaver Employment Supports (SLES)",
-            },
-          ],
-          isOpen: false,
-        },
-        {
-          id: 4,
-          link: "/#about",
-          idnm: "about",
-          navheading: "About",
-          icon: FaUser,
-        },
-        {
-          id: 5,
-          link: "/#accomodation",
-          idnm: "accomodation",
-          navheading: "Accomodation",
-          icon: FaBed,
-        },
-        {
-          id: 6,
-          navheading: "Contact Us",
-          icon: FaEnvelope,
-          submenu: [
-            { id: 14, navheading: "Referals", link: "/index5" },
-            { id: 15, navheading: "Enquiry", link: "/index1" },
-            { id: 16, navheading: "Career", link: "/#career" },
-            { id: 17, navheading: "Feedback", link: "/#feedback" },
-          ],
-          isOpen: false,
-        },
-      ],
+      navItems: navItems,
       isNavSticky: false,
       isOpenMenu: false,
     };

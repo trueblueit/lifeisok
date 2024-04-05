@@ -8,38 +8,18 @@
  */
 
 // accommodationData
-export const houses = [
-  {
-    name: "Image-1",
-    imag: "assets/lifeisok/house/1.jpg",
-  },
-  {
-    name: "Image-2",
-    imag: "assets/lifeisok/house/2.jpg",
-  },
-  {
-    name: "Image-3",
-    imag: "assets/lifeisok/house/3.jpg",
-  },
-  {
-    name: "Image-4",
-    imag: "assets/lifeisok/house/4.jpg",
-  },
-  {
-    name: "Image-5",
-    imag: "assets/lifeisok/house/5.jpg",
-  },
-  {
-    name: "Image-6",
-    imag: "assets/lifeisok/house/6.jpg",
-  },
-];
 
-export const house1 =
-  "Location: Heart of Darwin City \n3 bedroom Modal \n2 Bathroom \n2 Car Park Space";
-export const house =
-  "Location: Stuart Park \n2 bedroom Modal \n1 Bathroom \n1 Car Park Space\nNote:- No Pet allowed";
-// our values
+/* imporrt for NabItems*/
+import {
+  FaHome,
+  FaStar,
+  FaUser,
+  FaEnvelope,
+  FaCog,
+  FaBed,
+} from "react-icons/fa";
+
+// our values data in home page
 export const values = [
   {
     id: 1,
@@ -78,7 +58,7 @@ export const values = [
   },
 ];
 
-//services
+//services page data in our services (home page)
 export const services = [
   {
     title: "DAILY ACTIVITIES & IMPROVED LIVING CHOICE",
@@ -124,7 +104,7 @@ export const services = [
   },
 ];
 
-//gallery
+//gallery data in about us (gallary.js)
 export const images = [
   { id: 1, img: "assets/lifeisok/1.jpeg" },
   {
@@ -132,37 +112,6 @@ export const images = [
     img: "assets/lifeisok/about.jpeg",
   },
   { id: 3, img: "assets/lifeisok/aboutus.jpeg" },
-];
-
-export const servicesDetail = [
-  {
-    name: "Core Outreach Support",
-    description:
-      " We are excellent in providing all home-bound personal and self-care support as well as community access supports to assist you in visiting family and friends or participating in daily scheduled or innovative activities or social events in the community. Your core funding section of your NDIS plan enable you to get the core outreach support. Supports for you will be available 24 hours a day, 7 days a week. These supports are currently available in the Greater Darwin regions.",
-    imag: "assets/lifeisok/supports.jpg",
-  },
-  {
-    name: "Capacity Building Outreach Supports",
-    description:
-      "Our wide range of non-clinical capacity-building services includes social skills, employment, life skills, and tenancy support. As part of our person-centered recovery approach, we also provide life transition planning, mentoring, and peer support. These supports for you are available 7 days a weekCreative designer with a keen eye for detail.",
-    imag: "assets/lifeisok/sil.jpg",
-  },
-  {
-    name: "Accommodation Supports",
-    description: "",
-  },
-  {
-    name: "Support Coordination",
-    description:
-      "We’re dedicated to providing exceptional NDIS Support Coordination services in Darwin, NT, Australia. Our experienced and professional team believes in open communication and breaking barriers as a small provider. We’re on a mission to enrich lives, and we’re here to make it happen.",
-    imag: "assets/lifeisok/daily.jpg",
-  },
-  {
-    name: "Supports in Employment",
-    description:
-      "As a registered NDIS provider of Supports in employment, we offer a comprehensive range of services to assist participants in their employment journey. This includes providing support beyond the requirements of traditional employment services and employers, ensuring that participants receive the necessary assistance for success. Our services cover a spectrum of needs, including personal care, transportation assistance, assistive technology, and more, tailored to each participant's specific requirements irrespective of the activity they are engaged in. Additionally, we actively engage in building relationships with mainstream providers and the local community to enhance our understanding of the employment needs of people with disabilities. Funding for our employment support services is allocated in the Core budget of a participant’s NDIS plan under the support category 'Assistance with Social Economic and Community Participation.' Moreover, we provide capacity-building employment supports, such as employment-related assessments and counseling, workplace assistance, and School Leaver Employment Supports (SLES). Our commitment is to contribute to the overall well-being and inclusivity of individuals with disabilities in the workforce.",
-    imag: "assets/lifeisok/mta.jpg",
-  },
 ];
 
 // housing service
@@ -241,4 +190,93 @@ export const accommodations = [
   },
 
   // Add more accommodations as needed
+];
+
+export const navItems = [
+  {
+    id: 1,
+    link: "/#home",
+    idnm: "home",
+    navheading: "Home",
+    icon: FaHome,
+  },
+  {
+    id: 2,
+    link: "/#features",
+    idnm: "features",
+    navheading: "Features",
+    icon: FaStar,
+  },
+  {
+    id: 3,
+    link: "/#services",
+    idnm: "services",
+    navheading: "Services",
+    icon: FaCog,
+    submenu: [
+      {
+        id: 7,
+        link: "/service1",
+        idnm: "service1",
+        navheading: "Daily Activities & Improved Living Choice",
+      },
+      {
+        id: 8,
+        link: "/service2",
+        idnm: "service2",
+        navheading: "Assistance With Social And Community Participation",
+      },
+      {
+        id: 9,
+        link: "/service3",
+        idnm: "service3",
+        navheading: "Accommodation Support",
+      },
+      {
+        id: 10,
+        link: "/service4",
+        idnm: "service4",
+        navheading: "Supports in Employment",
+      },
+      {
+        id: 11,
+        link: "/service5",
+        idnm: "service5",
+        navheading: "Supported Independent Living (SIL)",
+      },
+      {
+        id: 12,
+        link: "/service6",
+        idnm: "service6",
+        navheading: "School Leaver Employment Supports (SLES)",
+      },
+    ],
+    isOpen: false,
+  },
+  {
+    id: 4,
+    link: "/index4",
+    idnm: "about",
+    navheading: "About Us",
+    icon: FaUser,
+  },
+  {
+    id: 5,
+    link: "/#accomodation",
+    idnm: "accomodation",
+    navheading: "Accomodation",
+    icon: FaBed,
+  },
+  {
+    id: 6,
+    navheading: "Contact Us",
+    icon: FaEnvelope,
+    submenu: [
+      { id: 14, navheading: "Referals", link: "/index5" },
+      { id: 15, navheading: "Enquiry", link: "/index1" },
+      { id: 16, navheading: "Career", link: "/#career" },
+      { id: 17, navheading: "Feedback", link: "/#feedback" },
+    ],
+    isOpen: false,
+  },
 ];
