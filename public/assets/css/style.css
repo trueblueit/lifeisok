@@ -95,7 +95,6 @@ p {
 .mybtn {
   background-color: black;
   color: white;
-  box-shadow: #6e3106 0px 8px 24px;
 }
 
 .mybtn:hover {
