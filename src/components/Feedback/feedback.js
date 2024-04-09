@@ -161,9 +161,14 @@ const Feedback = () => {
                   onChange={handleChange}
                 />
               </Form.Group>
-              <Button variant="primary" type="submit" style={{ width: "100%" }}>
+              <a
+                variant="primary"
+                className="btn mybtn"
+                onClick={handleSubmit}
+                style={{ width: "100%" }}
+              >
                 Submit
-              </Button>
+              </a>
             </Form>
           </div>
         </Row>

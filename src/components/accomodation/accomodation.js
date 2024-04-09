@@ -121,11 +121,7 @@ const AccommodationsSection = () => {
           </Modal.Footer>
         </Modal>
 
-        <Link
-          to="/index3"
-          className="btn mt-5"
-          style={{ background: "#ff6900", color: "white" }}
-        >
+        <Link to="/index3" className="btn mybtn mt-5">
           Read More
         </Link>
       </Container>

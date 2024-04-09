@@ -84,7 +84,7 @@ class Navbar_Page extends Component {
               />
             </NavbarBrand>
 
-            <NavbarToggler className="" onClick={this.toggle}>
+            <NavbarToggler onClick={this.toggle}>
               <i className="mdi mdi-menu"></i>
             </NavbarToggler>
 
@@ -98,7 +98,7 @@ class Navbar_Page extends Component {
                 {navItems.map((item, key) => (
                   <NavItem
                     key={key}
-                    className={item.idnm === "Home" ? "active" : ""}
+                    className={item.idnm === "Home" ? "active " : ""}
                   >
                     {item.submenu ? (
                       <Dropdown

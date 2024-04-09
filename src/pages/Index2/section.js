@@ -50,7 +50,6 @@ class Section extends Component {
                     to="/index3"
                     className="btn mybtn mt-4"
                     style={{
-                      color: "#fff",
                       padding: "10px 30px",
                       borderRadius: "30px",
                       transition: "transform 0.3s ease",

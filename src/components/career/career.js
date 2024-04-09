@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from "axios";
+
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -6,7 +8,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Container from "react-bootstrap/Container";
-import axios from "axios";
 
 import { useToast } from "@chakra-ui/react";
 
@@ -174,13 +175,9 @@ export function DemoModal(props) {
             />
           </Form.Group>
 
-          <Button
-            className="mx-auto"
-            style={{ background: "##fb5607" }}
-            type="submit"
-          >
+          <a className="mx-auto btn mybtn" onClick={handleSubmit}>
             Submit
-          </Button>
+          </a>
         </Form>
       </div>
     </Modal>
@@ -202,16 +199,12 @@ export function Career() {
                 Founded by a team of professionals to improve the quality of
                 life for people with difficulties.
               </p>
-              <Button
-                className="mt-3 mt-lg-5"
-                variant="primary"
+              <a
+                className="mt-3 mt-lg-5 btn mybtn"
                 onClick={() => setModalShow(true)}
-                onMouseOver={(e) =>
-                  (e.currentTarget.backgroundColor = "#fb5607")
-                }
               >
                 Join Us
-              </Button>
+              </a>
 
               <DemoModal show={modalShow} onHide={() => setModalShow(false)} />
             </Col>
