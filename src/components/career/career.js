@@ -206,6 +206,9 @@ export function Career() {
                 className="mt-3 mt-lg-5"
                 variant="primary"
                 onClick={() => setModalShow(true)}
+                onMouseOver={(e) =>
+                  (e.currentTarget.backgroundColor = "#fb5607")
+                }
               >
                 Join Us
               </Button>

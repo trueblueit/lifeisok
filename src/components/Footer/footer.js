@@ -20,12 +20,13 @@ class Footer extends Component {
       <footer className="footer footerbg">
         <div className="ft-overlay"></div>
         <Container fluid>
-          <Row className="mb-4">
+          <Row className="mb-4 justify-content-center">
             <Col xs={12} md={4} lg={4}>
               <img
                 className="img-fluid"
-                src="assets/lifeisok/NDIS.jpeg"
+                src="assets/lifeisok/NDIS.png"
                 alt="NDIS Logo"
+                style={{ alignContent: "top" }}
               />
             </Col>
 
@@ -58,7 +59,7 @@ class Footer extends Component {
             </Col>
           </Row>
           <Row>
-            <p className="text-white">
+            <p className="text-white text-center">
               We acknowledge and pay our respects to the traditional custodians
               of this land, their deep cultural heritage, and their vital role
               in shaping our community and country.
@@ -71,7 +72,7 @@ class Footer extends Component {
                 &copy; 2024 Life is OK All rights reserved ABN: 32 653 007 713
               </p>
             </Col>
-            <Col xs={12} md={6} className="text-center mt-2 mt-md-0">
+            <Col xs={12} md={6} className="text-center mt-2 ">
               <p>Developed by TRUE BLUE IT SERVICES.</p>
             </Col>
           </Row>

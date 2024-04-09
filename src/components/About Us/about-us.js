@@ -47,21 +47,9 @@ class AboutUs extends Component {
                     also have the vision to uphold our commitment to serving
                     NDIS participants with excellence.
                   </p>
-                  <Button
-                    to="/index4"
-                    className="btn-primary mt-4"
-                    style={{
-                      backgroundColor: "##fb5607",
-                    }}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.transform = "scale(1.05)")
-                    }
-                    onMouseOut={(e) =>
-                      +(e.currentTarget.style.transform = "scale(1)")
-                    }
-                  >
+                  <a href="/index4" className=" btn mybtn mt-4">
                     More About Us
-                  </Button>
+                  </a>
                 </div>
               </Col>
             </Row>

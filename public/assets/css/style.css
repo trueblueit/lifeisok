@@ -19,12 +19,12 @@ h6 {
 }
 .h1,
 h1 {
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .h2,
 h2 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .btn,
@@ -40,8 +40,9 @@ a {
 }
 
 p {
-  font-size: 14.4px;
-  line-height: 24px;
+  font-size: 18.4px;
+  line-height: 26px;
+  color: #525353;
 }
 
 .row > * {
@@ -92,8 +93,17 @@ p {
 }
 
 .mybtn {
-  background-color: hsl(25, 100%, 50%);
+  background-color: #fb5607;
+  color: white;
+  box-shadow: #9e4404 0px 8px 24px;
 }
+
+.mybtn:hover {
+  background-color: #ffffff;
+  color: #fb5607 !important;
+  font-weight: bold;
+}
+
 .custom-dropdown {
   background-color: orange !important;
   color: white !important;
@@ -138,7 +148,7 @@ p {
 }
 .ft-overlay {
   background: #fb5607;
-  opacity: 0.5;
+  opacity: 0.9;
   position: absolute;
   height: 100%;
   width: 100%;

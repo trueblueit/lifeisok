@@ -46,25 +46,18 @@ class Section extends Component {
                     disabilities. Aims to build a partnership with NDIS
                     Participants to learn what they want to learn and achieve.
                   </motion.p>
-                  <Link
+                  <a
                     to="/index3"
-                    className="btn mt-4"
+                    className="btn mybtn mt-4"
                     style={{
-                      background: "linear-gradient(45deg, #FFA849, #FF7A5A)", // Gradient example
                       color: "#fff",
                       padding: "10px 30px",
                       borderRadius: "30px",
                       transition: "transform 0.3s ease",
                     }}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.transform = "scale(1.05)")
-                    }
-                    onMouseOut={(e) =>
-                      (e.currentTarget.style.transform = "scale(1)")
-                    }
                   >
                     Our Services
-                  </Link>
+                  </a>
                 </Col>
               </Row>
             </Container>
