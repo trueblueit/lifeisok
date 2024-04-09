@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
+import Button from "react-bootstrap/Button";
+
 class AboutUs extends Component {
   render() {
     const textColor = "#34568B"; // Dark blue color for text
@@ -45,25 +47,21 @@ class AboutUs extends Component {
                     also have the vision to uphold our commitment to serving
                     NDIS participants with excellence.
                   </p>
-                  <Link
+                  <Button
                     to="/index4"
-                    className="btn mt-4"
+                    className="btn-primary mt-4"
                     style={{
-                      background: "linear-gradient(45deg, #FFA849, #FF7A5A)", // Gradient example
-                      color: "#fff",
-                      padding: "10px 30px",
-                      borderRadius: "30px",
-                      transition: "transform 0.3s ease",
+                      backgroundColor: "##fb5607",
                     }}
                     onMouseOver={(e) =>
                       (e.currentTarget.style.transform = "scale(1.05)")
                     }
                     onMouseOut={(e) =>
-                      (e.currentTarget.style.transform = "scale(1)")
+                      +(e.currentTarget.style.transform = "scale(1)")
                     }
                   >
                     More About Us
-                  </Link>
+                  </Button>
                 </div>
               </Col>
             </Row>

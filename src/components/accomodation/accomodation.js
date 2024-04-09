@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath, faCar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+
 import { accommodations } from "../../data";
 
 const AccommodationsSection = () => {
@@ -113,7 +115,7 @@ const AccommodationsSection = () => {
             </p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="primary" onClick={handleClose}>
               Close
             </Button>
           </Modal.Footer>

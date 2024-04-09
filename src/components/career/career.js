@@ -176,7 +176,7 @@ export function DemoModal(props) {
 
           <Button
             className="mx-auto"
-            style={{ background: "#ff6900" }}
+            style={{ background: "##fb5607" }}
             type="submit"
           >
             Submit
