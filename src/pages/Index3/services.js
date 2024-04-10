@@ -72,7 +72,6 @@ const Services = () => {
       </Row>
 
       <ContactUs />
-      <Footer />
     </React.Fragment>
   );
 };

@@ -23,22 +23,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <Navbar_Page />
-        <section className="section bg-service1 service-half">
-          <Container>
-            <div className="wave-effect wave-anim">
-              {/* Adjust the layout and visibility of waves for different screen sizes */}
-              <div className="waves-shape shape-one">
-                <div className="wave wave-one"></div>
-              </div>
-              <div className="waves-shape shape-two">
-                <div className="wave wave-two"></div>
-              </div>
-              <div className="waves-shape shape-three">
-                <div className="wave wave-three"></div>
-              </div>
-            </div>
-          </Container>
-        </section>
+        <section className="section bg-service1 service-half"></section>
         <Service1 />
 
         <ContactUs />
