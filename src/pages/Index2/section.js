@@ -47,7 +47,7 @@ class Section extends Component {
                     Participants to learn what they want to learn and achieve.
                   </motion.p>
                   <a
-                    to="/index3"
+                    href="/index3"
                     className="btn mybtn mt-4"
                     style={{
                       padding: "10px 30px",
