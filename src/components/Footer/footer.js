@@ -75,7 +75,7 @@ class Footer extends Component {
                 &copy; 2024 Life is OK All rights reserved ABN: 32 653 007 713
               </p>
             </Col>
-            <Col xs={12} md={6} className="mt-2 text-end">
+            <Col xs={12} md={6} className="text-end">
               <p>Developed by TRUE BLUE IT SERVICES.</p>
             </Col>
           </Row>
