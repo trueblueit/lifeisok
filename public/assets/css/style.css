@@ -101,6 +101,7 @@ p {
   background-color: #ffffff;
   color: #fb5607 !important;
   font-weight: bold;
+  border: 1px solid #fb5607;
 }
 
 .custom-dropdown {
