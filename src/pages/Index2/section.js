@@ -31,7 +31,7 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.75 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2 }}
-                    style={{ color: "#ffffff" }} // Setting the color to orange for the heading
+                    style={{ color: "#ffffff" }}
                   >
                     Providing best Support for Your Choice
                   </motion.h1>
@@ -40,14 +40,14 @@ class Section extends Component {
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 3 }}
-                    style={{ color: "#ffffff" }} // Setting the color to orange for the heading
+                    style={{ color: "#ffffff" }}
                   >
                     Dedicated to improving the quality of life for people with
                     disabilities. Aims to build a partnership with NDIS
                     Participants to learn what they want to learn and achieve.
                   </motion.p>
                   <a
-                    to="/index3"
+                    href="/index3"
                     className="btn mybtn mt-4"
                     style={{
                       padding: "10px 30px",

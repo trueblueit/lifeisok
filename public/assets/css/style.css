@@ -737,7 +737,7 @@ textarea.form-control {
 }
 
 .footer {
-  padding: 10px 0;
+  padding: 10px;
   position: relative;
 }
 .footer h4 {
@@ -764,7 +764,6 @@ textarea.form-control {
 .footer p {
   color: #ffffff;
 }
-
 
 @media (min-width: 200px) and (max-width: 1024px) {
   .navbar-custom {
@@ -849,8 +848,8 @@ textarea.form-control {
 /* Enhanced Text Styling */
 .enhancedText {
   font-family: "Lato", sans-serif;
-  color: #33475b; 
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+  color: #33475b;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Enhanced Text Styling */
@@ -871,7 +870,12 @@ textarea.form-control {
   background-size: cover;
   background-position: center;
   background-image: url("../lifeisok/capacity.jpg");
-  border-radius: 100px 0px 100px 0px;
+}
+.bg-service3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../lifeisok/accomodation.png");
 }
 .bg-service4 {
   background-repeat: no-repeat;
@@ -886,14 +890,16 @@ textarea.form-control {
   background-image: url("../lifeisok/employment.jpg");
 }
 .service-half {
-  padding-bottom: 275px; 
+  padding-bottom: 275px;
   padding-top: 375px;
+}
 .refer-half {
-  padding-bottom: 200px; 
-  padding-top: 300px; 
+  padding-bottom: 200px;
+  padding-top: 300px;
+}
 .contact-half {
-  padding-bottom: 200px; 
-  padding-top: 300px; 
+  padding-bottom: 200px;
+  padding-top: 300px;
 }
 .bg-support {
   background-repeat: no-repeat;
@@ -910,6 +916,6 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("../lifeisok/dev.png");
+  background-image: url("../lifeisok/devv.png");
   width: 100%;
 }
