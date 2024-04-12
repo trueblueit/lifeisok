@@ -189,7 +189,7 @@ export function Career() {
 
   return (
     <React.Fragment>
-      <section className="section mybg" id="career">
+      <section className="section-sm  mybg" id="career">
         <div className="bg-overlay"></div>
         <Container fluid>
           <Row>

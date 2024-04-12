@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Section from "./section";
 import Values from "../../components/Values/values";
@@ -10,6 +11,7 @@ import Accomodation from "../../components/accomodation/accomodation";
 import Feedback from "../../components/Feedback/feedback";
 import ContactUs from "../../components/Contact Us/contact-us";
 import Footer from "../../components/Footer/footer";
+import Separator from "../../components/Separator/Separator";
 
 class Index2 extends Component {
   constructor(props) {
@@ -27,9 +29,22 @@ class Index2 extends Component {
       <React.Fragment>
         <NavbarPage />
         <Section />
+
         <Values />
+        <Separator
+          text="Connect, Grow, Give"
+          imageUrl="assets/lifeisok/feedback-bg.jpg"
+        />
         <Services />
+        <Separator
+          text="Connect, Grow, Give"
+          imageUrl="assets/lifeisok/feedback-bg.jpg"
+        />
         <Features />
+        <Separator
+          text="Connect, Grow, Give"
+          imageUrl="assets/lifeisok/feedback-bg.jpg"
+        />
         <Accomodation />
         <Career />
         <AboutUs />

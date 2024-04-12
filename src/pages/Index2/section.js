@@ -20,7 +20,7 @@ class Section extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section bg-home home-half" id="home">
+        <section className="section bg-home" id="home">
           <div className="bg-overlay"></div>
           <Container fluid>
             <Container fluid>

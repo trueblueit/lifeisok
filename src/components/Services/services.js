@@ -14,17 +14,16 @@ class Services extends Component {
   };
 
   render() {
-    const textColor = "#34568B"; // Dark blue color for text
     return (
       <React.Fragment>
-        <section className="section bg-light" id="services">
+        <section className="bg-light section-sm " id="services">
           <Container>
             {/* Render section title with custom styles */}
             <h2
               className="section-heading"
               style={{
                 textAlign: "center",
-                color: textColor,
+                color: "black",
                 marginBottom: "20px",
               }}
             >
@@ -32,7 +31,7 @@ class Services extends Component {
             </h2>
             <p
               className="text-center"
-              style={{ color: textColor, marginBottom: "40px" }}
+              style={{ color: "black", marginBottom: "40px" }}
             >
               Explore our tailored support services designed to empower and
               provide excellent care on your journey with Life Is Ok.

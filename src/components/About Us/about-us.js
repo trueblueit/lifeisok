@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 
 class AboutUs extends Component {
   render() {
-    const textColor = "#34568B"; // Dark blue color for text
+    // Dark blue color for text
     return (
       <React.Fragment>
         <section
@@ -34,7 +34,6 @@ class AboutUs extends Component {
                     className="section-heading"
                     style={{
                       textAlign: "center",
-                      color: textColor,
                       marginBottom: "20px",
                     }}
                   >

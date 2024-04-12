@@ -29,24 +29,19 @@ const AccommodationsSection = () => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000,
   };
-  const textColor = "#34568B";
   return (
-    <section className="section bg-light" id="accomodation">
+    <section className="section-sm  bg-light" id="accomodation">
       <Container>
         <h2
           className="section-heading"
           style={{
             textAlign: "center",
-            color: textColor,
             marginBottom: "20px",
           }}
         >
           Our Accomodation
         </h2>
-        <p
-          className="text-center"
-          style={{ color: textColor, marginBottom: "40px" }}
-        >
+        <p className="text-center" style={{ marginBottom: "40px" }}>
           Available for Independent Living, Short & Medium-Term Accomodation
         </p>
 

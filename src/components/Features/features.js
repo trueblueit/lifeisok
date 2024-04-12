@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import { Container, Row, Col } from "reactstrap";
 import Lottie from "lottie-react";
 import animationData from "../../animation/Animation - bg.json";
 import {
@@ -11,35 +13,32 @@ import {
 
 class Features extends Component {
   render() {
-    const textColor = "#34568B"; // Dark blue color for text
-    const iconColor = "#FF6F61"; // Light red color for icons
+    const iconColor = "black"; // Light red color for icons
     const boxBackgroundColor = "#f2f2f2"; // Light grey color for box background
-    const imageUrl = "assets/lifeisok/about.jpeg"; // Path to your single right-side image
 
     return (
       <React.Fragment>
-        <section className="section" id="feedback">
-          <div className="container-fluid">
+        <section className="section-sm bg-light">
+          <Container>
             <h2
               className="section-heading"
               style={{
                 textAlign: "center",
-                color: textColor,
+
                 marginBottom: "20px",
               }}
             >
-              Why Life is OK?
+              Our Values
             </h2>
-            <p
-              className="text-center"
-              style={{ color: textColor, marginBottom: "40px" }}
-            >
+            <p className="text-center" style={{ marginBottom: "40px" }}>
               Discover how "Life is OK" enhances your life through our dedicated
               services and support.
             </p>
-            <div className="row align-items-center">
+            {/* List of features on the left */}
+
+            <Row>
               {/* List of features on the left */}
-              <div className="col-lg-7">
+              <Col xs={12} className="col-lg-7">
                 {[
                   {
                     icon: <FaRegSmile style={{ color: iconColor }} />,
@@ -86,17 +85,17 @@ class Features extends Component {
                       {feature.icon}
                     </div>
                     <div>
-                      <h5 style={{ color: textColor }}>{feature.title}</h5>
+                      <h5>{feature.title}</h5>
                       <p>{feature.description}</p>
                     </div>
                   </div>
                 ))}
-              </div>
+              </Col>
               {/* Single image on the right */}
-              <div className="col-lg-5">
-                <div style={{ textAlign: "center" }}>
+              <Col className="col-lg-5">
+                <div style={{ textAlign: "center", marginBottom: "20px" }}>
                   <img
-                    src={imageUrl}
+                    src="assets/lifeisok/about.jpeg"
                     alt="Feature Representation"
                     style={{
                       maxWidth: "100%",
@@ -106,9 +105,21 @@ class Features extends Component {
                     }}
                   />
                 </div>
-              </div>
-            </div>
-          </div>
+                <div style={{ textAlign: "center" }}>
+                  <img
+                    src="assets/lifeisok/1.jpeg"
+                    alt="Feature Representation"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                      borderRadius: "8px",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    }}
+                  />
+                </div>
+              </Col>
+            </Row>
+          </Container>
           <div className="animationboxbg">
             <Lottie animationData={animationData} />
           </div>

@@ -28,11 +28,12 @@ const ContactUs = () => {
                 boxShadow="md"
                 textAlign="center"
                 mb="4"
+                height={"150px"}
               >
                 <Heading size="md" mb="3">
                   <i
                     className="pe-7s-mail icon me-3"
-                    style={{ fontSize: "24px" }}
+                    style={{ fontSize: "36px" }}
                   ></i>
                   Message Us At
                 </Heading>
@@ -56,12 +57,13 @@ const ContactUs = () => {
                 boxShadow="md"
                 textAlign="center"
                 mb="4"
+                height={"150px"}
               >
                 <Heading size="md" mb="3">
                   Location
                   <i
                     className="pe-7s-map icon ms-3"
-                    style={{ fontSize: "24px" }}
+                    style={{ fontSize: "36px" }}
                   ></i>
                 </Heading>
                 <Text>

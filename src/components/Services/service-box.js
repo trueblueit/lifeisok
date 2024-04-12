@@ -26,9 +26,6 @@ class ServiceBox extends Component {
       justifyContent: "space-between",
     };
 
-    const darkBlueColor = "#34568B"; // Dark blue color for the title
-    const blackColor = "#000000"; // Black color for the description
-
     return (
       <Col lg="4" className="mt-4">
         <LinkBox
@@ -44,14 +41,16 @@ class ServiceBox extends Component {
             <div className="d-flex justify-content-center">
               <i
                 className={this.props.icon + " text-primary"}
-                style={{ fontSize: "24px" }}
+                style={{ fontSize: "60px" }}
               ></i>
             </div>
             <LinkOverlay href={this.props.mylink}>
-              <h4 style={{ color: darkBlueColor }}>{this.props.title}</h4>
+              <h4>{this.props.title}</h4>
             </LinkOverlay>
           </Heading>
-          <Text mb="3">{this.props.description}</Text>
+          <Text as="u" mb="3">
+            {this.props.description}
+          </Text>
           {this.state.isHovered && (
             <Box
               as="a"

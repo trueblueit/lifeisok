@@ -8,7 +8,6 @@ class Values extends Component {
   };
 
   render() {
-    const textColor = "#34568B";
     return (
       <React.Fragment>
         <section className="section-sm bg-light">
@@ -17,7 +16,7 @@ class Values extends Component {
               className="section-heading"
               style={{
                 textAlign: "center",
-                color: textColor,
+
                 marginBottom: "20px",
               }}
             >
@@ -52,7 +51,7 @@ class Values extends Component {
                     />
                   </div>
                   <div>
-                    <h5 style={{ color: textColor }}>{value.name}</h5>
+                    <h5>{value.name}</h5>
                     <p>{value.description}</p>
                   </div>
                 </div>

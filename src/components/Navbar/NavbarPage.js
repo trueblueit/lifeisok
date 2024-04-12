@@ -79,7 +79,7 @@ class Navbar_Page extends Component {
                 src="assets/lifeisok/logo.png"
                 height={50}
                 width={250}
-                className="d-inline-block align-text-top img-fluid"
+                className="d-inline-block align-text-top img-fluid ms-4"
                 alt="Life is ok Logo"
               />
             </NavbarBrand>
@@ -92,9 +92,9 @@ class Navbar_Page extends Component {
               id="navbarCollapse"
               isOpen={isOpenMenu}
               navbar
-              className="me-5 mt-4 mt-lg-0"
+              className={`me-5 mt-4 mt-lg-0 ${isOpenMenu ? "" : "text-center"}`}
             >
-              <Nav className="navbar-nav navbar-center ms-auto" id="mySidenav">
+              <Nav className="navbar-nav navbar-center mx-auto" id="mySidenav">
                 {navItems.map((item, key) => (
                   <NavItem
                     key={key}
@@ -111,30 +111,18 @@ class Navbar_Page extends Component {
                         onMouseLeave={() => this.toggleDropdown(item.id, false)}
                       >
                         <DropdownToggle nav caret>
-                          {React.createElement(item.icon, {
-                            style: { marginRight: "5px" },
-                          })}
                           {item.navheading}
                         </DropdownToggle>
                         <DropdownMenu>
                           {item.submenu.map((subItem, subKey) => (
-                            <DropdownItem
-                              key={subKey}
-                              href={subItem.link}
-                              style={{ color: "#ff6900" }}
-                            >
+                            <DropdownItem key={subKey} href={subItem.link}>
                               {subItem.navheading}
                             </DropdownItem>
                           ))}
                         </DropdownMenu>
                       </Dropdown>
                     ) : (
-                      <NavLink href={item.link}>
-                        {React.createElement(item.icon, {
-                          style: { marginRight: "5px" },
-                        })}
-                        {item.navheading}
-                      </NavLink>
+                      <NavLink href={item.link}>{item.navheading}</NavLink>
                     )}
                   </NavItem>
                 ))}
