@@ -24,6 +24,7 @@ class ServiceBox extends Component {
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
+      backgroundColor: "#f2f2f2",
     };
 
     return (
@@ -48,9 +49,7 @@ class ServiceBox extends Component {
               <h4>{this.props.title}</h4>
             </LinkOverlay>
           </Heading>
-          <Text as="u" mb="3">
-            {this.props.description}
-          </Text>
+          <Text mb="3">{this.props.description}</Text>
           {this.state.isHovered && (
             <Box
               as="a"

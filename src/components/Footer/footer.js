@@ -25,21 +25,16 @@ class Footer extends Component {
       <>
         <footer className="footer pt-5">
           <div className="ft-overlay"></div>
-          <Container fluid>
+          <div style={{ width: "85%", margin: "0 auto" }}>
             <Row className=" justify-content-center">
-              <Col
-                xs={12}
-                md={4}
-                lg={4}
-                className="text-dark text-center mt-4 mt-md-0"
-              >
-                <div className="d-flex align-items-center justify-content-center"></div>
-
-                <h3>Life is Ok</h3>
-                <p>
-                  Founded by a team of professionals to improve the quality of
-                  life for people with difficulties.
-                </p>
+              <Col xs={12} md={4} lg={4} className=" mt-4 mt-md-0">
+                <div className="d-flex flex-column align-items-start">
+                  <h3>Life is Ok</h3>
+                  <p>
+                    Founded by a team of professionals to improve the quality of
+                    life for people with difficulties.
+                  </p>
+                </div>
               </Col>
               <Col xs={12} md={4} lg={4}>
                 <div className="useful-links text-center">
@@ -61,19 +56,25 @@ class Footer extends Component {
                 </div>
               </Col>
 
-              <Col xs={12} md={4} lg={4} className="text-center mt-4 mt-md-0">
-                <h3>Follow Us</h3>
-                <div className="d-flex flex-column align-items-center">
+              <Col
+                xs={12}
+                md={4}
+                lg={4}
+                className="d-flex flex-column align-items-end mt-4 mt-md-0 pe-5"
+              >
+                <h3 className=" text-justify text-left">Follow Us</h3>
+                <div className="d-flex flex-column align-items-start">
                   {this.state.socials.map((social, index) => (
                     <a
                       key={index}
                       href={social.link}
-                      className="d-flex align-items-center mx-3"
+                      className="d-flex align-items-center"
                     >
                       <img
-                        className="me-4 mb-3 "
+                        className="me-3 mb-3 "
                         src={social.icon}
                         alt={`Social Icon ${index}`}
+                        style={{ maxWidth: "32px", height: "auto" }}
                       />
                       <p>{social.name}</p>
                     </a>
@@ -83,7 +84,7 @@ class Footer extends Component {
             </Row>
 
             <hr className="mt-5" style={{ borderWidth: "8px" }} />
-            <Row className="">
+            <Row>
               <Col xs={12} md={8} lg={8} className="text-start text-md-center">
                 <p style={{ color: "black", fontSize: "18px", float: "left" }}>
                   &copy; 2024 Life is OK All rights reserved
@@ -103,39 +104,40 @@ class Footer extends Component {
                 />
               </Col>
             </Row>
-          </Container>
+          </div>
         </footer>
-
-        <Row className="bg-dark py-4">
-          <Col xs={12} md={4} lg={4}>
-            <Row>
-              <img
-                src="assets/lifeisok/flag1.png"
-                alt="Feature Representation"
-                style={{
-                  maxWidth: "100px",
-                  height: "auto",
-                }}
-              />
-              <img
-                className="ms-3"
-                src="assets/lifeisok/flag2.png"
-                alt="Feature Representation"
-                style={{
-                  maxWidth: "100px",
-                  height: "auto",
-                }}
-              />
-            </Row>
-          </Col>
-          <Col xs={12} md={4} lg={4}>
-            <p className="text-white">
-              Life is OK acknowledge and pay our respects to the traditional
-              custodians of this land, their deep cultural heritage, and their
-              vital role in shaping our community and country.
-            </p>
-          </Col>
-        </Row>
+        <div className="bg-dark py-4">
+          <Row style={{ width: "80%", margin: "0 auto" }}>
+            <Col xs={12} md={3} lg={3}>
+              <Row className="justify-content-end">
+                <img
+                  src="assets/lifeisok/flag1.png"
+                  alt="Feature Representation"
+                  style={{
+                    maxWidth: "100px",
+                    height: "auto",
+                  }}
+                />
+                <img
+                  className="ms-3 me-5"
+                  src="assets/lifeisok/flag2.png"
+                  alt="Feature Representation"
+                  style={{
+                    maxWidth: "100px",
+                    height: "auto",
+                  }}
+                />
+              </Row>
+            </Col>
+            <Col xs={12} md={9} lg={9}>
+              <p className="text-white">
+                Life is OK acknowledge and pay our respects to the traditional
+                custodians of this land, their deep cultural heritage, and their
+                vital role in shaping our community and country.
+              </p>
+            </Col>
+          </Row>
+        </div>
       </>
     );
   }

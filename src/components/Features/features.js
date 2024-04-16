@@ -18,7 +18,7 @@ class Features extends Component {
 
     return (
       <React.Fragment>
-        <section className="section-sm bg-light">
+        <section className="section-sm bg-light" id="features">
           <Container>
             <h2
               className="section-heading"

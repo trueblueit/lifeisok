@@ -21,10 +21,9 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section className="section bg-home" id="home">
-          <div className="bg-overlay"></div>
           <Container fluid>
             <Container fluid>
-              <Row className="justify-content-center align-items-center">
+              <Row className="justify-content-center align-items-center mb-5">
                 <Col className="text-center">
                   <motion.h1
                     className="home-title"
@@ -48,7 +47,7 @@ class Section extends Component {
                   </motion.p>
                   <a
                     href="/index3"
-                    className="btn mybtn mt-4"
+                    className="btn mybtn mt-4 pb-3"
                     style={{
                       padding: "10px 30px",
                       borderRadius: "30px",

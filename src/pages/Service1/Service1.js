@@ -1,9 +1,5 @@
 import React from "react";
-import NavbarPage from "../../components/Navbar/NavbarPage";
-import Section from "./section";
-import Footer from "../../components/Footer/footer";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import ContactUs from "../../components/Contact Us/contact-us";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 

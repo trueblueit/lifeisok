@@ -42,8 +42,8 @@ class Index2 extends Component {
         />
         <Features />
         <Separator
-          text="Connect, Grow, Give"
-          imageUrl="assets/lifeisok/feedback-bg.jpg"
+          text="We’re Here for You as a Trusted NDIS Provider"
+          imageUrl="assets/lifeisok/f-bg.jpg"
         />
         <Accomodation />
         <Career />

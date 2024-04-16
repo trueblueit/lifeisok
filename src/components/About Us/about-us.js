@@ -40,7 +40,7 @@ class AboutUs extends Component {
                     About Us
                   </h2>
 
-                  <p className="text-muted" style={{ marginBottom: "32px" }}>
+                  <p style={{ marginBottom: "32px" }}>
                     “Life Is OK” aspires to be business role models through
                     cultural awareness and person-centric support strategies; we
                     also have the vision to uphold our commitment to serving

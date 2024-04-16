@@ -23,7 +23,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <Navbar_Page />
-        <section className="section bg-service3 service-half" id="home">
+        <section className="section-sm bg-service3 service-half" id="home">
           <Container>
             <Row className="mt-auto">
               <Col
