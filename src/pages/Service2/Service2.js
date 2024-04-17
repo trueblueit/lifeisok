@@ -14,14 +14,14 @@ class Service2 extends React.Component {
       borderRadius: "15px",
       margin: "40px 0",
       padding: "40px",
-      backgroundColor: "#fff",
+      backgroundColor: "#f2f2f2",
       border: "none",
     };
 
     const textStyle = {
       fontSize: "18px", // Bigger font size for main text
       lineHeight: "1.8", // More line spacing for readability
-      color: "#4a4a4a", // Soft color for text, less harsh on the eyes
+
       textAlign: "justify", // Justify text for a polished look
     };
 
@@ -29,7 +29,6 @@ class Service2 extends React.Component {
       fontWeight: "600",
       fontSize: "30px", // Larger and bolder title for emphasis
       marginBottom: "20px", // More space below the title
-      color: "#FFA500", // A color that stands out
     };
 
     const containerVariants = {
@@ -88,7 +87,7 @@ class Service2 extends React.Component {
                       <p>→ Improved relationships</p>
                       <p>→ Improved daily living skills</p>
                     </Card.Text>
-                    <Link to="/index1" className="btn btn-orange m-3">
+                    <Link to="/index1" className=" btn mybtn m-3">
                       Enquire Now
                     </Link>
                   </motion.div>

@@ -105,7 +105,7 @@ const Feedback = () => {
   };
 
   return (
-    <section className="section feedback-bg" id="blog">
+    <section className="section-sm feedback-bg" id="feedback">
       <div className="bg-overlay"></div>
       <Container fluid>
         <Row>

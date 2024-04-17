@@ -11,15 +11,6 @@ import { Link } from "react-router-dom";
 import { accommodations } from "../../data";
 
 const AccommodationsSection = () => {
-  const [show, setShow] = useState(false);
-  const [currentAccommodation, setCurrentAccommodation] = useState(null);
-
-  const handleClose = () => setShow(false);
-  const handleShow = (accommodation) => {
-    setCurrentAccommodation(accommodation);
-    setShow(true);
-  };
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -50,7 +41,13 @@ const AccommodationsSection = () => {
             <Col key={index} xs={12} md={4} className="mb-4">
               <div
                 style={{ cursor: "pointer" }}
-                onClick={() => handleShow(accommodation)}
+                onMouseEnter={() =>
+                  (document.getElementById(`card_disc_${index}`).innerText =
+                    accommodation.description)
+                }
+                onMouseLeave={() =>
+                  (document.getElementById(`card_disc_${index}`).innerText = "")
+                }
               >
                 <Slider {...sliderSettings}>
                   {accommodation.imgSrc.map((src, imgIndex) => (
@@ -63,8 +60,9 @@ const AccommodationsSection = () => {
                     </div>
                   ))}
                 </Slider>
+
                 <h3 style={{ marginTop: "20px" }}>{accommodation.name}</h3>
-                <p style={{ marginTop: "10px" }}>{accommodation.description}</p>
+                <p id={`card_disc_${index}`}></p>
                 <p style={{ marginTop: "5px" }}>
                   <FontAwesomeIcon icon={faBed} /> {accommodation.bedrooms}{" "}
                   Bedrooms
@@ -79,42 +77,6 @@ const AccommodationsSection = () => {
             </Col>
           ))}
         </Row>
-
-        <Modal show={show} onHide={handleClose} centered>
-          <Modal.Header closeButton>
-            <Modal.Title>{currentAccommodation?.name}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Slider {...sliderSettings}>
-              {currentAccommodation?.imgSrc.map((src, index) => (
-                <img
-                  key={index}
-                  src={src}
-                  alt={`${currentAccommodation.name} ${index + 1}`}
-                  className="img-fluid"
-                />
-              ))}
-            </Slider>
-            <p style={{ marginTop: "20px" }}>
-              {currentAccommodation?.description}
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faBed} /> {currentAccommodation?.bedrooms}{" "}
-              Bedrooms
-              <br />
-              <FontAwesomeIcon icon={faBath} />{" "}
-              {currentAccommodation?.bathrooms} Bathrooms
-              <br />
-              <FontAwesomeIcon icon={faCar} /> {currentAccommodation?.parking}{" "}
-              Parking Spots
-            </p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
 
         <Link to="/index3" className="btn mybtn mt-5">
           Read More
