@@ -1,74 +1,93 @@
-import React, { Component } from "react";
-/* Importing Components */
+import React, { useState } from "react";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-/* Importing Bootstrap */
-import Accordion from "react-bootstrap/Accordion";
-import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBed, faBath, faCar } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { accommodations } from "../../data";
 
-/*Importing datas from data.js */
-import { accordionData } from "../../data";
+const AccommodationsSection = () => {
+  const [selectedAccommodation, setSelectedAccommodation] = useState(null);
 
-const RenderAccordionItems = () => {
+  const handleAccommodationClick = (index) => {
+    setSelectedAccommodation(index);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedAccommodation(null);
+  };
+
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000,
-    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 3500,
   };
-  return accordionData.map((item, index) => (
-    <Accordion.Item key={index} eventKey={index.toString()}>
-      <Accordion.Header>{item.title}</Accordion.Header>
-      <Accordion.Body>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} className="align-self-start">
-            {item.content}
-          </Col>
-          <Col xs={12} md={6}>
-            <Slider {...sliderSettings}>
-              {item.imgSrc.map((src, imgIndex) => (
-                <div key={imgIndex} style={{ textAlign: "center" }}>
-                  <Image
-                    src={src}
-                    alt={`${item.name} ${imgIndex + 1}`}
-                    className="img-fluid"
-                  />
-                </div>
-              ))}
-            </Slider>
-          </Col>
+
+  return (
+    <section className="section-sm bg-light" id="accommodation">
+      <Container>
+        <h2
+          className="section-heading"
+          style={{ textAlign: "center", marginBottom: "20px" }}
+        >
+          Our Accommodation
+        </h2>
+        <p className="text-center" style={{ marginBottom: "40px" }}>
+          Available for Independent Living, Short & Medium-Term Accommodation
+        </p>
+
+        <Row className="mt-5">
+          {accommodations.map((accommodation, index) => (
+            <Col key={index} xs={12} md={4} className="mb-4">
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => handleAccommodationClick(index)}
+              >
+                <Slider {...sliderSettings}>
+                  {accommodation.imgSrc.map((src, imgIndex) => (
+                    <div key={imgIndex} style={{ textAlign: "center" }}>
+                      <img
+                        src={src}
+                        alt={`${accommodation.name} ${imgIndex + 1}`}
+                        className="img-fluid"
+                      />
+                    </div>
+                  ))}
+                </Slider>
+
+                <h3 style={{ marginTop: "20px" }}>{accommodation.name}</h3>
+                {selectedAccommodation === index && (
+                  <div>
+                    <p>{accommodation.description}</p>
+                    <p style={{ marginTop: "5px" }}>
+                      <FontAwesomeIcon icon={faBed} /> {accommodation.bedrooms}{" "}
+                      Bedrooms
+                      <br />
+                      <FontAwesomeIcon icon={faBath} />{" "}
+                      {accommodation.bathrooms} Bathrooms
+                      <br />
+                      <FontAwesomeIcon icon={faCar} /> {accommodation.parking}{" "}
+                      Parking Spots
+                    </p>
+                  </div>
+                )}
+              </div>
+            </Col>
+          ))}
         </Row>
-      </Accordion.Body>
-    </Accordion.Item>
-  ));
+
+        <Link to="/index3" className="btn mybtn mt-5">
+          Read More
+        </Link>
+      </Container>
+    </section>
+  );
 };
 
-class Service3 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  componentDidMount() {
-    document.getElementById("colorTheme").href = "assets/colors/orange.css";
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <Accordion defaultActiveKey="0">
-          <RenderAccordionItems />
-        </Accordion>
-      </React.Fragment>
-    );
-  }
-}
-
-export default Service3;
+export default AccommodationsSection;

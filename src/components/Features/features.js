@@ -28,7 +28,7 @@ class Features extends Component {
                 marginBottom: "20px",
               }}
             >
-              Our Values
+              Why US?
             </h2>
             <p className="text-center" style={{ marginBottom: "40px" }}>
               Discover how "Life is OK" enhances your life through our dedicated

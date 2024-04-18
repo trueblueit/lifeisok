@@ -68,12 +68,13 @@ function Contactus() {
   return (
     <>
       <Container fluid className="mt-5">
+        <h3 className="text-center">Enquire Form</h3>
         <div className="row justify-content-center">
-          <Form className="col-md-8 text-center" onSubmit={handleSubmit}>
+          <Form className="col-md-8 text-center  " onSubmit={handleSubmit}>
             <Form.Text className="text-muted">
               We'll never share your details with anyone else.
             </Form.Text>
-            <Form.Group className="mb-3" controlId="formFullName">
+            <Form.Group className="mb-3 mt-5" controlId="formFullName">
               <Form.Control
                 type="text"
                 placeholder="Full Name"

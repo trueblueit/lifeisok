@@ -4,7 +4,7 @@ import Navbar_Page from "../../components/Navbar/NavbarPage";
 
 import Footer from "../../components/Footer/footer";
 import ContactUs from "../../components/Contact Us/contact-us";
-import Accomodation from "../../components/accomodation/accomodation";
+import Service3 from "./Service3";
 
 class Section extends Component {
   constructor() {
@@ -36,7 +36,7 @@ class Section extends Component {
           </Container>
         </section>
 
-        <Accomodation />
+        <Service3 />
         <ContactUs />
         <Footer />
       </React.Fragment>

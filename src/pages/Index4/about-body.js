@@ -41,6 +41,9 @@ function Aboutbody() {
     marginBottom: "15px",
     display: "flex",
     alignItems: "center",
+    color: "black",
+    fontSize: "18px",
+    fontWeight: "550",
   };
 
   const iconStyle = {

@@ -16,7 +16,7 @@ class Services extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="bg-light section-sm " id="services">
+        <section className="section-sm " id="services">
           <Container>
             {/* Render section title with custom styles */}
             <h2
