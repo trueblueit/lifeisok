@@ -8,8 +8,8 @@ function Section() {
         <Container>
           <Row>
             <Col lg={{ size: 8, offset: 2 }} className="text-white text-center">
-              <h1 className="home-title">Referral</h1>
-              <p className="pt-3 home-desc mx-auto">
+              <h1 className="home-title text-white">Referral</h1>
+              <p className="pt-3 home-desc mx-auto text-white">
                 Get in Touch and Let us Care for you.
               </p>
             </Col>

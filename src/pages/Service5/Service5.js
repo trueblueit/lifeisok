@@ -81,7 +81,7 @@ class Service5 extends React.Component {
                       <br /> Our long-term basis SIL services are available in
                       Palmerston and in Darwin.
                     </Card.Text>
-                    <Link to="/index1" className="btn btn-orange m-3">
+                    <Link to="/index1" className="btn mybtn">
                       Enquire Now
                     </Link>
                   </motion.div>

@@ -56,11 +56,11 @@ function Aboutbody() {
     <React.Fragment>
       <Container fluid>
         <Container>
-          <Row className="align-items-center ">
+          <Row className="align-items-center mt-5 ">
             <Col lg="5" className="order-lg-1 mb-4 mb-lg-0">
               <div className="features-box mt-5 mt-lg-0">
                 <h3>About Us</h3>
-                <p className="text-muted web-desc home-desc">
+                <p className="web-desc home-desc">
                   Life is OK is seeking to provide care support services under
                   the National Disability Insurance Scheme (NDIS) in NT, seeking
                   to deliver services that include:
@@ -73,12 +73,12 @@ function Aboutbody() {
                   ))}
                 </ul>
               </div>
-              <Link to="/index3" className="btn btn-orange m-3">
+              <Link to="/index3" className="btn mybtn my-5">
                 Our Services
               </Link>
             </Col>
             <Col lg="7">
-              <div className="features-img mx-auto text-center">
+              <div className="features-img  text-center">
                 <img
                   src="assets/lifeisok/3.jpeg"
                   className="img-fluid"

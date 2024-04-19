@@ -20,14 +20,16 @@ class AboutUs extends Component {
                 <div
                   className="about-card p-5 shadow-sm"
                   style={{
-                    background: "#FFFFFF",
+                    border: " solid",
+                    borderColor: "#efa27d",
+                    background: "#f2f2f2",
                     borderRadius: "15px",
                     textAlign: "center",
                     position: "relative",
                     top: "0",
                     transition: "top ease 0.5s",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.top = "-5px")}
+                  onMouseEnter={(e) => (e.currentTarget.style.top = "-7px")}
                   onMouseLeave={(e) => (e.currentTarget.style.top = "0")}
                 >
                   <h2
@@ -46,7 +48,7 @@ class AboutUs extends Component {
                     also have the vision to uphold our commitment to serving
                     NDIS participants with excellence.
                   </p>
-                  <a href="/index4" className=" btn mybtn mt-4">
+                  <a href="/index4" className="btn mybtn mt-4">
                     More About Us
                   </a>
                 </div>

@@ -113,7 +113,7 @@ class Navbar_Page extends Component {
                         <DropdownToggle nav caret>
                           {item.navheading}
                         </DropdownToggle>
-                        <DropdownMenu>
+                        <DropdownMenu style={{ backgroundColor: "#f3e0e0" }}>
                           {item.submenu.map((subItem, subKey) => (
                             <DropdownItem key={subKey} href={subItem.link}>
                               {subItem.navheading}

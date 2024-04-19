@@ -8,9 +8,9 @@ function Section() {
       <section className="section bg-contact contact-half" id="contact us">
         <Container>
           <Row>
-            <Col lg={{ size: 8, offset: 2 }} className="text-white text-center">
-              <h1 className="home-title">Contact Us</h1>
-              <p className="pt-3 home-desc mx-auto">
+            <Col lg={{ size: 8, offset: 2 }} className=" text-center">
+              <h1 className="home-title tomato">Contact Us</h1>
+              <p className="pt-3  tomato">
                 Get in Touch and Let us Care for you.
               </p>
             </Col>

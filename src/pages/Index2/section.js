@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "reactstrap";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import Carousel from "react-bootstrap/Carousel";
 
 class Section extends Component {
   constructor() {
@@ -20,73 +19,35 @@ class Section extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="section bg-home" id="home">
-          <Container fluid>
-            <Container fluid>
-              <Row className="justify-content-center align-items-center mb-5">
-                <Col className="text-center">
-                  <motion.h1
-                    className="home-title"
-                    initial={{ opacity: 0, scale: 0.75 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 2 }}
-                    style={{ color: "#ffffff" }}
-                  >
-                    Providing best Support for Your Choice
-                  </motion.h1>
-                  <motion.p
-                    className="home-desc"
-                    initial={{ opacity: 0, scale: 0.7 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 3 }}
-                    style={{ color: "#ffffff" }}
-                  >
-                    Dedicated to improving the quality of life for people with
-                    disabilities. Aims to build a partnership with NDIS
-                    Participants to learn what they want to learn and achieve.
-                  </motion.p>
-                  <a
-                    href="/index3"
-                    className="btn mybtn mt-4 pb-3"
-                    style={{
-                      padding: "10px 30px",
-                      borderRadius: "30px",
-                      transition: "transform 0.3s ease",
-                    }}
-                  >
-                    Our Services
-                  </a>
-                </Col>
-              </Row>
-            </Container>
-
-            <div className="wave-effect wave-anim">
-              <div className="wave-effect wave-anim">
-                <div className="waves-shape shape-one">
-                  <div
-                    className="wave wave-one"
-                    style={{
-                      backgroundImage: `url(assets/images/wave-shape/wave1.png)`,
-                    }}
-                  ></div>
-                </div>
-                <div className="waves-shape shape-two">
-                  <div
-                    className="wave wave-two"
-                    style={{
-                      backgroundImage: `url(assets/images/wave-shape/wave2.png)`,
-                    }}
-                  ></div>
-                </div>
-                <div className="waves-shape shape-three">
-                  <div
-                    className="wave wave-three"
-                    style={{
-                      backgroundImage: `url(assets/images/wave-shape/wave3.png)`,
-                    }}
-                  ></div>
-                </div>
-              </div>
+        <section id="home">
+          <Container fluid style={{ padding: "0px" }} className="home-slider ">
+            <div className="carousel-container ">
+              <Carousel indicators={false}>
+                <Carousel.Item interval={3000}>
+                  <img
+                    className="carousel-image"
+                    src="assets/images/img-1.png"
+                    alt="First slide"
+                    display=" block"
+                    marginleft="auto"
+                    marginright="auto"
+                  />
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                  <img
+                    className="carousel-image"
+                    src="assets/images/img-2.png"
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                  <img
+                    className="carousel-image"
+                    src="assets/images/img-4.png"
+                    alt="Third slide"
+                  />
+                </Carousel.Item>
+              </Carousel>
             </div>
           </Container>
         </section>

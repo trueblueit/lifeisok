@@ -29,6 +29,10 @@ class Index2 extends Component {
       <React.Fragment>
         <NavbarPage />
         <Section />
+        <Separator
+          text="Connect, Grow, Give"
+          imageUrl="assets/lifeisok/feedback-bg.jpg"
+        />
 
         <Values />
         <Separator

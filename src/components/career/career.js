@@ -194,7 +194,7 @@ export function Career() {
         <Container fluid>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="text-white">Join Our Team Today</h2>
+              <h2>Join Our Team Today</h2>
               <p className="pt-3 home-desc mx-auto">
                 Founded by a team of professionals to improve the quality of
                 life for people with difficulties.

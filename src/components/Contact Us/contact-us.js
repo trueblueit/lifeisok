@@ -23,7 +23,7 @@ const ContactUs = () => {
             <Col lg="6" className="mb-4 mb-lg-0">
               <LinkBox
                 p="4"
-                bg="white"
+                bg="#f2f2f2"
                 borderRadius="lg"
                 boxShadow="md"
                 textAlign="center"
@@ -52,7 +52,7 @@ const ContactUs = () => {
             <Col lg="6">
               <LinkBox
                 p="4"
-                bg="white"
+                bg="#f2f2f2"
                 borderRadius="lg"
                 boxShadow="md"
                 textAlign="center"

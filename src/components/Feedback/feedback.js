@@ -19,7 +19,7 @@ const Feedback = () => {
   const toast = useToast();
   // Define emojis for the rating system
   const emojis = ["😍", "😊", "😐", "😟", "😡"];
-  const textColor = "#34568B";
+  const textColor = "black";
   const emojiRatings = { "😡": 1, "😟": 2, "😐": 3, "😊": 4, "😍": 5 };
   // Reverse order of emojis
   const handleEmojiClick = (emoji) => {
@@ -114,7 +114,7 @@ const Feedback = () => {
             style={{
               maxWidth: "600px",
               padding: "20px",
-              backgroundColor: "white",
+              backgroundColor: "#f2f2f2",
               borderRadius: "8px",
               boxShadow: "0 2px 4px rgba(0,0,0,.1)",
             }}
@@ -130,13 +130,16 @@ const Feedback = () => {
               >
                 Rate Our Service
               </h2>
-              <p className="text-muted">
+              <p>
                 Share your thoughts on our service! Rate your experience with us
                 and let us know what you liked. Your feedback is valuable in
                 helping us enhance our services.
               </p>
             </div>
-            <Form onSubmit={handleSubmit}>
+            <Form
+              onSubmit={handleSubmit}
+              style={{ color: "black", fontWeight: "bold" }}
+            >
               <Form.Group>
                 <Form.Label>Rate Us:</Form.Label>
                 <div>{emojis.map(renderEmoji)}</div>
@@ -159,6 +162,7 @@ const Feedback = () => {
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
+                  placeholder="Write a comment"
                 />
               </Form.Group>
               <a

@@ -36,11 +36,12 @@ const AccommodationsSection = () => {
           Available for Independent Living, Short & Medium-Term Accomodation
         </p>
 
-        <Row className="mt-5">
+        <Row className="mt-5 ">
           {accommodations.map((accommodation, index) => (
-            <Col key={index} xs={12} md={4} className="mb-4">
+            <Col key={index} xs={12} md={4} className="mb-4 mr-2">
               <div
-                style={{ cursor: "pointer" }}
+                className="p-3"
+                style={{ cursor: "pointer", backgroundColor: "#f2f2f2" }}
                 onMouseEnter={() =>
                   (document.getElementById(`card_disc_${index}`).innerText =
                     accommodation.description)

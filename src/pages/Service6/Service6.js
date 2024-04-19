@@ -85,7 +85,7 @@ class Service5 extends React.Component {
                       You might also like to become more independent at work or
                       progress your career goals.
                     </Card.Text>
-                    <Link to="/index1" className="btn btn-orange m-3">
+                    <Link to="/index1" className="btn mybtn">
                       Enquire Now
                     </Link>
                   </motion.div>

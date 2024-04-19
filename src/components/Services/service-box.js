@@ -20,10 +20,9 @@ class ServiceBox extends Component {
 
   render() {
     const boxStyle = {
-      minHeight: "450px",
+      minHeight: "455px",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "space-between",
       backgroundColor: "#f2f2f2",
     };
 
@@ -33,33 +32,24 @@ class ServiceBox extends Component {
           p="5"
           borderWidth="1px"
           rounded="md"
-          className="services-box text-center hover-effect"
+          className="services-box text-left hover-effect"
           style={boxStyle}
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
         >
-          <Heading size="md" my="2">
-            <div className="d-flex justify-content-center">
-              <i
-                className={this.props.icon + " text-primary"}
-                style={{ fontSize: "60px" }}
-              ></i>
-            </div>
-            <LinkOverlay href={this.props.mylink}>
+          <LinkOverlay href={this.props.mylink}>
+            <Heading size="md" my="2">
+              <div className="d-flex justify-content-center">
+                <i
+                  className={this.props.icon + " text-primary"}
+                  style={{ fontSize: "60px" }}
+                ></i>
+              </div>
+
               <h4>{this.props.title}</h4>
-            </LinkOverlay>
-          </Heading>
-          <Text mb="3">{this.props.description}</Text>
-          {this.state.isHovered && (
-            <Box
-              as="a"
-              color="orange.400"
-              href={this.props.mylink}
-              fontWeight="bold"
-            >
-              Read more
-            </Box>
-          )}
+            </Heading>
+          </LinkOverlay>
+          <p>{this.props.description}</p>
         </LinkBox>
       </Col>
     );

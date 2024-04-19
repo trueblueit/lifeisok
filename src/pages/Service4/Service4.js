@@ -107,7 +107,7 @@ class Service4 extends React.Component {
                         employment supports (SLES)
                       </p>
                     </Card.Text>
-                    <Link to="/index1" className="btn btn-orange m-3">
+                    <Link to="/index1" className="btn mybtn">
                       Enquire Now
                     </Link>
                   </motion.div>
