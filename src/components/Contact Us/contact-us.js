@@ -33,15 +33,14 @@ const ContactUs = () => {
                 <Heading size="md" mb="3">
                   <i
                     className="pe-7s-mail icon me-3"
-                    style={{ fontSize: "36px" }}
+                    style={{ fontSize: "38px" }}
                   ></i>
                   Message Us At
                 </Heading>
                 <Text>
-                  Email:{" "}
                   <LinkOverlay
                     href="mailto:admin@lifeisok.info"
-                    color="blue.500"
+                    color="orange.500"
                   >
                     admin@lifeisok.info
                   </LinkOverlay>
@@ -63,14 +62,13 @@ const ContactUs = () => {
                   Location
                   <i
                     className="pe-7s-map icon ms-3"
-                    style={{ fontSize: "36px" }}
+                    style={{ fontSize: "38px" }}
                   ></i>
                 </Heading>
                 <Text>
-                  Address:{" "}
                   <LinkOverlay
                     href="https://www.google.com/maps/search/?api=1&query=48+Trower+Rd,+Millner+NT+0810"
-                    color="blue.500"
+                    color="orange.500"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

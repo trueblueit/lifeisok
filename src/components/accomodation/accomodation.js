@@ -41,7 +41,13 @@ const AccommodationsSection = () => {
             <Col key={index} xs={12} md={4} className="mb-4 mr-2">
               <div
                 className="p-3"
-                style={{ cursor: "pointer", backgroundColor: "#f2f2f2" }}
+                style={{
+                  cursor: "pointer",
+                  backgroundColor: "#f2f2f2",
+                  border: "1px solid #f2fff",
+                  borderRadius: "8px",
+                  minHeight: "550px",
+                }}
                 onMouseEnter={() =>
                   (document.getElementById(`card_disc_${index}`).innerText =
                     accommodation.description)

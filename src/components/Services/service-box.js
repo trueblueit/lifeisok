@@ -47,6 +47,7 @@ class ServiceBox extends Component {
               </div>
 
               <h4>{this.props.title}</h4>
+              <br />
             </Heading>
           </LinkOverlay>
           <p>{this.props.description}</p>
