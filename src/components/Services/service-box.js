@@ -20,7 +20,7 @@ class ServiceBox extends Component {
 
   render() {
     const boxStyle = {
-      minHeight: "455px",
+      minHeight: "550px",
       display: "flex",
       flexDirection: "column",
       backgroundColor: "#f2f2f2",

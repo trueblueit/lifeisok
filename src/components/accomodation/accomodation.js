@@ -44,7 +44,7 @@ const AccommodationsSection = () => {
                 style={{
                   cursor: "pointer",
                   backgroundColor: "#f2f2f2",
-                  border: "1px solid #f2fff",
+                  border: "2px solid orange",
                   borderRadius: "8px",
                   minHeight: "550px",
                 }}
