@@ -8,7 +8,6 @@
  */
 
 // accommodationData
-
 /* imporrt for NabItems*/
 import {
   FaHome,

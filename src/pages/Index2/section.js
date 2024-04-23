@@ -19,14 +19,14 @@ class Section extends Component {
   render() {
     return (
       <React.Fragment>
-        <section id="home">
+        <section style={{ position: "relative" }} id="home">
           <Container fluid style={{ padding: "0px" }} className="home-slider ">
             <div className="carousel-container ">
               <Carousel indicators={false}>
-                <Carousel.Item interval={3000}>
+                <Carousel.Item interval={2000}>
                   <img
                     className="carousel-image"
-                    src="assets/images/img-1.png"
+                    src="assets/images/img-1.jpg"
                     alt="First slide"
                     display=" block"
                     marginleft="auto"
@@ -48,6 +48,34 @@ class Section extends Component {
                   />
                 </Carousel.Item>
               </Carousel>
+            </div>
+          </Container>
+          <Container>
+            <div className="wave-effect wave-anim">
+              <div className="waves-shape shape-one">
+                <div
+                  className="wave wave-one"
+                  style={{
+                    backgroundImage: `url(assets/images/wave-shape/wave1.png)`,
+                  }}
+                ></div>
+              </div>
+              <div className="waves-shape shape-two">
+                <div
+                  className="wave wave-two"
+                  style={{
+                    backgroundImage: `url(assets/images/wave-shape/wave2.png)`,
+                  }}
+                ></div>
+              </div>
+              <div className="waves-shape shape-three">
+                <div
+                  className="wave wave-three"
+                  style={{
+                    backgroundImage: `url(assets/images/wave-shape/wave3.png)`,
+                  }}
+                ></div>
+              </div>
             </div>
           </Container>
         </section>

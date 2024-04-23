@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Section from "./section";
 import Referral from "./referral";
+import Topsection from "../../components/common_section/topsection";
 
 import NavbarPage from "../../components/Navbar/NavbarPage";
 import Footer from "../../components/Footer/footer";
@@ -16,7 +16,10 @@ class Index5 extends Component {
     return (
       <React.Fragment>
         <NavbarPage navClass={this.state.navClass} />
-        <Section />
+        <Topsection
+          mycss={"section bg-refer refer-half mt-5"}
+          text={"Referral"}
+        />
         <Referral />
         <Footer />
       </React.Fragment>

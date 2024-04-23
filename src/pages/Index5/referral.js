@@ -86,7 +86,8 @@ function Referral() {
         <a
           href="https://lifeisok.com.au/wp-content/uploads/2022/08/LIO-NDIS-Referral-Form-updated-2022.pdf"
           download
-          style={{ textDecoration: "underline" }} // This underlines the text
+          // This underlines the text
+          className="color-link"
         >
           Download PDF
         </a>

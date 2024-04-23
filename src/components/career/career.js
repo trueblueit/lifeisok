@@ -189,24 +189,54 @@ export function Career() {
 
   return (
     <React.Fragment>
-      <section className="section-sm  mybg" id="career">
-        <div className="bg-overlay"></div>
-        <Container fluid>
-          <Row>
-            <Col lg="12" className="text-center">
-              <h2>Join Our Team Today</h2>
-              <p className="pt-3 home-desc mx-auto">
-                Founded by a team of professionals to improve the quality of
-                life for people with difficulties.
-              </p>
-              <a
-                className="mt-3 mt-lg-5 btn mybtn"
-                onClick={() => setModalShow(true)}
+      <section
+        className="section-sm "
+        id="career"
+        style={{ backgroundColor: "#FAFAFA", padding: "80px 0" }}
+      >
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg="10">
+              <div
+                className="about-card p-5 shadow-sm"
+                style={{
+                  border: " solid",
+                  borderColor: "#efa27d",
+                  background: "#f2f2f2",
+                  borderRadius: "15px",
+                  textAlign: "center",
+                  position: "relative",
+                  top: "0",
+                  transition: "top ease 0.5s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.top = "-7px")}
+                onMouseLeave={(e) => (e.currentTarget.style.top = "0")}
               >
-                Join Us
-              </a>
+                <h2
+                  className="section-heading"
+                  style={{
+                    textAlign: "center",
+                    marginBottom: "20px",
+                  }}
+                >
+                  Join Our Team
+                </h2>
 
-              <DemoModal show={modalShow} onHide={() => setModalShow(false)} />
+                <p style={{ marginBottom: "32px" }}>
+                  Founded by a team of professionals to improve the quality of
+                  life for people with difficulties.
+                </p>
+                <a
+                  onClick={() => setModalShow(true)}
+                  className="btn mybtn mt-4"
+                >
+                  Join Us
+                </a>
+                <DemoModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
+              </div>
             </Col>
           </Row>
         </Container>

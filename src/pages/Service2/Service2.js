@@ -14,15 +14,17 @@ class Service2 extends React.Component {
       borderRadius: "15px",
       margin: "40px 0",
       padding: "40px",
-      backgroundColor: "#f2f2f2",
-      border: "none",
+      border: " solid",
+      borderColor: "#efa27d",
+      background: "#f2f2f2",
+      borderRadius: "15px",
     };
 
     const textStyle = {
-      fontSize: "18px", // Bigger font size for main text
+      fontSize: "18px !important", // Bigger font size for main text
       lineHeight: "1.8", // More line spacing for readability
 
-      textAlign: "justify", // Justify text for a polished look
+      textAlign: "left", // left text for a polished look
     };
 
     const titleStyle = {
@@ -80,6 +82,7 @@ class Service2 extends React.Component {
                       peer support. These supports for you are available 7 days
                       a week Your NDIS plan may include the following funding
                       sections for capacity-building support:
+                      <br />
                       <br />
                       <p>→ Improved living arrangement</p>
                       <p>→ Increased social and community participation</p>

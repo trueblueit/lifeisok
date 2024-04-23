@@ -15,13 +15,16 @@ class Service5 extends React.Component {
       margin: "40px 0",
       padding: "40px",
       backgroundColor: "#f2f2f2",
-      border: "none",
+      border: " solid",
+      borderColor: "#efa27d",
+      background: "#f2f2f2",
+      borderRadius: "15px",
     };
 
     const textStyle = {
-      fontSize: "18px", // Bigger font size for main text
+      fontSize: "18px !important", // Bigger font size for main text
       lineHeight: "1.8", // More line spacing for readability
-      textAlign: "justify", // Justify text for a polished look
+      textAlign: "left", // Justify text for a polished look
     };
 
     const titleStyle = {

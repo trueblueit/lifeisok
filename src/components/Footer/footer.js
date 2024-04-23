@@ -37,14 +37,14 @@ class Footer extends Component {
                 </div>
               </Col>
               <Col xs={12} md={4} lg={4}>
-                <div className="useful-links text-center">
-                  <h3>Useful Links</h3>
-                  <ul>
+                <div className="useful-links">
+                  <h3 className="useful-links">Useful Links</h3>
+                  <ul className="useful-links">
                     <li>
                       <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="/#about">About Us</a>
+                      <a href="/index4">About Us</a>
                     </li>
                     <li>
                       <a href="/index3">Services</a>
@@ -56,27 +56,21 @@ class Footer extends Component {
                 </div>
               </Col>
 
-              <Col
-                xs={12}
-                md={4}
-                lg={4}
-                className="d-flex flex-column align-items-end mt-4 mt-md-0 pe-5"
-              >
-                <h3 className=" text-justify text-left">Follow Us</h3>
-                <div className="d-flex flex-column align-items-start">
+              <Col xs={12} md={4} lg={4} className="follow-us-column">
+                <h3 className="follow-us-header">Follow Us</h3>
+                <div className="follow-us-socials">
                   {this.state.socials.map((social, index) => (
                     <a
                       key={index}
                       href={social.link}
-                      className="d-flex align-items-center"
+                      className="follow-us-link"
                     >
                       <img
-                        className="me-3 mb-3 "
+                        className="follow-us-icon"
                         src={social.icon}
                         alt={`Social Icon ${index}`}
-                        style={{ maxWidth: "32px", height: "auto" }}
                       />
-                      <p>{social.name}</p>
+                      <p className="follow-us-name">{social.name}</p>
                     </a>
                   ))}
                 </div>
@@ -86,7 +80,7 @@ class Footer extends Component {
             <hr className="mt-5" style={{ borderWidth: "8px" }} />
             <Row>
               <Col xs={12} md={8} lg={8} className="text-start text-md-center">
-                <p style={{ color: "black", fontSize: "18px", float: "left" }}>
+                <p style={{ color: "white", fontSize: "18px", float: "left" }}>
                   &copy; 2024 Life is OK All rights reserved
                   <span className="ms-5">ABN: 32 653 007 713.</span>
                   <span className="ms-5">Developed by True Blue It</span>

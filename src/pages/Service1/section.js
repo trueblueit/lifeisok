@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Container } from "reactstrap";
 import Service1 from "./Service1";
 import Navbar_Page from "../../components/Navbar/NavbarPage";
 

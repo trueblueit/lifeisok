@@ -4,13 +4,16 @@ import Footer from "../../components/Footer/footer";
 import Contact from "../../components/Contact Us/contact-us";
 import Aboutbody from "./about-body";
 import Gallery from "./gallery";
-import Section from "./section";
+import Topsection from "../../components/common_section/topsection";
 class Index4 extends Component {
   render() {
     return (
       <React.Fragment>
         <NavbarPage />
-        <Section />
+        <Topsection
+          mycss={"section bg-about refer-half mt-5"}
+          text={"About Us"}
+        />
         <Aboutbody />
         <Gallery />
         <Contact />

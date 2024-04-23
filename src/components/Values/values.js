@@ -31,10 +31,13 @@ class Values extends Component {
                   style={{
                     marginBottom: "10px",
                     padding: "5px",
-                    backgroundColor: "#f2f2f2",
                     borderRadius: "8px",
                     display: "flex",
                     alignItems: "center",
+                    border: " solid",
+                    borderColor: "#efa27d",
+                    background: "#f2f2f2",
+                    borderRadius: "15px",
                   }}
                 >
                   <div style={{ fontSize: "24px" }}>

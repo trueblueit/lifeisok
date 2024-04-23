@@ -29,26 +29,18 @@ class Index2 extends Component {
       <React.Fragment>
         <NavbarPage />
         <Section />
-        <Separator
-          text="Connect, Grow, Give"
-          imageUrl="assets/lifeisok/feedback-bg.jpg"
-        />
 
         <Values />
-        <Separator
-          text="Connect, Grow, Give"
-          imageUrl="assets/lifeisok/feedback-bg.jpg"
-        />
+        <Separator imageUrl="assets/lifeisok/feedback-bg.jpg" />
         <Services />
-
+        <Separator imageUrl="assets/lifeisok/feedback-bg.jpg" />
         <Features />
-        <Separator
-          text="We’re Here for You as a Trusted NDIS Provider"
-          imageUrl="assets/lifeisok/f-bg.jpg"
-        />
+        <Separator imageUrl="assets/lifeisok/f-bg.jpg" />
         <Accomodation />
+        <Separator imageUrl="assets/lifeisok/f-bg.jpg" />
         <Career />
-        <AboutUs />
+        <Separator imageUrl="assets/lifeisok/art.jpg" />
+
         <Feedback />
         <ContactUs />
         <Footer />

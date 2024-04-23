@@ -27,7 +27,7 @@ h1 {
 
 .h2,
 h2 {
-  font-size: 36px;
+  font-size: 34px;
 }
 .h3,
 h3 {
@@ -59,6 +59,7 @@ a {
   text-decoration: none !important;
   outline: none;
   font-weight: 600;
+  color: #000000;
 }
 
 p {
@@ -67,8 +68,11 @@ p {
   color: #000000 !important;
   font-weight: 500;
 }
+.useful-links {
+  text-align: center;
+}
 .useful-links h3 {
-  color: #000000;
+  color: #ffffff;
 }
 .useful-links ul {
   list-style-type: none;
@@ -79,7 +83,7 @@ p {
   margin-bottom: 10px;
 }
 .useful-links ul li a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-size: 20px;
 }
@@ -113,6 +117,7 @@ p {
 }
 .home-slider {
   padding: 0%;
+  color: #000000;
 }
 
 .vertical-content {
@@ -140,12 +145,7 @@ p {
   color: #ffc107;
 }
 /* our changes*/
-.mycolor {
-  color: #f5a37d;
-}
-.tomato {
-  color: #fffefe !important;
-}
+
 .mybtn {
   background-color: black;
   color: white;
@@ -267,7 +267,6 @@ p {
 }
 
 .navbar-custom {
-  background-color: rgb(255, 0, 0);
   padding: 20px 0px;
   width: 100%;
   border-radius: 0px;
@@ -279,7 +278,7 @@ p {
   margin-left: 50px;
 }
 .navbar-custom .navbar-nav li a {
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0, 0.85) !important;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   text-transform: capitalize;
@@ -292,7 +291,7 @@ p {
 .navbar-custom .navbar-nav li a.active,
 .navbar-custom .navbar-nav li a:hover,
 .navbar-custom .navbar-nav li a:active {
-  color: #000000;
+  color: #000000 !important;
   font-weight: bold;
 }
 
@@ -305,7 +304,7 @@ p {
   font-size: 24px;
   margin-top: 5px;
   margin-bottom: 0px;
-  color: #ffffff;
+  color: #000000 !important;
 }
 
 .navbar-custom .navbar-toggles {
@@ -363,15 +362,17 @@ p {
 }
 /* Adjusting navbar padding for a shorter height */
 .navbar-custom {
-  background-color: #f5dede !important;
+  background-color: ivory;
+  border-radius: 0 0 12px 12px;
+  border-width: 0px 0px 4px 0px;
+  border-color: #000000;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 .navbar-custom .navbar-nav .nav-link {
-  color: #000000 !important; /* our color */
+  color: #000000; /* our color */
 }
 .navbar-custom .navbar-nav .nav-link:hover,
 .navbar-custom .navbar-nav .nav-link:focus {
-  background-color: transparent;
   font-weight: bolder;
 }
 .navbar-custom .navbar-nav .active > .nav-link,
@@ -384,7 +385,7 @@ p {
   box-shadow: 0px 3px 10px 0px rgba(38, 107, 193, 0.08);
 }
 .nav-sticky.navbar-custom.sticky-dark {
-  background-color: #ffffff; /* White background for sticky navbar */
+  background-color: ivory; /* ivory background for sticky navbar */
 }
 .navbar-brand img {
   transition: transform 0.3s ease-in-out;
@@ -433,16 +434,25 @@ p {
   background-size: cover;
   background-position: center;
 }
+.bg-about {
+  background-image: url("../images/about-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .feedback-bg {
   background: url("../lifeisok/feedback-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 350px;
+  padding-bottom: 150px;
 }
 .home-title {
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
   line-height: 64px;
+  text-align: left;
 }
 
 .home-small-title {
@@ -452,11 +462,9 @@ p {
 }
 
 .home-desc {
-  color: rgba(255, 255, 255, 0.7);
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   max-width: 500px;
-  margin: 0 auto;
 }
 .home-half {
   padding-bottom: 300px; /* Increased bottom padding */
@@ -640,12 +648,13 @@ textarea.form-control {
 
   font-weight: bolder;
 }
-.footer h4 {
-  color: #000000;
+.footer h3,
+a {
+  color: #ffffff;
 }
 
 .footer .footer-logo {
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
@@ -654,13 +663,13 @@ textarea.form-control {
 }
 
 .footer p {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 @media (min-width: 200px) and (max-width: 1024px) {
   .navbar-custom {
     margin-top: 0px;
-    padding: 10px 0px !important;
+    padding: 10px 8px !important;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
   }
   .navbar-custom .navbar-nav {
@@ -672,12 +681,12 @@ textarea.form-control {
   .navbar-custom .navbar-nav li a {
     transition: all 0.4s;
     margin: 0px;
-    color: rgba(0, 0, 0, 0.6) !important;
+    color: rgba(255, 255, 255, 0.6);
   }
   .navbar-custom > .container {
     width: 90%;
   }
-  .navbar-white .navbar-toggler {
+  .navbar-toggler {
     color: #000000 !important;
   }
   .navbar-button {
@@ -712,6 +721,7 @@ textarea.form-control {
   .home-half .home-title {
     font-size: 32px;
     line-height: 48px;
+    text-align: center !important;
   }
   .home-section {
     height: auto;
@@ -725,10 +735,50 @@ textarea.form-control {
   .home-btn {
     max-height: 50px;
   }
+  .useful-links {
+    text-align: left !important;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px !important;
+  }
+}
+.follow-us-column {
+  margin-top: 4px;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.follow-us-header {
+  text-align: justify;
+  text-align: left;
+}
+
+.follow-us-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.follow-us-link {
+  display: flex;
+  align-items: center;
+}
+
+.follow-us-icon {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  max-width: 32px;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .follow-us-column {
+    align-items: flex-start;
+    padding-left: 0px;
   }
 }
 
@@ -767,8 +817,8 @@ textarea.form-control {
   padding-top: 375px;
 }
 .refer-half {
-  padding-bottom: 200px;
-  padding-top: 300px;
+  padding-bottom: 150px;
+  padding-top: 350px;
 }
 .contact-half {
   padding-bottom: 200px;
@@ -785,13 +835,6 @@ textarea.form-control {
   border-bottom-right-radius: 20px;
 }
 
-.bg-about {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("../lifeisok/dev.png");
-  width: 100%;
-}
 .separator {
   display: flex;
   align-items: center;

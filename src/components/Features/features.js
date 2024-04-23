@@ -76,9 +76,12 @@ class Features extends Component {
                       marginBottom: "20px",
                       padding: "20px",
                       backgroundColor: boxBackgroundColor,
-                      borderRadius: "8px",
                       display: "flex",
                       alignItems: "center",
+                      border: " solid",
+                      borderColor: "#efa27d",
+                      background: "#f2f2f2",
+                      borderRadius: "15px",
                     }}
                   >
                     <div style={{ marginRight: "15px", fontSize: "24px" }}>

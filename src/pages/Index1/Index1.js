@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Section from "./section";
+import Topsection from "../../components/common_section/topsection";
 import Contactus from "./contact-us";
 
 import NavbarPage from "../../components/Navbar/NavbarPage";
@@ -16,7 +16,10 @@ class Index1 extends Component {
     return (
       <React.Fragment>
         <NavbarPage navClass={this.state.navClass} />
-        <Section />
+        <Topsection
+          mycss={"section bg-contact contact-half"}
+          text={"Contact Us"}
+        />
         <Contactus />
         <Footer />
       </React.Fragment>

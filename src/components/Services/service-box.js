@@ -24,6 +24,10 @@ class ServiceBox extends Component {
       display: "flex",
       flexDirection: "column",
       backgroundColor: "#f2f2f2",
+      border: " solid",
+      borderColor: "#efa27d",
+      background: "#f2f2f2",
+      borderRadius: "15px",
     };
 
     return (

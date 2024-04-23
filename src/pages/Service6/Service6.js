@@ -11,13 +11,16 @@ class Service5 extends React.Component {
       margin: "40px 0",
       padding: "40px",
       backgroundColor: "#f2f2f2",
-      border: "none",
+      border: " solid",
+      borderColor: "#efa27d",
+      background: "#f2f2f2",
+      borderRadius: "15px",
     };
 
     const textStyle = {
-      fontSize: "18px", // Bigger font size for main text
+      fontSize: "18px !important", // Bigger font size for main text
       lineHeight: "1.8", // More line spacing for readability
-      textAlign: "justify", // Justify text for a polished look
+      textAlign: "left", // Justify text for a polished look
     };
 
     const titleStyle = {
@@ -72,6 +75,7 @@ class Service5 extends React.Component {
                       (SLES) in NT Australia. A SLES is an NDIS support
                       available to students leaving secondary school that helps
                       them on a pathway to employment.
+                      <br />
                       <br /> SELS and other individual and group based supports
                       to achieve your employment goals.
                       <br />
@@ -81,6 +85,7 @@ class Service5 extends React.Component {
                       supports in place, to identify your work skills, learn how
                       to communicate with others at work, or better understand
                       what an employer might expect from you.
+                      <br />
                       <br />
                       You might also like to become more independent at work or
                       progress your career goals.

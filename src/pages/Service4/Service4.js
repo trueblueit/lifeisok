@@ -16,14 +16,16 @@ class Service4 extends React.Component {
       borderRadius: "15px",
       margin: "40px 0",
       padding: "40px",
-      backgroundColor: "#f2f2f2",
-      border: "none",
+      border: " solid",
+      borderColor: "#efa27d",
+      background: "#f2f2f2",
+      borderRadius: "15px",
     };
 
     const textStyle = {
-      fontSize: "18px", // Bigger font size for main text
+      fontSize: "18px !important", // Bigger font size for main text
       lineHeight: "1.8", // More line spacing for readability
-      textAlign: "justify", // Justify text for a polished look
+      textAlign: "left", // Justify text for a polished look
     };
 
     const titleStyle = {
@@ -74,18 +76,25 @@ class Service4 extends React.Component {
                     </Card.Title>
                     <Card.Text style={textStyle}>
                       As a registered NDIS provider of Supports in employment
-                      supports, we provide the following:{" "}
+                      supports, we provide the following:
+                      <br />
                       <p>
-                        <FontAwesomeIcon icon={faThumbsUp} /> Supports to assist
-                        participants with employment where it is beyond the
-                        requirements of employment services and employers.
+                        <span style={{ fontWeight: "bold" }}>
+                          <FontAwesomeIcon icon={faThumbsUp} />
+                        </span>{" "}
+                        Supports to assist participants with employment where it
+                        is beyond the requirements of employment services and
+                        employers.
                       </p>
                       <p>
-                        <FontAwesomeIcon icon={faThumbsUp} /> Supports the
-                        participants would require regardless of the activity
-                        they are undertaking (Personal care, assist with
-                        transport, assistive technology etc.)
-                      </p>{" "}
+                        <span style={{ fontWeight: "bold" }}>
+                          <FontAwesomeIcon icon={faThumbsUp} />
+                        </span>{" "}
+                        Supports the participants would require regardless of
+                        the activity they are undertaking (Personal care, assist
+                        with transport, assistive technology etc.)
+                      </p>
+                      <br />
                       We also provide services for building relationships with
                       mainstream providers and the local community to improve
                       our understanding of the employment needs of people with
@@ -94,6 +103,8 @@ class Service4 extends React.Component {
                       category Assistance with Social Economic and Community
                       Participation. The NDIS also funds capacity building
                       employment supports, such as:
+                      <br />
+                      <br />
                       <p>
                         <FontAwesomeIcon icon={faArrowRight} />{" "}
                         Employment-related assessment and counselling
@@ -107,6 +118,7 @@ class Service4 extends React.Component {
                         employment supports (SLES)
                       </p>
                     </Card.Text>
+                    <br />
                     <Link to="/index1" className="btn mybtn">
                       Enquire Now
                     </Link>

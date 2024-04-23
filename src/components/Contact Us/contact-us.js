@@ -20,62 +20,66 @@ const ContactUs = () => {
           </div>
 
           <Row className="justify-content-center">
-            <Col lg="6" className="mb-4 mb-lg-0">
+            <Col lg="6" md="12" className="mb-4 mb-lg-0">
               <LinkBox
                 p="4"
                 bg="#f2f2f2"
-                borderRadius="lg"
                 boxShadow="md"
                 textAlign="center"
                 mb="4"
-                height={"150px"}
+                height={{ base: "auto", lg: "150px" }}
+                border="solid"
+                borderColor="#efa27d"
+                background="#f2f2f2"
+                borderRadius="15px"
+                className="mb-3"
               >
-                <Heading size="md" mb="3">
+                <Heading>
                   <i
-                    className="pe-7s-mail icon me-3"
+                    className="pe-7s-mail icon me-3 mb-3"
                     style={{ fontSize: "38px" }}
                   ></i>
                   Message Us At
                 </Heading>
-                <Text>
-                  <LinkOverlay
-                    href="mailto:admin@lifeisok.info"
-                    color="orange.500"
-                  >
-                    admin@lifeisok.info
-                  </LinkOverlay>
-                </Text>
+
+                <LinkOverlay href="mailto:admin@lifeisok.info">
+                  <Text>admin@lifeisok.info</Text>
+                </LinkOverlay>
               </LinkBox>
             </Col>
 
-            <Col lg="6">
+            <Col lg="6" md="12">
               <LinkBox
                 p="4"
                 bg="#f2f2f2"
-                borderRadius="lg"
                 boxShadow="md"
                 textAlign="center"
                 mb="4"
-                height={"150px"}
+                height={{ base: "auto", lg: "150px" }}
+                border="solid"
+                borderColor="#efa27d"
+                background="#f2f2f2"
+                borderRadius="15px"
+                className="mb-3"
               >
-                <Heading size="md" mb="3">
-                  Location
+                <Heading>
                   <i
-                    className="pe-7s-map icon ms-3"
+                    className="pe-7s-map icon me-3 mb-3"
                     style={{ fontSize: "38px" }}
                   ></i>
+                  Location
                 </Heading>
-                <Text>
-                  <LinkOverlay
-                    href="https://www.google.com/maps/search/?api=1&query=48+Trower+Rd,+Millner+NT+0810"
-                    color="orange.500"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+
+                <LinkOverlay
+                  href="https://www.google.com/maps/search/?api=1&query=48+Trower+Rd,+Millner+NT+0810"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p>
                     Shop 16 (Rapid Creek Shopping Village) 48 Trower Road,
                     Milner, NT 0810
-                  </LinkOverlay>
-                </Text>
+                  </p>
+                </LinkOverlay>
               </LinkBox>
             </Col>
           </Row>
