@@ -7,7 +7,6 @@
  * into the app code.
  */
 
-// accommodationData
 /* imporrt for NabItems*/
 import {
   FaHome,
@@ -22,35 +21,35 @@ import {
 export const values = [
   {
     id: 1,
-    img: "assets/images/icons/1.png",
+    icon: "fa fa-heartbeat",
     name: "COMPASSION",
     description:
       "We offer support from our desire to help individuals and emphasize on the operational environment is less stressful and more satisfying.",
   },
   {
     id: 2,
-    img: "assets/images/icons/2.png",
+    icon: "fa fa-users",
     name: "TOGETHERNESS/INTEGRITY",
     description:
       "We cement our relationship by encouraging each other to strive together, feel safe and belong to a group.",
   },
   {
     id: 3,
-    img: "assets/images/icons/3.png",
+    icon: "fa fa-gratipay",
     name: "RESEPCT",
     description:
       "We recognise individual rights and dignity. We do care about the diversity and social cohesion/inclusion.",
   },
   {
     id: 4,
-    img: "assets/images/icons/4.png",
+    icon: "fa fa-slideshare",
     name: "TRUST",
     description:
       "We trust our ability to contribute to a positive change. We thrive to achieve the best potential of individual.",
   },
   {
     id: 5,
-    img: "assets/images/icons/5.png",
+    icon: "fa fa-search",
     name: "EXPLORE",
     description:
       "To grow in an everyday changing environment, we keep questioning and challenging ourselves and the status quo.",
@@ -61,42 +60,42 @@ export const values = [
 export const services = [
   {
     title: "DAILY ACTIVITIES & IMPROVED LIVING CHOICE",
-    icon: "pe-7s-rocket",
+    icon: "fa fa-rocket",
     mylink: "/service1",
     description:
       "We are excellent in providing all home-bound personal and self-care support as well as community access supports to assist you in visiting family and friends or participating in daily scheduled or innovative activities or social events.",
   },
   {
     title: "ASSISTANCE WITH SOCIAL AND COMMUNITY PARTICIPATION",
-    icon: "pe-7s-chat ",
+    icon: "fa fa-comments",
     mylink: "/service2",
     description:
       "Our wide range of non-clinical capacity-building services includes social skills, employment, life skills, and tenancy support. As part of our person-centered recovery approach.",
   },
   {
     title: "ACCOMMODATION SUPPORT",
-    icon: "pe-7s-home",
+    icon: "fa fa-home",
     mylink: "/service3",
     description:
       "Funding for Accommodation Supports generally comes from the Core funding section of your NDIS plan and is usually pre-planned with the agency when your plan is established or reviewed.",
   },
   {
     title: "SUPPORTS IN EMPLOYMENT",
-    icon: "pe-7s-map-2",
+    icon: "fa fa-briefcase",
     mylink: "/service4",
     description:
       "Funding for support in employment is in the Core budget of a participant’s plan under the support category Assistance with Social Economic and Community Participation. The NDIS also funds capacity building employment supports.",
   },
   {
     title: "SUPPORTED INDEPENDENT LIVING (SIL)",
-    icon: "pe-7s-key",
+    icon: "fa fa-key",
     mylink: "/service5",
     description:
       "In our SIL, you will find a safe, comfortable, and supportive living environment, where all your everyday needs will be met. You will receive person-centred care from our SIL team; they will assist you in planning your recovery journey.",
   },
   {
     title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)",
-    icon: "pe-7s-portfolio",
+    icon: "fa fa-graduation-cap",
     mylink: "/service6",
     description:
       "A SLES is an NDIS support available to students leaving secondary school that helps them on a pathway to employment.",
@@ -146,7 +145,7 @@ export const accordionData = [
       "NDIS participants can stay at our MTA during a transitional period (such as when leaving the hospital or released from Corrections). Throughout your recovery journey, our residential staff will provide you with support and guidance so that you can move into more permanent accommodations and support your psychosocial recovery goal. For a period of up to 90 days, we provide MTA at shared residential locations throughout Darwin.",
   },
 ];
-
+// accommodationData
 export const accommodations = [
   {
     name: "Support indepedent Living(SIL)",

@@ -71,11 +71,12 @@ function Contactus() {
         <h3 className="text-center">Enquire Form</h3>
         <div className="row justify-content-center">
           <Form className="col-md-8 text-center " onSubmit={handleSubmit}>
-            <Form.Text>
+            <Form.Text style={{ fontWeight: "600", color: "black" }}>
               We'll never share your details with anyone else.
             </Form.Text>
             <Form.Group className="mb-3 mt-5 text-lg" controlId="formFullName">
               <Form.Control
+                style={{ fontWeight: "bold" }}
                 type="text"
                 placeholder="Full Name"
                 name="fullname"
@@ -85,6 +86,7 @@ function Contactus() {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
+                style={{ fontWeight: "bold" }}
                 type="email"
                 placeholder="Enter email"
                 name="email"
@@ -94,6 +96,7 @@ function Contactus() {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formSubject">
               <Form.Control
+                style={{ fontWeight: "bold" }}
                 type="text"
                 placeholder="Subject"
                 name="subject"
@@ -103,6 +106,7 @@ function Contactus() {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formMessage">
               <Form.Control
+                style={{ fontWeight: "bold" }}
                 as="textarea"
                 rows={3}
                 placeholder="Type your message here"

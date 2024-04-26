@@ -22,7 +22,7 @@ class Section extends Component {
         <section style={{ position: "relative" }} id="home">
           <Container fluid style={{ padding: "0px" }} className="home-slider ">
             <div className="carousel-container ">
-              <Carousel indicators={false}>
+              <Carousel indicators controls={false} pause={false}>
                 <Carousel.Item interval={2000}>
                   <img
                     className="carousel-image"

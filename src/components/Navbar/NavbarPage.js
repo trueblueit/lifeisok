@@ -85,7 +85,7 @@ class Navbar_Page extends Component {
             </NavbarBrand>
 
             <NavbarToggler onClick={this.toggle}>
-              <i className="mdi mdi-menu"></i>
+              <i className="fa fa-bars"></i>
             </NavbarToggler>
 
             <Collapse

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -25,8 +24,6 @@ function Referral() {
     referee_contact_number: "",
     callback_request: false,
   });
-  const [submitMessage, setSubmitMessage] = useState(null);
-  const [submitHeadinh, setSubmitHeading] = useState(null);
   const toast = useToast();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,10 +34,7 @@ function Referral() {
         "http://localhost:80/referral.php",
         formData
       );
-      const data = response.data;
-      setSubmitMessage(data.message);
-      setSubmitMessage(data.message); // Response from PHP script
-
+      const data = response.data; // Response from PHP script
       if (data.success) {
         toast({
           title: data.heading,
@@ -48,6 +42,23 @@ function Referral() {
           status: data.status,
           duration: 2000,
           isClosable: true,
+        });
+
+        // clear the form data after sucess
+        setFormData({
+          participant_name: "",
+          ndis_number: "",
+          email: "",
+          address: "",
+          contact_number: "",
+          service_type: "",
+          funding_body: "",
+          referee_name: "",
+          organisation_name: "",
+          referee_email: "",
+          relation_to_participant: "",
+          referee_contact_number: "",
+          callback_request: false,
         });
       } else {
         // Set the error message
@@ -94,10 +105,13 @@ function Referral() {
       </span>
       <Form className="m-3" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Participant Details</Form.Label>
+          <Form.Label style={{ fontWeight: "bold" }}>
+            Participant Details
+          </Form.Label>
           <Row>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="f-name"
                 label="Participant Name"
                 className="mb-3"
@@ -117,6 +131,7 @@ function Referral() {
             </Col>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="NDIS Number"
                 label="NDIS Number"
                 className="mb-3"
@@ -135,6 +150,7 @@ function Referral() {
           <Row>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="email"
                 label="Email Address"
                 className="mb-3"
@@ -151,6 +167,7 @@ function Referral() {
             </Col>
             <Col>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="address"
                 label="Address"
                 className="mb-3"
@@ -170,6 +187,7 @@ function Referral() {
           <Row>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="pnone"
                 label="Contact Number"
                 className="mb-3"
@@ -189,6 +207,7 @@ function Referral() {
             </Col>
             <Col xs={12} md={6}>
               <Form.Select
+                style={{ fontWeight: "600" }}
                 aria-label="Default select example"
                 name="service_type"
                 value={formData.service_type}
@@ -218,6 +237,7 @@ function Referral() {
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Select
+            style={{ fontWeight: "600" }}
             aria-label="Default select example"
             name="funding_body"
             value={formData.funding_body}
@@ -233,10 +253,13 @@ function Referral() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Referee Details</Form.Label>
+          <Form.Label style={{ fontWeight: "bold" }}>
+            Referee Details
+          </Form.Label>
           <Row>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="f-name"
                 label="Referee Name"
                 className="mb-3"
@@ -253,6 +276,7 @@ function Referral() {
             </Col>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="Organisation Name"
                 label="Organisation Name"
                 className="mb-3"
@@ -273,7 +297,12 @@ function Referral() {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <FloatingLabel controlId="email" label=" Email" className="mb-3">
+              <FloatingLabel
+                style={{ fontWeight: "bold" }}
+                controlId="email"
+                label=" Email"
+                className="mb-3"
+              >
                 <Form.Control
                   type="text"
                   name="referee_email"
@@ -289,6 +318,7 @@ function Referral() {
             </Col>
             <Col xs={12} md={6}>
               <Form.Select
+                style={{ fontWeight: "600" }}
                 aria-label="Default select example"
                 name="relation_to_participant"
                 value={formData.relation_to_participant}
@@ -310,6 +340,7 @@ function Referral() {
           <Row>
             <Col xs={12} md={6}>
               <FloatingLabel
+                style={{ fontWeight: "bold" }}
                 controlId="pnone"
                 label="Contact Number"
                 className="mb-3"
@@ -333,6 +364,7 @@ function Referral() {
                 controlId="exampleForm.ControlTextarea1"
               >
                 <Form.Check
+                  style={{ fontWeight: "600" }}
                   type="switch"
                   id="call-back"
                   label="Call Back Request"
@@ -350,9 +382,9 @@ function Referral() {
           </Row>
         </Form.Group>
 
-        <Button className="mx-auto" variant="primary" type="submit">
+        <button className="mybtn btn" type="submit">
           Submit
-        </Button>
+        </button>
       </Form>
     </div>
   );

@@ -36,14 +36,15 @@ const ContactUs = () => {
               >
                 <Heading>
                   <i
-                    className="pe-7s-mail icon me-3 mb-3"
+                    className="fa fa-envelope
+                    icon me-3 mb-3"
                     style={{ fontSize: "38px" }}
                   ></i>
                   Message Us At
                 </Heading>
 
                 <LinkOverlay href="mailto:admin@lifeisok.info">
-                  <Text>admin@lifeisok.info</Text>
+                  <p style={{ color: "#fb5607" }}>admin@lifeisok.info</p>
                 </LinkOverlay>
               </LinkBox>
             </Col>
@@ -64,7 +65,7 @@ const ContactUs = () => {
               >
                 <Heading>
                   <i
-                    className="pe-7s-map icon me-3 mb-3"
+                    className="fa fa-map icon me-3 mb-3"
                     style={{ fontSize: "38px" }}
                   ></i>
                   Location
@@ -75,7 +76,7 @@ const ContactUs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p>
+                  <p style={{ color: "#fb5607" }}>
                     Shop 16 (Rapid Creek Shopping Village) 48 Trower Road,
                     Milner, NT 0810
                   </p>

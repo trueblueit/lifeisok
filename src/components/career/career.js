@@ -103,7 +103,11 @@ export function DemoModal(props) {
           </Row>
           <Row className="mb-3">
             <Col md={6}>
-              <FloatingLabel controlId="first_name" label="First Name">
+              <FloatingLabel
+                style={{ fontWeight: "bold" }}
+                controlId="first_name"
+                label="First Name"
+              >
                 <Form.Control
                   type="text"
                   name="first_name"
@@ -112,7 +116,11 @@ export function DemoModal(props) {
               </FloatingLabel>
             </Col>
             <Col md={6}>
-              <FloatingLabel controlId="last_name" label="Last Name">
+              <FloatingLabel
+                style={{ fontWeight: "bold" }}
+                controlId="last_name"
+                label="Last Name"
+              >
                 <Form.Control
                   type="text"
                   name="last_name"
@@ -123,7 +131,12 @@ export function DemoModal(props) {
           </Row>
           <Row>
             <Col md={6}>
-              <FloatingLabel controlId="email" label="Email" className="mb-3">
+              <FloatingLabel
+                style={{ fontWeight: "bold" }}
+                controlId="email"
+                label="Email"
+                className="mb-3"
+              >
                 <Form.Control
                   type="email"
                   name="email"
@@ -132,7 +145,12 @@ export function DemoModal(props) {
               </FloatingLabel>
             </Col>
             <Col md={6}>
-              <FloatingLabel controlId="phone" label="Phone" className="mb-3">
+              <FloatingLabel
+                style={{ fontWeight: "bold" }}
+                controlId="phone"
+                label="Phone"
+                className="mb-3"
+              >
                 <Form.Control
                   type="text"
                   name="phone"
@@ -144,7 +162,11 @@ export function DemoModal(props) {
 
           <Row className="mb-3">
             <Col md={6}>
-              <FloatingLabel controlId="qualifications" label="Qualifications">
+              <FloatingLabel
+                style={{ fontWeight: "bold" }}
+                controlId="qualifications"
+                label="Qualifications"
+              >
                 <Form.Control
                   type="text"
                   name="qualifications"
@@ -154,6 +176,7 @@ export function DemoModal(props) {
             </Col>
             <Col md={6}>
               <Form.Select
+                style={{ fontWeight: "600" }}
                 aria-label="position"
                 onChange={handleChange}
                 name="position"
@@ -165,7 +188,7 @@ export function DemoModal(props) {
             </Col>
           </Row>
           <Form.Group className="mb-3" controlId="description">
-            <Form.Label>Description</Form.Label>
+            <Form.Label style={{ fontWeight: "bold" }}>Description</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}

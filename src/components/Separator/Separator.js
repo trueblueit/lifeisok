@@ -5,7 +5,7 @@ const Separator = ({ imageUrl }) => {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "200px",
+
     position: "relative",
   };
 

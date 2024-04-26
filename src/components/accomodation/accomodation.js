@@ -12,11 +12,9 @@ import { accommodations } from "../../data";
 
 const AccommodationsSection = () => {
   const sliderSettings = {
-    dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000,
   };
@@ -44,7 +42,7 @@ const AccommodationsSection = () => {
                 style={{
                   cursor: "pointer",
                   backgroundColor: "#f2f2f2",
-                  border: "2px solid orange",
+                  border: "3px solid #efa27d",
                   borderRadius: "8px",
                   minHeight: "550px",
                 }}

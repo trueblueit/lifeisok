@@ -42,14 +42,13 @@ function Aboutbody() {
     display: "flex",
     alignItems: "center",
     color: "black",
-    fontSize: "18px",
+    fontSize: "20px",
     fontWeight: "550",
   };
 
   const iconStyle = {
     marginRight: "10px",
-    minWidth: "24px",
-    fontSize: "20px",
+    fontSize: "36px",
   };
 
   return (
@@ -59,7 +58,6 @@ function Aboutbody() {
           <Row className="align-items-center mt-5 ">
             <Col lg="5" className="order-lg-1 mb-4 mb-lg-0">
               <div className="features-box mt-5 mt-lg-0">
-                <h3>About Us</h3>
                 <p className="web-desc home-desc">
                   Life is OK is seeking to provide care support services under
                   the National Disability Insurance Scheme (NDIS) in NT, seeking

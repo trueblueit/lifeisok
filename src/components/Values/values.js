@@ -22,7 +22,6 @@ class Values extends Component {
             >
               Our Values
             </h2>
-            {/* List of features on the left */}
 
             <Row>
               {this.state.values.map((value, index) => (
@@ -41,17 +40,10 @@ class Values extends Component {
                   }}
                 >
                   <div style={{ fontSize: "24px" }}>
-                    <img
-                      variant="top"
-                      src={value.img}
-                      alt="logo-img"
-                      className="img-fluid"
-                      style={{
-                        width: "100px",
-                        height: "auto",
-                        mixBlendMode: "darken",
-                      }}
-                    />
+                    <i
+                      className={value.icon + " me-2"}
+                      style={{ fontSize: "55px" }}
+                    ></i>
                   </div>
                   <div>
                     <h5>{value.name}</h5>

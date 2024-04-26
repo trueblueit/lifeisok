@@ -44,10 +44,7 @@ class ServiceBox extends Component {
           <LinkOverlay href={this.props.mylink}>
             <Heading size="md" my="2">
               <div className="d-flex justify-content-center">
-                <i
-                  className={this.props.icon + " text-primary"}
-                  style={{ fontSize: "60px" }}
-                ></i>
+                <i className={this.props.icon} style={{ fontSize: "60px" }}></i>
               </div>
 
               <h4>{this.props.title}</h4>

@@ -65,7 +65,7 @@ a {
 p {
   font-size: 24px;
   line-height: 26px;
-  color: #000000 !important;
+  color: #000000;
   font-weight: 500;
 }
 .useful-links {
@@ -149,6 +149,7 @@ p {
 .mybtn {
   background-color: black;
   color: white;
+  border-radius: 10px;
 }
 
 .mybtn:hover {
@@ -839,10 +840,17 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px; /* Set a fixed height or adjust as needed */
+  /* Set a fixed height or adjust as needed */
   background-size: cover; /* Make sure background image covers the entire area */
 }
-
+.separator {
+  height: 35vh; /* Set a fixed height or adjust as needed for desktop */
+}
+@media (max-width: 767px) {
+  .separator {
+    height: 20vh; /* Adjust the height for mobile devices */
+  }
+}
 /* Container for flipping */
 .flip-container {
   perspective: 1000px;
