@@ -82,10 +82,6 @@ const AccommodationsSection = () => {
             </Col>
           ))}
         </Row>
-
-        <Link to="/index3" className="btn mybtn mt-5">
-          Read More
-        </Link>
       </Container>
     </section>
   );

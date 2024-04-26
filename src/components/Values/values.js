@@ -37,6 +37,7 @@ class Values extends Component {
                     borderColor: "#efa27d",
                     background: "#f2f2f2",
                     borderRadius: "15px",
+                    overflow: "auto",
                   }}
                 >
                   <div style={{ fontSize: "24px" }}>
