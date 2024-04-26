@@ -79,14 +79,21 @@ class Footer extends Component {
 
             <hr className="mt-5" style={{ borderWidth: "8px" }} />
             <Row>
-              <Col xs={12} md={8} lg={8} className="text-start text-md-center">
-                <p style={{ color: "white", fontSize: "18px", float: "left" }}>
-                  &copy; 2024 Life is OK All rights reserved
-                  <span className="ms-5">ABN: 32 653 007 713.</span>
-                  <span className="ms-5">Developed by True Blue It</span>
-                </p>
+              <Col xs={12} md={9} lg={9}>
+                <Row className="text-start text-md-center">
+                  <Col xs={12} md={4} lg={4}>
+                    &copy; 2024 Life is OK All rights reserved
+                  </Col>
+                  <Col xs={12} md={4} lg={4}>
+                    ABN: 32 653 007 713.
+                  </Col>
+                  <Col xs={12} md={4} lg={4}>
+                    Developed by True Blue It
+                  </Col>
+                </Row>
               </Col>
-              <Col xs={12} md={4} lg={4}>
+
+              <Col xs={12} md={3} lg={3}>
                 <img
                   src="assets/lifeisok/NDIS.png"
                   alt="Feature Representation"
