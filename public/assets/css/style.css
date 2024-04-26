@@ -515,8 +515,8 @@ p {
 }
 
 .wave-one {
-  background-size: 50% 100px;
-  bottom: -40px;
+  background-size: 50% 10vh;
+  bottom: -4vh;
 }
 
 .wave-anim .wave-one {
@@ -527,7 +527,7 @@ p {
 
 .wave-two {
   background-image: url("../images/wave-shape/wave2.png");
-  background-size: 50% 120px;
+  background-size: 50% 12vh;
 }
 
 .wave-anim .wave-two {
@@ -536,7 +536,7 @@ p {
 
 .wave-three {
   background-image: url("../images/wave-shape/wave3.png");
-  background-size: 50% 100px;
+  background-size: 50% 10vh;
 }
 
 .wave-anim .wave-three {
@@ -548,7 +548,7 @@ p {
     transform: translateX(0) translateZ(0) scaleY(1);
   }
   50% {
-    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    transform: translateX(-25%) translateZ(0) scaleY(0.5);
   }
   100% {
     transform: translateX(-50%) translateZ(0) scaleY(1);
