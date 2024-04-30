@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import axios from "axios";
@@ -30,6 +29,7 @@ function Contactus() {
         formData
       );
       const data = response.data;
+
       if (data.success) {
         toast({
           title: data.heading,
@@ -115,7 +115,7 @@ function Contactus() {
                 onChange={handleChange}
               />
             </Form.Group>
-            <a className="btn mybtn mb-5" onAuxClick={handleSubmit}>
+            <a className="btn mybtn mb-5" onClick={handleSubmit}>
               Submit
             </a>
           </Form>

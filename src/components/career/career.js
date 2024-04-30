@@ -42,8 +42,7 @@ export function DemoModal(props) {
         "http://localhost:80/career.php",
         formData
       );
-      const data = response.data;
-      setSubmitMessage(data.message); // Response from PHP script
+      const data = response.data; // Response from PHP script
       if (data.success) {
         // Set the success message
         // Show success toast
@@ -64,7 +63,6 @@ export function DemoModal(props) {
           description: "",
         });
       } else {
-        setSubmitMessage(data.message); // Set the error message
         toast({
           title: data.heading,
           description: data.message,
