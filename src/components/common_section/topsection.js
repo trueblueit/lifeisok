@@ -6,7 +6,7 @@ const Topsection = ({ mycss, text, children }) => {
     <React.Fragment>
       <section className={mycss}>
         <Container>
-          <h1 className="home-title">{text}</h1>
+          <h1 className="home-title text-white">{text}</h1>
         </Container>
         {children !== null ? children : null}
         <Container>

@@ -247,7 +247,7 @@ export function Career() {
 
                 <p style={{ marginBottom: "32px" }}>
                   Founded by a team of professionals to improve the quality of
-                  life for people with difficulties.
+                  life for people with disability.
                 </p>
                 <a
                   onClick={() => setModalShow(true)}

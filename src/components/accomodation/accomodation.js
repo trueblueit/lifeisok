@@ -45,6 +45,8 @@ const AccommodationsSection = () => {
                   border: "3px solid #efa27d",
                   borderRadius: "8px",
                   minHeight: "550px",
+
+                  transition: "background-color 5s, border-color 0.5s",
                 }}
                 onMouseEnter={() =>
                   (document.getElementById(`card_disc_${index}`).innerText =

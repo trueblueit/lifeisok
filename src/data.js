@@ -61,42 +61,42 @@ export const services = [
   {
     title: "DAILY ACTIVITIES & IMPROVED LIVING CHOICE",
     icon: "fa fa-rocket",
-    mylink: "/service1",
+    mylink: "/DAILYACTIVITIES&IMPROVEDLIVINGCHOICE",
     description:
       "We are excellent in providing all home-bound personal and self-care support as well as community access supports to assist you in visiting family and friends or participating in daily scheduled or innovative activities or social events.",
   },
   {
     title: "ASSISTANCE WITH SOCIAL AND COMMUNITY PARTICIPATION",
     icon: "fa fa-comments",
-    mylink: "/service2",
+    mylink: "/ASSISTANCEWITHSOCIALANDCOMMUNITYPARTICIPATION",
     description:
       "Our wide range of non-clinical capacity-building services includes social skills, employment, life skills, and tenancy support. As part of our person-centered recovery approach.",
   },
   {
     title: "ACCOMMODATION SUPPORT",
     icon: "fa fa-home",
-    mylink: "/service3",
+    mylink: "/ACCOMMODATIONSUPPORT",
     description:
       "Funding for Accommodation Supports generally comes from the Core funding section of your NDIS plan and is usually pre-planned with the agency when your plan is established or reviewed.",
   },
   {
     title: "SUPPORTS IN EMPLOYMENT",
     icon: "fa fa-briefcase",
-    mylink: "/service4",
+    mylink: "/SUPPORTSINEMPLOYMENT",
     description:
       "Funding for support in employment is in the Core budget of a participant’s plan under the support category Assistance with Social Economic and Community Participation. The NDIS also funds capacity building employment supports.",
   },
   {
     title: "SUPPORTED INDEPENDENT LIVING (SIL)",
     icon: "fa fa-key",
-    mylink: "/service5",
+    mylink: "/SUPPORTEDINDEPENDENTLIVING",
     description:
       "In our SIL, you will find a safe, comfortable, and supportive living environment, where all your everyday needs will be met. You will receive person-centred care from our SIL team; they will assist you in planning your recovery journey.",
   },
   {
     title: "SCHOOL LEAVER EMPLOYMENT SUPPORTS (SLES)",
     icon: "fa fa-graduation-cap",
-    mylink: "/service6",
+    mylink: "/SCHOOLLEAVEREMPLOYMENTSUPPORTS",
     description:
       "A SLES is an NDIS support available to students leaving secondary school that helps them on a pathway to employment.",
   },
@@ -207,44 +207,43 @@ export const navItems = [
   },
   {
     id: 3,
-    link: "/#services",
     idnm: "services",
     navheading: "Services",
     icon: FaCog,
     submenu: [
       {
         id: 7,
-        link: "/service1",
+        link: "/DAILYACTIVITIES&IMPROVEDLIVINGCHOICE",
         idnm: "service1",
         navheading: "Daily Activities & Improved Living Choice",
       },
       {
         id: 8,
-        link: "/service2",
+        link: "/ASSISTANCEWITHSOCIALANDCOMMUNITYPARTICIPATION",
         idnm: "service2",
         navheading: "Assistance With Social And Community Participation",
       },
       {
         id: 9,
-        link: "/service3",
+        link: "/ACCOMMODATIONSUPPORT",
         idnm: "service3",
         navheading: "Accommodation Support",
       },
       {
         id: 10,
-        link: "/service4",
+        link: "/SUPPORTSINEMPLOYMENT",
         idnm: "service4",
         navheading: "Supports in Employment",
       },
       {
         id: 11,
-        link: "/service5",
+        link: "/SUPPORTEDINDEPENDENTLIVING",
         idnm: "service5",
         navheading: "Supported Independent Living (SIL)",
       },
       {
         id: 12,
-        link: "/service6",
+        link: "/SCHOOLLEAVEREMPLOYMENTSUPPORTS",
         idnm: "service6",
         navheading: "School Leaver Employment Supports (SLES)",
       },
@@ -253,7 +252,7 @@ export const navItems = [
   },
   {
     id: 4,
-    link: "/index4",
+    link: "/about",
     idnm: "about",
     navheading: "About Us",
     icon: FaUser,
@@ -270,8 +269,8 @@ export const navItems = [
     navheading: "Contact Us",
     icon: FaEnvelope,
     submenu: [
-      { id: 14, navheading: "Referals", link: "/index5" },
-      { id: 15, navheading: "Enquiry", link: "/index1" },
+      { id: 14, navheading: "Referals", link: "/referral" },
+      { id: 15, navheading: "Enquiry", link: "/enquire" },
       { id: 16, navheading: "Career", link: "/#career" },
       { id: 17, navheading: "Feedback", link: "/#feedback" },
     ],

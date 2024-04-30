@@ -16,7 +16,6 @@ class Footer extends Component {
         icon: "assets/lifeisok/linkedin.png",
         link: "https://www.linkedin.com/company/life-is-ok/",
       },
-      { name: "Instagram", icon: "assets/lifeisok/instagram.png", link: "#" },
     ],
   };
 
@@ -29,10 +28,11 @@ class Footer extends Component {
             <Row className=" justify-content-center">
               <Col xs={12} md={4} lg={4} className=" mt-4 mt-md-0">
                 <div className="d-flex flex-column align-items-start">
-                  <h3>Life is Ok</h3>
+                  <h3> Our Mission</h3>
                   <p>
-                    Founded by a team of professionals to improve the quality of
-                    life for people with difficulties.
+                    At Life is OK, we partner with NDIS to provide
+                    person-centric services that promote well-being, cultural
+                    awareness, and inclusivity.
                   </p>
                 </div>
               </Col>
@@ -80,7 +80,7 @@ class Footer extends Component {
             <hr className="mt-5" style={{ borderWidth: "8px" }} />
             <Row>
               <Col xs={12} md={9} lg={9}>
-                <Row className="text-start text-md-center">
+                <Row className="text-start text-white text-md-center">
                   <Col xs={12} md={4} lg={4}>
                     &copy; 2024 Life is OK All rights reserved
                   </Col>
@@ -119,6 +119,7 @@ class Footer extends Component {
                     height: "auto",
                   }}
                 />
+
                 <img
                   className="ms-3 me-5"
                   src="assets/lifeisok/flag2.png"
