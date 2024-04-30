@@ -39,7 +39,7 @@ class Index2 extends Component {
         <Accomodation />
         <Separator imageUrl="assets/lifeisok/f-bg.jpg" />
         <Career />
-
+        <Separator imageUrl="assets/lifeisok/art.jpg" />
         <Feedback />
         <ContactUs />
         <Footer />
