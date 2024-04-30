@@ -18,7 +18,7 @@ switch($method) {
             'status' => 'warning',
             'heading' => 'Missing Email '
         ];
-    } else {
+    } /*else {
         // Check if email already exists
         $emailExistsSql = "SELECT COUNT(*) AS count FROM enquire WHERE email = :email";
         $emailExistsStmt = $conn->prepare($emailExistsSql);
@@ -34,9 +34,10 @@ switch($method) {
                 'status' => 'warning',
                 'heading' => 'Email Already Exists'
             ];
-        } else {
+        } */
+    else {
             
-        }
+        
     $sql = "INSERT INTO enquire (id, Name, email, subject, description) VALUES (null, :Name, :email, :subject, :description)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':Name', $new_member->Name);
