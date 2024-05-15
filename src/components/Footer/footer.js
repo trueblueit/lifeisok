@@ -112,7 +112,7 @@ class Footer extends Component {
             <Col xs={12} md={3} lg={3}>
               <Row className="justify-content-end">
                 <img
-                  src="assets/lifeisok/flag1.png"
+                  src="assets/lifeisok/Flag1.png"
                   alt="Feature Representation"
                   style={{
                     maxWidth: "100px",
@@ -122,7 +122,7 @@ class Footer extends Component {
 
                 <img
                   className="ms-3 me-5"
-                  src="assets/lifeisok/flag2.png"
+                  src="assets/lifeisok/Flag2.png"
                   alt="Feature Representation"
                   style={{
                     maxWidth: "100px",
